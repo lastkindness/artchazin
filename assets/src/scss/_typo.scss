@@ -1,0 +1,224 @@
+p,
+input,
+textarea,
+address,
+blockquote,
+blockquote p {
+    -webkit-hyphens: auto;
+    -moz-hyphens: auto;
+    -ms-hyphens: auto;
+    hyphens: auto;
+    max-width: 100%;
+    margin: 0 0 1.45em;
+    line-height: 1.24em;
+    &:last-child {
+        margin: 0;
+    }
+}
+
+input,
+textarea,
+a,
+button {
+    outline: none;
+    &:hover,
+    &:active,
+    &:focus {
+        outline: none;
+    }
+}
+
+input {
+    width: 100%;
+    line-height: 1em;
+}
+
+address {
+    font-style: normal;
+}
+
+b,
+i,
+strong,
+em,
+a,
+span,
+input,
+i,
+mark {
+    -webkit-hyphens: auto;
+    -moz-hyphens: auto;
+    -ms-hyphens: auto;
+    hyphens: auto;
+    margin: 0;
+    outline: none;
+    &:hover,
+    &:active,
+    &:focus {
+        outline: none;
+    }
+}
+
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    line-height: 1.44em;
+    margin: 0 0 0.65em;
+    font-family: $font;
+    font-weight: 400;
+    color: $fontColor;
+    text-align: center;
+    -webkit-hyphens: auto;
+    -moz-hyphens: auto;
+    -ms-hyphens: auto;
+    hyphens: auto;
+    @include animate(all);
+}
+.h1,
+h1 {
+    font-size: 64px;
+    text-transform: uppercase;
+    @include respond-to('desktop-m') {
+        font-size: 52px;
+    }
+    @include respond-to('mobile') {
+        font-size: 36px;
+    }
+}
+.h2,
+h2 {
+    font-size: 39px;
+    text-transform: uppercase;
+    @include respond-to('desktop-m') {
+        font-size: 30px;
+    }
+    @include respond-to('mobile') {
+        font-size: 24px;
+    }
+}
+
+.h3,
+h3 {
+    font-size: 30px;
+    @include respond-to('mobile') {
+        font-size: 22px;
+    }
+}
+
+.h4,
+h4 {
+    font-size: 24px;
+    text-transform: uppercase;
+    @include respond-to('mobile') {
+        font-size: 18px;
+    }
+}
+
+.h5,
+h5 {
+    font-size: 18px;
+    text-transform: uppercase;
+    @include respond-to('mobile') {
+        font-size: 16px;
+    }
+}
+.h6,
+h6 {
+    font-weight: 700;
+    font-size: 18px;
+    @include respond-to('mobile') {
+        font-size: 16px;
+    }
+}
+
+%a {
+    font-size: inherit;
+    @include animate(all);
+    text-decoration: none;
+    color: $fontColor;
+    position: relative;
+    cursor: pointer;
+    &:before {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: -7px;
+        width: 100%;
+        height: 1px;
+        background-color: $primary;
+        content: '';
+        display: block;
+        opacity: 0;
+        @include animate(all);
+    }
+    &:hover,
+    &:active,
+    &:focus {
+        @include animate(all);
+        &:before {
+            opacity: 1;
+            @include animate(all);
+        }
+    }
+}
+
+a {
+    @extend %a;
+}
+
+#wpadminbar a {
+    &:before {
+        display: none;
+    }
+}
+
+b,
+strong {
+    font-family: $font;
+    font-weight: 700;
+}
+
+em,
+i {
+    font-family: $font;
+    font-style: italic;
+    font-weight: 200;
+}
+
+mark {
+    padding: 5px;
+    background-color: transparentize($primary, 0.5);
+}
+
+blockquote,
+q {
+    font-weight: 200;
+    color: $fontColor;
+    font-style: normal;
+    font-family: $font;
+    display: block;
+    p {
+        &:before,
+        &:after {
+            content: '"';
+        }
+    }
+}
+
+cite,
+figcaption {
+    font-style: normal;
+    font-size: 14px;
+    &:before {
+        content: '- ';
+    }
+}

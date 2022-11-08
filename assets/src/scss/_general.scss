@@ -1,0 +1,48 @@
+* {
+    -webkit-font-smoothing: antialiased;
+    outline: none;
+    box-sizing: border-box;
+}
+html, body {
+    margin: 0;
+    padding: 0;
+    background: $bg;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: center;
+}
+body {
+    margin: 0;
+    font: 400 16px/19px $font;
+    letter-spacing: .02em;
+    color: $fontColor;
+    @include respond-to('mobile') {
+        font: 400 14px/17px $font;
+    }
+}
+input, textarea {
+    color: $fontColor;
+    font: 400 16px/19px $font;
+    @include respond-to('mobile') {
+        font: 400 14px/17px $font;
+    }
+}
+
+a img {
+    border: none;
+}
+
+img,
+picture {
+    object-fit: contain;
+    object-position: 50% 50%;
+    width: 100%;
+    height: 100%;
+}
+
+main,
+.main {
+    padding: 46px 0;
+}

@@ -1,0 +1,7 @@
+{
+    "name": "crispwp/starter",
+    "type": "project",    
+    "autoload": {
+        "psr-4": { "RST\\" : "src/" }
+    }
+}

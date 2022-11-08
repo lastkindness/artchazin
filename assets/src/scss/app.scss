@@ -1,0 +1,21 @@
+@import "fonts";
+@import "mixins";
+@import "vars";
+@import "typo";
+@import "grids";
+@import "modals";
+@import "general";
+
+@import "components/header";
+@import "components/footer";
+@import "components/button";
+@import "components/start-section";
+
+@import "pages/404";
+/**
+ *  Reset defaults
+ */
+html, body {
+    margin: 0;
+    padding: 0;
+}

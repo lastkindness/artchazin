@@ -1,0 +1,37 @@
+image: mklkj/php-node-composer-npm
+
+stages:
+- deploy
+
+before_script:
+# Install project dependencies
+- apt-get install sshpass
+- composer self-update
+# Build main app
+- npm install
+- npm run production
+- composer global remove hirak/prestissimo
+- composer install --ignore-platform-reqs
+# Remove fat sources
+- rm -rf .git
+- rm -rf creds.txt
+- rm -rf credsError.txt
+- rm -rf readme.md
+- rm -rf assets/src
+- rm -rf node_modules
+
+deploy-dev:
+  stage: deploy
+  only:
+  - dev
+  script:
+  # Deploy to development server ( .dev)
+  - rsync -a --stats --rsh="sshpass -p $DEV_PASW ssh -o StrictHostKeyChecking=no -l $DEV_USER" ./ $DEV_HOST:$DEV_PATH
+
+deploy-review:
+  stage: deploy
+  only:
+  - review
+  script:
+  # Deploy to staging server (.review)
+  - rsync -a --stats --rsh="sshpass -p $REVIEW_PASW ssh -o StrictHostKeyChecking=no -l $REVIEW_USER" ./ $REVIEW_HOST:$REVIEW_PATH
