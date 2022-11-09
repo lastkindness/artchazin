@@ -7,8 +7,6 @@
     <?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
-<header class="header" id="header">
-
-</header>
+<header class="header" id="header"></header>
 <main class="main">
 <?php # TODO: code here ?>
