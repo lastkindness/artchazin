@@ -10,7 +10,10 @@ blockquote p {
     hyphens: auto;
     max-width: 100%;
     margin: 0 0 1.45em;
-    line-height: 1.24em;
+    font-family: $font;
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 1.6em;
     &:last-child {
         margin: 0;
     }
@@ -85,7 +88,12 @@ h6 {
 }
 .h1,
 h1 {
-    font-size: 64px;
+    font-family: $fontCinzel;
+    font-weight: 400;
+    font-size: 48px;
+    line-height: 1.35em;
+
+    /*font-size: 64px;*/
     text-transform: uppercase;
     @include respond-to('desktop-m') {
         font-size: 52px;
@@ -96,7 +104,11 @@ h1 {
 }
 .h2,
 h2 {
-    font-size: 39px;
+    font-family: $fontCinzel;
+    font-weight: 400;
+    font-size: 40px;
+
+    /*font-size: 39px;*/
     text-transform: uppercase;
     @include respond-to('desktop-m') {
         font-size: 30px;
@@ -108,7 +120,11 @@ h2 {
 
 .h3,
 h3 {
-    font-size: 30px;
+    font-family: $fontCinzel;
+    font-weight: 400;
+    font-size: 36px;
+
+    /*font-size: 30px;*/
     @include respond-to('mobile') {
         font-size: 22px;
     }
@@ -116,7 +132,11 @@ h3 {
 
 .h4,
 h4 {
-    font-size: 24px;
+    font-family: $fontCinzel;
+    font-weight: 400;
+    font-size: 32px;
+
+    /*font-size: 24px;*/
     text-transform: uppercase;
     @include respond-to('mobile') {
         font-size: 18px;
@@ -125,7 +145,11 @@ h4 {
 
 .h5,
 h5 {
-    font-size: 18px;
+    font-family: $fontCinzel;
+    font-weight: 400;
+    font-size: 28px;
+
+    /*font-size: 18px;*/
     text-transform: uppercase;
     @include respond-to('mobile') {
         font-size: 16px;
@@ -133,8 +157,12 @@ h5 {
 }
 .h6,
 h6 {
-    font-weight: 700;
-    font-size: 18px;
+    font-family: $fontCinzel;
+    font-weight: 400;
+    font-size: 24px;
+
+    /*font-weight: 700;
+    font-size: 18px;*/
     @include respond-to('mobile') {
         font-size: 16px;
     }
@@ -144,7 +172,7 @@ h6 {
     font-size: inherit;
     @include animate(all);
     text-decoration: none;
-    color: $fontColor;
+    color: $linkColor;
     position: relative;
     cursor: pointer;
     &:before {
@@ -222,3 +250,4 @@ figcaption {
         content: '- ';
     }
 }
+

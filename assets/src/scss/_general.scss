@@ -3,6 +3,10 @@
     outline: none;
     box-sizing: border-box;
 }
+a {
+    text-decoration: none;
+    background-color: transparent;
+}
 html, body {
     margin: 0;
     padding: 0;
@@ -14,9 +18,12 @@ html, body {
     justify-content: center;
 }
 body {
+    height: 100%;
     margin: 0;
-    font: 400 16px/19px $font;
-    letter-spacing: .02em;
+    font-family: $font;
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 1.6em;
     color: $fontColor;
     @include respond-to('mobile') {
         font: 400 14px/17px $font;
@@ -45,4 +52,13 @@ picture {
 main,
 .main {
     padding: 46px 0;
+}
+
+.wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    flex-direction: column;
+    min-height: 100vh;
+    height: 100%;
 }
