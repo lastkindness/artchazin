@@ -9,11 +9,12 @@ blockquote p {
     -ms-hyphens: auto;
     hyphens: auto;
     max-width: 100%;
-    margin: 0 0 1.45em;
+    margin: 0 0 16px;
     font-family: $font;
     font-weight: 300;
     font-size: 20px;
     line-height: 1.6em;
+    color: $fontColor;
     &:last-child {
         margin: 0;
     }
@@ -169,6 +170,7 @@ h6 {
 }
 
 %a {
+
     font-size: inherit;
     @include animate(all);
     text-decoration: none;
@@ -223,8 +225,9 @@ i {
 }
 
 mark {
+    color: $fontColor;
+    background-color: $lightgold;
     padding: 5px;
-    background-color: transparentize($primary, 0.5);
 }
 
 blockquote,
@@ -248,6 +251,17 @@ figcaption {
     font-size: 14px;
     &:before {
         content: '- ';
+    }
+}
+
+ol, ul {
+    color: $headingColor;
+    font-weight: 400;
+
+    padding: 0 0 0 20px;
+    margin: 16px 0;
+    li {
+        margin: 0 0 16px;
     }
 }
 
