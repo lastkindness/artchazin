@@ -21,8 +21,8 @@
                         <li class="header__head-item"><a href="#" class="header__head-link">Terms and Conditions</a></li>
                     </ul>
                 </nav>
-                <div class="header__head-phone">
-                    <a href="tel:+97258-4797927" class="phone">+97258-4797927</a>
+                <div class="header__head-phone p3-italic">
+                    <a href="tel:+97258-4797927" class="phone"><span class="icon icon-telephone"></span><span>+97258-4797927</span></a>
                 </div>
             </div>
         </div>
@@ -32,16 +32,15 @@
             <div class="header__menu-wrapper">
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/src/img/artlogo.svg" alt="" class="header__menu-logo">
                 <nav class="header__menu-nav">
-                    <ul class="header__menu-list">
+                    <ul class="header__menu-list p3-italic">
                         <li class="header__menu-item"><a href="#" class="header__menu-link">GIFTS</a></li>
                         <li class="header__menu-item"><a href="#" class="header__menu-link">KETUBAH</a></li>
                         <li class="header__menu-item"><a href="#" class="header__menu-link">JEWISH ARTWORK</a></li>
                         <li class="header__menu-item"><a href="#" class="header__menu-link">INSTITUTIONS AND ORGANIZATION</a></li>
                         <li class="header__menu-item"><a href="#" class="header__menu-link">THE ILLUMINATED TORAH</a></li>
                     </ul>
-                    <div class="header__menu-dot">.</div>
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/src/img/search.svg" alt=""
-                         class="header__menu-img">
+                    <div class="header__menu-dot"></div>
+                    <div class="icon-search icon"></div>
                 </nav>
                 <div class="header__menu-lang">
                     <img src="<?php echo get_template_directory_uri(); ?>/assets/src/img/Eng.svg" alt="">
@@ -49,6 +48,7 @@
                     <img src="<?php echo get_template_directory_uri(); ?>/assets/src/img/Isr.svg" alt="">
                 </div>
             </div>
+                <div class="header__menu-line"></div>
         </div>
     </div>
 

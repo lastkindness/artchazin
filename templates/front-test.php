@@ -29,6 +29,20 @@ get_header('front'); ?>
                 <p>Words can be like X-rays, if you use them properly—they’ll go through anything. You read and you’re pierced.</p>
             </blockquote>
             <figcaption>—Aldous Huxley, <cite>Brave New World</cite></figcaption>
+            <a href="#">LINK</a>
+            <a class="btn" href="#">LINK</a>
+            <a disabled class="btn" href="#">LINK</a>
+            <a class="btn btn_lite" href="#">LINK</a>
+            <a disabled class="btn btn_lite" href="#">LINK</a>
+            <button class="btn btn_lite">LINK</button>
+            <button disabled class="btn btn_lite">LINK</button>
+            <button class="btn">LINK</button>
+            <button disabled class="btn">LINK</button>
+            <input type="button" value="LINK" class="btn">
+            <input disabled type="button" value="LINK" class="btn">
+            <input type="button" value="LINK" class="btn btn_lite">
+            <input disabled type="button" value="LINK" class="btn btn_lite">
+
         </div>
     </div>
 </section>

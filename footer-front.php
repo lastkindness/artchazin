@@ -21,7 +21,10 @@
                     </ul>
                 </nav>
                 <ul class="footer__contacts">
-                    <li class="footer__contacts-item"><a href="#" class="footer__contacts-link">97258-4797927</a></li>
+                    <li class="footer__contacts-item footer__contacts-phone">
+                        <div class="icon icon-telephone footer__contacts-number"></div>
+                        <a href="#" class="footer__contacts-link ">+97258-4797927</a>
+                    </li>
                     <li class="footer__contacts-item"><a href="#" class="footer__contacts-link">artchazin@gmail.com</a></li>
                     <li class="footer__contacts-item"><a href="#" class="footer__contacts-link">umanshalom.co.il</a></li>
                 </ul>

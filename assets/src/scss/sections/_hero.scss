@@ -1,0 +1,26 @@
+.hero {
+    &__wrapper {
+    padding: 186px 0px 25px 0px;
+
+    }
+    &__slide {
+        display: flex;
+        justify-content: center;
+        &-img {
+            width: 410px;
+            height: 421px;
+        }
+        &-content {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
+            margin-left: 45px;
+            max-width: 550px;
+        }
+        &-btn {
+            margin-top: 55px;
+        }
+
+    }
+}

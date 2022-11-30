@@ -2,48 +2,45 @@ a.btn,
 %btn,
 .btn,
 button {
-  font-size: 16px;
-  text-decoration: none;
-  text-transform: unset;
-  border-radius: 50px;
-  outline: none;
-  font-weight: 400;
-  background-color: transparent;
-  border: 1px solid $secondary;
-  color: $fontColor;
-  font-family: $font;
-  cursor: pointer;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  margin: 0 auto;
-  padding: 13px 24px;
-  align-self: center;
-  width: auto;
-  display: inline-flex;
-  @include animate(all);
-    @include respond-to('mobile') {
-        font-size: 14px;
-    }
-  &:before {
-    display: none;
-  }
-  &:hover,
-  &:active,
-  &:focus {
-    border: 1px solid $secondary;
-    background-color: $secondary;
-    color: $bg;
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    align-self: center;
+    min-width: 272px;
+    padding: 16px 64px;
+    margin: 0 auto;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 1.33em;
+    font-family: $fontCinzel;
+    cursor: pointer;
+    text-decoration: none;
     outline: none;
+    color: $headingColor;
+    opacity: 0.9;
+    border: 2px solid;
+    border-radius: 4px;
+    width: auto;
     @include animate(all);
-  }
-  &:disabled {
-    @include animate(all);
-    background-color: transparentize($fontColor, 0.9);
-    color: transparentize($fontColor, 0.5);
-    border: 1px solid $bg;
-    box-shadow: unset;
-    pointer-events: none;
-    cursor: default;
-  }
+    &:hover {
+        @include animate(all);
+        background-color: $headingColor;
+        color: $white;
+    }
+    &:active {
+        filter: drop-shadow(0px 0px 8px #0047FF);
+    }
+    &:disabled {
+        opacity: 0.4;
+        @include animate(all);
+        box-shadow: unset;
+        pointer-events: none;
+        cursor: default;
+   }
+    &_lite {
+        background-color: transparent;
+        color: $white;
+    }
 }

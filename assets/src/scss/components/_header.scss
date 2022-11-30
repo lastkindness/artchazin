@@ -5,7 +5,7 @@
         height: 53px;
         background: linear-gradient(180deg, rgba(255, 255, 200, 0.3) 0%, rgba(151, 121, 61, 0.3) 100%);
         &-link {
-            color: $white;
+            color: $darkgrey;
         }
         &-wrapper {
             display: flex;
@@ -26,24 +26,37 @@
             align-items: center;
             justify-content: center;
             margin: 0;
+            margin-top: 13px;
             padding: 0;
             list-style-type: none;
-            font-weight: 400;
-            font-size: 15px;
-            line-height: 18px;
+            font-weight: 300;
+            font-size: 14px;
+            line-height: 17px;
         }
         &-item {
             margin-right: 29px;
         }
         &-phone {
-            font-family: Inter-Italic;
+            font-family: $fontItalic;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 19px;
+            text-transform: uppercase;
+            .icon {
+                display: inline-block;
+                margin: 0 15px 0 0;
+                color: $darkgrey;
+            }
+            a.phone {
+                color: $darkgrey;
+            }
         }
 
     }
     &__menu {
         width: 100%;
         &-link {
-            color: $white;
+            color: $darkgrey;
         }
         &-lang {
             display: flex;
@@ -68,26 +81,35 @@
             align-items: center;
             justify-content: space-between;
             list-style-type: none;
-            font-family: Inter-Italic;
             margin: 0;
             padding: 0;
+            font-family: $fontItalic;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 19px;
+            text-transform: uppercase;
         }
         &-item {
-            margin-left: 15px;
-            margin-right: 17px;
+            margin: 0 14px 0 17px;
         }
         &-dot {
+            height: 4px;
+            width: 4px;
             margin-left: 16px;
-            margin-right: 16px;
+            margin-right: 25px;
+            border-radius: 50%;
+            background-color: $darkgrey;
         }
-        &-img {
-            display: flex;
-            align-items: center;
-            width: 18px;
-            height: 18px;
-            margin-left: 16px;
-            margin-right: 16px;
+        &-line {
+            /*display: flex;
+            align-items: flex-end;*/
+            margin-top: 34px;
+            width: 100%;
+            height: 0px;
+            border: 1px solid #F1F1ED;
         }
     }
 }
+
+
 

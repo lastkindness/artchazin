@@ -9,6 +9,7 @@
         display: flex;
         align-items: flex-end;
         justify-content: space-between;
+
     }
     &__logo {
         width: 23.27%;
@@ -17,14 +18,17 @@
         width: 47.61%;
     }
     &__menu{
+        list-style-type: none;
         margin: 0;
         padding: 0;
         display: grid;
+        /*align-self: end;*/
+        /*align-content: end;*/
         grid-template-columns: repeat(4, 1fr);
-        align-items: end;
-        align-content: space-around;
-        justify-content: space-between;
-        gap: 10px 20px;
+        /*align-content: space-around;
+        justify-content: space-between;*/
+        /*align-items: end;*/
+        gap: 7px 20px;
         &-link {
             color: $headingColor;
         }
@@ -33,16 +37,36 @@
         }
     }
     &__contacts {
+        list-style-type: none;
         padding: 0;
         margin: 0;
+        margin-bottom: 16px;
         width: 13.1%;
         text-align: right;
+        &-link {
+            color: $headingColor;
+        }
+        &-phone {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+
+        &-number {
+            font-family: $fontItalic;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 1.18empx;
+        }
+            .icon {
+                margin:0 10px 0 0;
+            }
+        }
     }
     &__copyright {
         display: flex;
         justify-content: center;
         align-items: flex-end;
-        margin-top: 84px;
+        margin-top: 80px;
         font-weight: 400;
         font-size: 15px;
         line-height: 170%;
