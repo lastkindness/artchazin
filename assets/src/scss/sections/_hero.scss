@@ -1,11 +1,31 @@
 .hero {
+    position: relative;
+    height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    &:before {
+        display: block;
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 0;
+        /*background: linear-gradient(0deg, rgba(0, 0, 0, 0) 56.44%, rgba(0, 0, 0, 0.44) 83.46%);*/
+        background: linear-gradient(107.55deg, rgba(26, 30, 32, 0.8) 0%, rgba(39, 49, 54, 0.8) 107.79%);
+    }
     &__wrapper {
-    padding: 186px 0px 25px 0px;
-
+        z-index: 1;
+        position: relative;
+        padding: 366px 0px 25px 0px;
     }
     &__slide {
         display: flex;
         justify-content: center;
+        align-items: center;
         &-img {
             width: 410px;
             height: 421px;
@@ -15,12 +35,65 @@
             flex-direction: column;
             justify-content: flex-start;
             align-items: flex-start;
+            text-align: left;
             margin-left: 45px;
             max-width: 550px;
         }
+        &-title {
+            color: $white;
+        }
+        &-descr {
+            color: $white;
+        }
         &-btn {
-            margin-top: 55px;
+            &.btn {
+                align-self: flex-start;
+                margin: 55px 0 0 0;
+
+            }
         }
 
+    }
+}
+
+
+.top-slider {
+    padding: 64px 0 64px 0;
+    &-divider {
+        margin: 0 auto;
+        height: 2px;
+        width: 45%;
+        align-items: center;
+        background-color: $lightgold;
+    }
+    &-descr {
+        margin: 0 auto;
+        margin-top: 8px;
+        width: 764px;
+        text-align: center;
+    }
+    &__cardwrap {
+        margin-top: 32px;
+        display: flex;
+        justify-content: space-between;
+    }
+    &__card {
+        padding: 40px 57.5px 32px 57.5px;
+        width: 539px;
+        height: 764px;
+        background-color: $hovergold;
+        &-img {
+            max-width: 424px;
+            max-height: 565px;
+        }
+        &-subtitle {
+            margin: 0;
+            margin-top: 30px;
+        }
+        &-price {
+            display: flex;
+            justify-content: center;
+            margin: 0;
+        }
     }
 }

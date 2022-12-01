@@ -42,5 +42,8 @@ button {
     &_lite {
         background-color: transparent;
         color: $white;
+        &:hover {
+            border-color: $headingColor;
+        }
     }
 }

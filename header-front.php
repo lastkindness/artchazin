@@ -8,7 +8,7 @@
 </head>
 <body <?php body_class(); ?>>
 <div class="wrapper">
-<header class="header" id="header">
+<header class="header header_transparent" id="header">
     <div class="header__head">
         <div class="container">
             <div class="header__head-wrapper">
@@ -44,7 +44,7 @@
                 </nav>
                 <div class="header__menu-lang">
                     <img src="<?php echo get_template_directory_uri(); ?>/assets/src/img/Eng.svg" alt="">
-                    <span>/</span>
+                    <span class="header__menu-span">/</span>
                     <img src="<?php echo get_template_directory_uri(); ?>/assets/src/img/Isr.svg" alt="">
                 </div>
             </div>
