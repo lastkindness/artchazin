@@ -53,4 +53,50 @@ get_header('front'); ?>
     </div>
 </section>
 
+<section class="banner" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/src/img/bgposthero.jpg')" >
+    <div class="container">
+        <div class="banner__wrapper">
+            <div class="banner__descr">
+                <h1 class="banner__descr-title">Lorem Ipsum</h1>
+                <p2 class="banner__descr-descr">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p2>
+                <div class="banner__descr-readmore">
+                    <a href="" class="banner__descr-readmore-link">Read More</a>
+                    <div class="banner__descr-readmore-arrow icon icon-arrowr"><a href="" class="banner__descr-readmore-arrow-link"></a></div>
+                </div>
+            </div>
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/src/img/product.png" alt="" class="banner__img">
+            <div class="banner__box">
+                <div class="banner__box__item">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/src/img/pentagram.svg" alt="" class="banner__box__item-img">
+                    <div class="banner__box__item__descr">
+                        <h6 class="banner__box__item__descr-title">Some Good Title</h6>
+                        <p5 class="banner__box__item__descr-text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy</p5>
+                    </div>
+                </div>
+                <div class="banner__box__item">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/src/img/pentagram.svg" alt="" class="banner__box__item-img">
+                    <div class="banner__box__item__descr">
+                        <h6 class="banner__box__item__descr-title">Some Good Title</h6>
+                        <p5 class="banner__box__item__descr-text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy</p5>
+                    </div>
+                </div>
+                <div class="banner__box__item">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/src/img/pentagram.svg" alt="" class="banner__box__item-img">
+                    <div class="banner__box__item__descr">
+                        <h6 class="banner__box__item__descr-title">Some Good Title</h6>
+                        <p5 class="banner__box__item__descr-text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy</p5>
+                    </div>
+                </div>
+                <div class="banner__box__item">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/src/img/pentagram.svg" alt="" class="banner__box__item-img">
+                    <div class="banner__box__item__descr">
+                        <h6 class="banner__box__item__descr-title">Some Good Title</h6>
+                        <p5 class="banner__box__item__descr-text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy</p5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
 <?php get_footer('front'); ?>
