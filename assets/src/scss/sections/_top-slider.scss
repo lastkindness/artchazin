@@ -1,1 +1,41 @@
-
+.top-slider {
+    padding: 64px 0 64px 0;
+    &__divider {
+        margin: 0 auto;
+        height: 2px;
+        width: 45%;
+        margin-top: 16px;
+        align-items: center;
+        background-color: $lightgold;
+    }
+    &__descr {
+        margin: 0 auto;
+        margin-top: 8px;
+        width: 764px;
+        text-align: center;
+    }
+    &__cardwrap {
+        margin-top: 32px;
+        display: flex;
+        justify-content: space-between;
+    }
+    &__card {
+        padding: 40px 57.5px 32px 57.5px;
+        width: 539px;
+        height: 764px;
+        background-color: $hovergold;
+        &-img {
+            max-width: 424px;
+            max-height: 565px;
+        }
+        &-subtitle {
+            margin: 0;
+            margin-top: 30px;
+        }
+        &-price {
+            display: flex;
+            justify-content: center;
+            margin: 0;
+        }
+    }
+}

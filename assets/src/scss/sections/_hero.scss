@@ -14,18 +14,17 @@
         left: 0;
         right: 0;
         z-index: 0;
-        /*background: linear-gradient(0deg, rgba(0, 0, 0, 0) 56.44%, rgba(0, 0, 0, 0.44) 83.46%);*/
         background: linear-gradient(107.55deg, rgba(26, 30, 32, 0.8) 0%, rgba(39, 49, 54, 0.8) 107.79%);
     }
     &__wrapper {
         z-index: 1;
         position: relative;
-        padding: 366px 0px 25px 0px;
+        padding: 386px 0px 25px 0px;
     }
     &__slide {
         display: flex;
         justify-content: center;
-        align-items: center;
+        /*align-items: center;*/
         &-img {
             width: 410px;
             height: 421px;
@@ -37,13 +36,16 @@
             align-items: flex-start;
             text-align: left;
             margin-left: 45px;
-            max-width: 550px;
+            max-width: 500px;
         }
         &-title {
+            margin-top: 4px;
             color: $white;
+            font-family: $fontCinzel;
         }
         &-descr {
-            color: $white;
+            color: transparentize($white, 0.7);
+            margin-top: 10px;
         }
         &-btn {
             &.btn {
@@ -57,127 +59,6 @@
 }
 
 
-.top-slider {
-    padding: 64px 0 64px 0;
-    &-divider {
-        margin: 0 auto;
-        height: 2px;
-        width: 45%;
-        margin-top: 16px;
-        align-items: center;
-        background-color: $lightgold;
-    }
-    &-descr {
-        margin: 0 auto;
-        margin-top: 8px;
-        width: 764px;
-        text-align: center;
-    }
-    &__cardwrap {
-        margin-top: 32px;
-        display: flex;
-        justify-content: space-between;
-    }
-    &__card {
-        padding: 40px 57.5px 32px 57.5px;
-        width: 539px;
-        height: 764px;
-        background-color: $hovergold;
-        &-img {
-            max-width: 424px;
-            max-height: 565px;
-        }
-        &-subtitle {
-            margin: 0;
-            margin-top: 30px;
-        }
-        &-price {
-            display: flex;
-            justify-content: center;
-            margin: 0;
-        }
-    }
-}
 
-.banner {
-    position: relative;
-    padding: 136px 0 125px 0;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    /*&:before {
-    display: block;
-    content: "";
-    position: relative;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 0;
-    background: linear-gradient(107.55deg, rgba(26, 30, 32, 0.8) 0%, rgba(39, 49, 54, 0.8) 107.79%);
-    }*/
-    &__wrapper {
-        display: flex;
-        justify-content: space-between;
-    }
-    &__descr {
-        max-width: 474px;
-        margin-top: 72px;
-        &-title {
-            text-align: left;
-            color: $white;
-            margin-bottom: 16px;
-        }
-        &-descr {
-            color: $white;
-        }
-        &-readmore {
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            margin-top: 15px;
-            color: $white;
-            /*&-arrow {
-                width: 7px;
-                height: 12px;
-            }*/
-            &-link {
-                color: $white;
-                margin-right: 16px;
-            }
-        }
-    }
-    &__img {
-        max-width: 468px;
-        max-height: 480px;
-    }
-    &__box {
-        display: flex;
-        flex-direction: column;
-        &__item {
-            display: flex;
-            flex-direction: row;
-            max-width: 400px;
-            margin:0 50px 32px 0;
-            &__descr {
-                display: flex;
-                flex-direction: column;
-                justify-content: flex-start;
-                align-items: flex-start;
-                color: $white;
-                &-title {
-                    color: $white;
-                }
-                &-text {
 
-                }
-            }
-            &-img {
-                width: 84px;
-                height: 84px;
-                margin-right: 32px;
-            }
-        }
-    }
-}
+

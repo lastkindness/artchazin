@@ -48,6 +48,22 @@
 }
 
 @font-face {
+    font-family: 'Arizonia';
+    src: url('../fonts/Arizonia-Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+    font-display: block;
+}
+
+@font-face {
+    font-family: 'Abyssinica SIL';
+    src: url('../fonts/AbyssinicaSIL-Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+    font-display: block;
+}
+
+@font-face {
     font-family: 'icomoon';
     src: url('../fonts/iconmoon/icomoon.woff2') format('woff2');
     font-weight: normal;

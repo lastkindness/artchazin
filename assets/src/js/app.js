@@ -3,12 +3,12 @@
 /**
  *  Load modules
  */
-import echo from './modules/echo.js';
+import Swiper from 'swiper/swiper-bundle.min';
 
 import '../scss/app.scss';
 
 $(document).ready(() => {
 
-    echo('App ready');
+    ;
 
 });
