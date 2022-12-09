@@ -58,6 +58,51 @@
     }
 }
 
+.swiper-pagination {
+    &-bullet {
+        border: 2px solid $white ;
+    }
+    &-bullet-active {
+        border: none;
+        background: linear-gradient(180deg, #FFFFC8 0%, #97793D 100%);
+    }
+}
+
+.swiper-button {
+    &-next {
+        margin-top: 80px;
+        color: $greyColor;
+        &:after {
+            font-family: Inter;
+            font-size: 0;
+            text-transform: none !important;
+            letter-spacing: 0;
+            font-variant: none;
+            line-height: 0;
+        }
+        &:before {
+            font-size: 56px;
+        }
+    }
+    &-prev {
+        transform: rotate(180deg);
+        margin-top: 80px;
+        color: $greyColor;
+        &:after {
+            font-family: Inter;
+            font-size: 0;
+            text-transform: none !important;
+            letter-spacing: 0;
+            font-variant: none;
+            line-height: 0;
+        }
+        &:before {
+            font-size: 56px;
+        }
+    }
+
+}
+
 
 
 

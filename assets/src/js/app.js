@@ -3,12 +3,12 @@
 /**
  *  Load modules
  */
-import Swiper from 'swiper/swiper-bundle.min';
+import heroSlider from "./modules/hero-slider"
 
 import '../scss/app.scss';
 
 $(document).ready(() => {
 
-    ;
+    heroSlider();
 
 });

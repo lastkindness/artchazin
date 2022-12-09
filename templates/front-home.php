@@ -7,9 +7,9 @@ get_header('front'); ?>
 
 <section class="hero" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/src/img/herobg.jpg')">
     <div class="container">
-        <div class="hero__wrapper">
-            <div class="hero__slider">
-                <div class="hero__slide">
+        <div class="hero__wrapper swiper">
+            <div class="hero__slider swiper-wrapper">
+                <div class="hero__slide swiper-slide">
                     <img src="<?php echo get_template_directory_uri(); ?>/assets/src/img/product.png" alt="" class="hero__slide-img">
                     <div class="hero__slide-content">
                         <h1 class="hero__slide-title">Lorem Ipsum</h1>
@@ -17,14 +17,43 @@ get_header('front'); ?>
                         <a href="#" class="hero__slide-btn btn btn_lite">Go To Order</a>
                     </div>
                 </div>
+                <div class="hero__slide swiper-slide">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/src/img/onepost.jpg" alt="" class="hero__slide-img">
+                    <div class="hero__slide-content">
+                        <h1 class="hero__slide-title">Lorem Light</h1>
+                        <p class="hero__slide-descr p3">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
+                        <a href="#" class="hero__slide-btn btn btn_lite">Go To Order</a>
+                    </div>
+                </div>
+                <div class="hero__slide swiper-slide">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/src/img/torah1.png" alt="" class="hero__slide-img">
+                    <div class="hero__slide-content">
+                        <h1 class="hero__slide-title">Lorem Book</h1>
+                        <p class="hero__slide-descr p3">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
+                        <a href="#" class="hero__slide-btn btn btn_lite">Go To Order</a>
+                    </div>
+                </div>
+                <div class="hero__slide swiper-slide">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/src/img/torah2.png" alt="" class="hero__slide-img">
+                    <div class="hero__slide-content">
+                        <h1 class="hero__slide-title">Lorem Tower</h1>
+                        <p class="hero__slide-descr p3">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
+                        <a href="#" class="hero__slide-btn btn btn_lite">Go To Order</a>
+                    </div>
+                </div>
             </div>
+            <div class="hero__navigation">
+                <div class="swiper-button-next icon icon-arrowr"></div>
+                <div class="swiper-button-prev icon icon-arrowr"></div>
+            </div>
+            <div class="hero__pagination swiper-pagination"></div>
         </div>
     </div>
 </section>
 
 <section class="top-slider">
     <div class="container">
-        <div class="top-slider__wrapper">
+        <div class="top-slider__wrapper swiper">
             <h1 class="top-slider__title">SOME GOOD TOTLE</h1>
             <div class="top-slider__divider"></div>
             <div class="top-slider__descr">
