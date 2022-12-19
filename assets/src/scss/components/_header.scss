@@ -5,7 +5,7 @@
     left: 0;
     right: 0;
     z-index: 100;
-    background: linear-gradient(180deg, #1E1C1C 18.22%, rgba(4, 4, 4, 0) 100%);
+    /*background: linear-gradient(180deg, #1E1C1C 18.22%, rgba(4, 4, 4, 0) 100%);*/
     &__head {
         width: 100%;
         height: 53px;
@@ -41,6 +41,11 @@
         }
         &-item {
             margin-right: 29px;
+            &.active {
+                a {
+                    color: $headingColor;
+                }
+            }
         }
         &-phone {
             font-family: $fontItalic;
@@ -62,7 +67,7 @@
     &__menu {
         width: 100%;
         &-link {
-            color: $darkgrey;
+            color: $greyColor;
         }
         &-lang {
             display: flex;
@@ -97,6 +102,11 @@
         }
         &-item {
             margin: 0 14px 0 17px;
+            &.active {
+                a {
+                color: $headingColor;
+                }
+            }
         }
         &-dot {
             height: 4px;
@@ -104,7 +114,10 @@
             margin-left: 16px;
             margin-right: 25px;
             border-radius: 50%;
-            background-color: $darkgrey;
+            background-color: $greyColor;
+        }
+        .icon {
+            color: $greyColor;
         }
         &-span {
             margin: 0 8px;

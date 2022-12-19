@@ -1,11 +1,24 @@
 .footer {
-    padding: 54px 0 52px 0;
+    padding: 17px 0 52px 0;
     width: 100%;
     background-color: $bgColor;
     &__wrapper {
 
     }
+    &__divider {
+        opacity: 0.2;
+        border: 1px solid $headingColor;
+        max-width: 1740px;
+        margin: 0 auto;
+        @include respond-to('tablet') {
+            max-width: 904px;
+        }
+        @include respond-to('mobile-sm') {
+            max-width: 311px;
+        }
+    }
     &__main {
+        margin-top: 55px;
         display: flex;
         align-items: flex-end;
         justify-content: space-between;

@@ -16,7 +16,7 @@ blockquote p {
     line-height: 1.6em;
     color: $fontColor;
     &:last-child {
-        margin: 0;
+        margin-bottom: 0;
     }
 }
 
@@ -98,10 +98,10 @@ h1 {
 
     /*font-size: 64px;*/
     text-transform: uppercase;
-    @include respond-to('desktop-m') {
-        font-size: 52px;
+    @include respond-to('tablet') {
+        font-size: 48px;
     }
-    @include respond-to('mobile') {
+    @include respond-to('mobile-sm') {
         font-size: 36px;
     }
 }
@@ -114,10 +114,7 @@ h2 {
 
     /*font-size: 39px;*/
     text-transform: uppercase;
-    @include respond-to('desktop-m') {
-        font-size: 30px;
-    }
-    @include respond-to('mobile') {
+    @include respond-to('mobile-sm') {
         font-size: 24px;
     }
 }

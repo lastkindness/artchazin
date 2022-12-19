@@ -1,5 +1,14 @@
 .top-slider {
     padding: 64px 0 64px 0;
+    &__wrapper {
+        overflow: visible;
+        visibility: visible;
+    }
+    &__title {
+        @include respond-to('mobile-sm') {
+            font-size: 32px;
+        }
+    }
     &__divider {
         margin: 0 auto;
         height: 2px;
@@ -20,22 +29,6 @@
         justify-content: space-between;
     }
     &__card {
-        padding: 40px 57.5px 32px 57.5px;
-        width: 539px;
-        height: 764px;
-        background-color: $hovergold;
-        &-img {
-            max-width: 424px;
-            max-height: 565px;
-        }
-        &-subtitle {
-            margin: 0;
-            margin-top: 30px;
-        }
-        &-price {
-            display: flex;
-            justify-content: center;
-            margin: 0;
-        }
+
     }
 }

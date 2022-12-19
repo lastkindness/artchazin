@@ -45,6 +45,9 @@
         font-size: 64px;
         line-height: 150%;
         color: $white;
+        @include respond-to('mobile-sm') {
+            font-size: 50px;
+        }
         &-mark {
             font-family: $fontArizonia;
             font-weight: 400;
@@ -53,6 +56,9 @@
             text-align: center;
             text-transform: capitalize;
             color: $lightgold;
+            @include respond-to('mobile-sm') {
+                font-size: 72px;
+            }
         }
     }
 }

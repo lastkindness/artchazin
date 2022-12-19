@@ -1,0 +1,106 @@
+.card {
+    padding: 40px 57.5px 32px 57.5px;
+    height: auto;
+    background-color: $hovergold;
+    opacity: 0;
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    position: relative;
+    min-height: 776px;
+    @include animate(all);
+    &:hover {
+        .card {
+            &__text {
+                display: block;
+                z-index: 1;
+                opacity: 1;
+                /*max-height: 400px;*/
+                @include animate(all);
+            }
+            &__btn {
+                display: block;
+                position: static;
+                z-index: 1;
+                opacity: 1;
+                /*max-height: 70px;*/
+                @include animate(all);
+                &.btn {
+                    display: inline-flex;
+                }
+            }
+            &__img {
+                width: 65.67%;
+                height: 360px;
+                @include animate(all);
+            }
+        }
+    }
+    &__content {
+        flex-grow: 1;
+        margin-top: 37px;
+    }
+    &__price {
+        margin-top: 31px;
+    }
+    &__text {
+        display: none;
+        position: relative;
+        /*max-height: 0;*/
+        /*overflow: hidden;*/
+        margin: 8px auto 0;
+        text-align: center;
+        /*z-index: -1;*/
+        opacity: 0;
+        @include animate(all);
+    }
+    &__img {
+        flex-grow: 0;
+        width: 100%;
+        height: 550px;
+        object-fit: cover;
+        margin: 0 auto;
+        @include animate(all);
+    }
+    &__title {
+        margin: 0;
+    }
+    &__price {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: center;
+        margin: 31px 0 0 0;
+    }
+    &__btn {
+        flex-grow: 0;
+        /*z-index: -1;
+        opacity: 0;
+        max-height: 0;*/
+        @include animate(all);
+        &.btn {
+            display: none;
+            margin-top: 17px;
+            @include animate(all);
+            @include respond-to('mobile-sm') {
+                padding: 16px 41.5px;
+            }
+        }
+    }
+    &.swiper {
+        &-slide {
+            &-active {
+                opacity: 1;
+                @include animate(all);
+                &+.card {
+                    opacity: 1;
+                    @include animate(all);
+                    &+.card {
+                        opacity: 1;
+                        @include animate(all);
+                    }
+                }
+            }
+        }
+    }
+}

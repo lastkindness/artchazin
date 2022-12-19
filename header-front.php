@@ -8,13 +8,13 @@
 </head>
 <body <?php body_class(); ?>>
 <div class="wrapper">
-<header class="header header_transparent" id="header">
+<header class="header" id="header">
     <div class="header__head">
         <div class="container">
             <div class="header__head-wrapper">
                 <nav class="header__head-nav">
                     <ul class="header__head-list">
-                        <li class="header__head-item"><a href="#" class="header__head-link">Goods Packaging</a></li>
+                        <li class="header__head-item active"><a href="#" class="header__head-link">Goods Packaging</a></li>
                         <li class="header__head-item"><a href="#" class="header__head-link">News and Articles</a></li>
                         <li class="header__head-item"><a href="#" class="header__head-link">Promotions and Discounts</a></li>
                         <li class="header__head-item"><a href="#" class="header__head-link">Payment and Delivery</a></li>
@@ -30,10 +30,11 @@
     <div class="header__menu">
         <div class="container">
             <div class="header__menu-wrapper">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/src/img/artlogo.svg" alt="" class="header__menu-logo">
+<!--                <img src="<?php echo get_template_directory_uri(); ?>/assets/src/img/artlogo.svg" alt="" class="header__menu-logo">-->
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/src/img/artlogo3.svg" alt="" class="header__menu-logo">
                 <nav class="header__menu-nav">
                     <ul class="header__menu-list p3-italic">
-                        <li class="header__menu-item"><a href="#" class="header__menu-link">GIFTS</a></li>
+                        <li class="header__menu-item active"><a href="#" class="header__menu-link">GIFTS</a></li>
                         <li class="header__menu-item"><a href="#" class="header__menu-link">KETUBAH</a></li>
                         <li class="header__menu-item"><a href="#" class="header__menu-link">JEWISH ARTWORK</a></li>
                         <li class="header__menu-item"><a href="#" class="header__menu-link">INSTITUTIONS AND ORGANIZATION</a></li>

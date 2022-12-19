@@ -59,23 +59,49 @@ get_header('front'); ?>
             <div class="top-slider__descr">
                 <p class="p3">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
             </div>
-            <div class="top-slider__cardwrap">
-                <div class="top-slider__card">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/src/img/productheart.png" alt="" class="top-slider__card-img">
-                    <h2 class="top-slider__card-subtitle">NAME OF PRODUCT</h2>
-                    <p class="top-slider__card-price p1">999$</p>
+            <div class="top-slider__cardwrap swiper-wrapper">
+                <div class="top-slider__card card swiper-slide">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/src/img/delivery.jpg" alt="" class="top-slider__card-img card__img">
+                    <div class="card__content top-slider__card-content">
+                        <h2 class="top-slider__card-title card__title">NAME OF PRODUCT</h2>
+                        <p class="card__text p3 top-slider__card-text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. </p>
+                        <div class="top-slider__card-price card__price p1">999$</div>
+                    </div>
+                    <a href="#" class="btn card__btn top-slider__card-btn">Go To Order</a>
                 </div>
-                <div class="top-slider__card">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/src/img/productheart.png" alt="" class="top-slider__card-img">
-                    <h2 class="top-slider__card-subtitle">NAME OF PRODUCT</h2>
-                    <p class="top-slider__card-price p1">999$</p>
+                <div class="top-slider__card card swiper-slide">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/src/img/productcard1.png" alt="" class="top-slider__card-img card__img">
+                    <div class="card__content top-slider__card-content">
+                        <h2 class="top-slider__card-title card__title">NAME OF PRODUCT</h2>
+                        <p class="card__text p3 top-slider__card-text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+                        <div class="top-slider__card-price card__price p1">999$</div>
+                    </div>
+                    <a href="#" class="btn card__btn top-slider__card-btn">Go To Order</a>
                 </div>
-                <div class="top-slider__card">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/src/img/productheart.png" alt="" class="top-slider__card-img">
-                    <h2 class="top-slider__card-subtitle">NAME OF PRODUCT</h2>
-                    <p class="top-slider__card-price p1">999$</p>
+                <div class="top-slider__card card swiper-slide">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/src/img/productheart.png" alt="" class="top-slider__card-img card__img">
+                    <div class="card__content top-slider__card-content">
+                        <h2 class="top-slider__card-title card__title">NAME OF PRODUCT</h2>
+                        <p class="card__text p3 top-slider__card-text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh . </p>
+                        <div class="top-slider__card-price card__price p1">999$</div>
+                    </div>
+                    <a href="#" class="btn card__btn top-slider__card-btn">Go To Order</a>
+                </div>
+                <div class="top-slider__card card swiper-slide">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/src/img/torah2.png" alt="" class="top-slider__card-img card__img">
+                    <div class="card__content top-slider__card-content">
+                        <h2 class="top-slider__card-title card__title">NAME OF PRODUCT</h2>
+                        <p class="card__text p3 top-slider__card-text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+                        <div class="top-slider__card-price card__price p1">999$</div>
+                    </div>
+                    <a href="#" class="btn card__btn top-slider__card-btn">Go To Order</a>
                 </div>
             </div>
+            <div class="top-slider__navigation swiper-navigation">
+                <div class="swiper-button-prev icon icon-arrowr"></div>
+                <div class="swiper-button-next icon icon-arrowr"></div>
+            </div>
+            <div class="top-slider__pagination swiper-pagination"></div>
         </div>
     </div>
 </section>
@@ -130,6 +156,95 @@ get_header('front'); ?>
         <div class="wall__wrapper">
             <img src="<?php echo get_template_directory_uri(); ?>/assets/src/img/bigpentagram.svg" alt="" class="wall__pentagram">
             <p class="wall__descr"><span class="wall__descr-mark">Lorem ipsum</span> Dolor Sit Amet, Consectetuer Adipiscing Elit, Sed Diam Nonummy</p>
+        </div>
+    </div>
+</section>
+
+<section class="top-slider">
+    <div class="container">
+        <div class="top-slider__wrapper swiper">
+            <h1 class="top-slider__title">SOME GOOD TOTLE</h1>
+            <div class="top-slider__divider"></div>
+            <div class="top-slider__descr">
+                <p class="p3">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
+            </div>
+            <div class="top-slider__cardwrap swiper-wrapper">
+                <div class="top-slider__card card swiper-slide">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/src/img/productheart.png" alt="" class="top-slider__card-img card__img">
+                    <div class="card__content top-slider__card-content">
+                        <h2 class="top-slider__card-title card__title">NAME OF PRODUCT</h2>
+                        <p class="card__text p3 top-slider__card-text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. </p>
+                        <div class="top-slider__card-price card__price p1">999$</div>
+                    </div>
+                    <a href="#" class="btn card__btn top-slider__card-btn">Go To Order</a>
+                </div>
+                <div class="top-slider__card card swiper-slide">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/src/img/productheart.png" alt="" class="top-slider__card-img card__img">
+                    <div class="card__content top-slider__card-content">
+                        <h2 class="top-slider__card-title card__title">NAME OF PRODUCT</h2>
+                        <p class="card__text p3 top-slider__card-text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. </p>
+                        <div class="top-slider__card-price card__price p1">999$</div>
+                    </div>
+                    <a href="#" class="btn card__btn top-slider__card-btn">Go To Order</a>
+                </div>
+                <div class="top-slider__card card swiper-slide">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/src/img/productheart.png" alt="" class="top-slider__card-img card__img">
+                    <div class="card__content top-slider__card-content">
+                        <h2 class="top-slider__card-title card__title">NAME OF PRODUCT</h2>
+                        <p class="card__text p3 top-slider__card-text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. </p>
+                        <div class="top-slider__card-price card__price p1">999$</div>
+                    </div>
+                    <a href="#" class="btn card__btn top-slider__card-btn">Go To Order</a>
+                </div>
+                <div class="top-slider__card card swiper-slide">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/src/img/productheart.png" alt="" class="top-slider__card-img card__img">
+                    <div class="card__content top-slider__card-content">
+                        <h2 class="top-slider__card-title card__title">NAME OF PRODUCT</h2>
+                        <p class="card__text p3 top-slider__card-text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. </p>
+                        <div class="top-slider__card-price card__price p1">999$</div>
+                    </div>
+                    <a href="#" class="btn card__btn top-slider__card-btn">Go To Order</a>
+                </div>
+                <div class="top-slider__card card swiper-slide">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/src/img/productheart.png" alt="" class="top-slider__card-img card__img">
+                    <div class="card__content top-slider__card-content">
+                        <h2 class="top-slider__card-title card__title">NAME OF PRODUCT</h2>
+                        <p class="card__text p3 top-slider__card-text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. </p>
+                        <div class="top-slider__card-price card__price p1">999$</div>
+                    </div>
+                    <a href="#" class="btn card__btn top-slider__card-btn">Go To Order</a>
+                </div>
+                <div class="top-slider__card card swiper-slide">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/src/img/productheart.png" alt="" class="top-slider__card-img card__img">
+                    <div class="card__content top-slider__card-content">
+                        <h2 class="top-slider__card-title card__title">NAME OF PRODUCT</h2>
+                        <p class="card__text p3 top-slider__card-text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. </p>
+                        <div class="top-slider__card-price card__price p1">999$</div>
+                    </div>
+                    <a href="#" class="btn card__btn top-slider__card-btn">Go To Order</a>
+                </div>
+            </div>
+            <div class="top-slider__navigation swiper-navigation">
+                <div class="swiper-button-prev icon icon-arrowr"></div>
+                <div class="swiper-button-next icon icon-arrowr"></div>
+            </div>
+            <div class="hero__pagination swiper-pagination"></div>
+        </div>
+    </div>
+</section>
+
+<section class="callback" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/src/img/peoplecallback.jpg')">
+    <div class="container">
+        <div class="callback__wrapper">
+            <div class="callback__title h1">get a call back</div>
+            <form class="callback__form" action="/my-handling-form-page" method="post">
+                    <input class="callback__form-name" type="text" id="name" name="user_name" placeholder="Name">
+                    <input class="callback__form-phone" type="email" id="mail" name="user_email" placeholder="Phone">
+                    <textarea class="callback__form-comment" id="msg" name="user_message" placeholder="Comment"></textarea>
+            </form>
+            <div class="callback__button button_lite">
+                <button class="callback__button_lite btn_lite" type="submit">Call Me</button>
+            </div>
         </div>
     </div>
 </section>
