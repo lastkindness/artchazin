@@ -16,6 +16,9 @@
         margin-top: 16px;
         align-items: center;
         background-color: $lightgold;
+        @include respond-to('desktop') {
+            width: 75%;
+        }
     }
     &__descr {
         margin: 0 auto;

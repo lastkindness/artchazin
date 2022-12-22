@@ -109,7 +109,7 @@ get_header('front'); ?>
 <section class="banner" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/src/img/bgposthero.jpg')" >
     <div class="container">
         <div class="banner__wrapper">
-            <div class="banner__descr">
+            <div class="banner__descr ">
                 <h1 class="banner__descr-title">Lorem Ipsum</h1>
                 <p class="banner__descr-descr p2">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
                 <div class="banner__descr-readmore">

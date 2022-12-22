@@ -6,10 +6,15 @@
     right: 0;
     z-index: 100;
     /*background: linear-gradient(180deg, #1E1C1C 18.22%, rgba(4, 4, 4, 0) 100%);*/
+    &__burger {
+        display: none;
+    }
     &__head {
+        padding: 18px 0;
         width: 100%;
-        height: 53px;
+        max-height: 300px;
         background: linear-gradient(180deg, rgba(255, 255, 200, 0.3) 0%, rgba(151, 121, 61, 0.3) 100%);
+        @include animate(all);
         &-link {
             color: $darkgrey;
         }
@@ -17,22 +22,24 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
-            height: 53px;
             &:before {
                 content: "";
                 display: block;
                 width: 391px;
+                @include respond-to('desktop-m') {
+                    display: none;
+                }
             }
         }
         &-nav {
 
         }
         &-list {
+            flex-wrap: wrap;
             display: flex;
             align-items: center;
-            justify-content: center;
-            margin: 0;
-            margin-top: 13px;
+            justify-content: flex-start;
+            margin: 0 0 -16px;
             padding: 0;
             list-style-type: none;
             font-weight: 300;
@@ -53,6 +60,7 @@
             font-size: 16px;
             line-height: 19px;
             text-transform: uppercase;
+            min-width: 170px;
             .icon {
                 display: inline-block;
                 margin: 0 15px 0 0;
@@ -73,6 +81,10 @@
             display: flex;
             align-items: center;
             justify-content: flex-end;
+            width: 60px;
+            &_mobile {
+                display: none;
+            }
         }
         &-wrapper{
             display: flex;
@@ -82,26 +94,51 @@
         &-logo {
             width: 391px;
             margin-top: 16px;
+            @include respond-to('desktop-m'){
+                max-width: 351px;
+            }
+            @include respond-to('tablet'){
+                max-width: 196px;
+            }
         }
         &-nav {
+            width: calc(100% - 90px - 391px);
             display: flex;
             align-items: center;
+            @include respond-to('tablet') {
+                margin-right: 30px;
+            }
+        }
+        &-items {
+            width: calc(100% - 45px - 20px);
         }
         &-list {
             display: flex;
             align-items: center;
-            justify-content: space-between;
+            justify-content: flex-start;
+            flex-wrap: wrap;
             list-style-type: none;
-            margin: 0;
+            margin: 0 0 -16px;
             padding: 0;
             font-family: $fontItalic;
             font-weight: 400;
             font-size: 16px;
             line-height: 19px;
             text-transform: uppercase;
+            &-dot_adapt {
+                .dot_adapt {
+                    @include respond-to('desktop-m') {
+                        display: block;
+                    }
+                }
+
+            }
+            @include respond-to('desktop-m') {
+                max-width: 700px;
+            }
         }
         &-item {
-            margin: 0 14px 0 17px;
+            margin: 0 14px 16px 0;
             &.active {
                 a {
                 color: $headingColor;
@@ -115,9 +152,15 @@
             margin-right: 25px;
             border-radius: 50%;
             background-color: $greyColor;
+            display: block;
+            @include respond-to('desktop-m'){
+
+            }
         }
         .icon {
             color: $greyColor;
+            @include respond-to('desktop-m'){
+            }
         }
         &-span {
             margin: 0 8px;
@@ -165,6 +208,126 @@
     }
 }
 
+.header__menu-dot {
+
+}
+
+body.scroll {
+    .header {
+        &__head {
+            overflow: hidden;
+            padding: 0;
+            max-height: 0;
+            @include animate(all);
+        }
+        &__menu {
+            width: 100%;
+            background: $headingColor;
+            &-link {
+                color: $greyColor;
+            }
+            &-lang {
+                display: flex;
+                align-items: center;
+                justify-content: flex-end;
+                &_mobile {
+                    display: none;
+                }
+            }
+            &-wrapper{
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                padding: 13px 0 4px;
+            }
+            &-logo {
+                width: 195px;
+                margin: 0;
+            }
+            &-nav {
+                display: flex;
+                align-items: center;
+            }
+            &-list {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                flex-wrap: wrap;
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+                font-family: $fontItalic;
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 19px;
+                text-transform: uppercase;
+                @include respond-to('desktop-m') {
+                    max-width: 700px;
+                }
+            }
+            &-item {
+                margin: 0 14px 0 17px;
+                &.active {
+                    a {
+                        color: $white;
+                    }
+                }
+            }
+            &-dot {
+                display: block;
+                @include respond-to('desktop-m'){
+                    margin: 0;
+                    display: none;
+                }
+            }
+            .icon {
+                color: $greyColor;
+                @include respond-to('desktop-m'){
+                    margin: 0;
+                    display: none;
+                }
+            }
+            &-span {
+                margin: 0 8px;
+                color: $white;
+            }
+            &-line {
+                display: none;
+            }
+        }
+        &_transparent {
+            .header {
+                &__head {
+                    &-link {
+                        color: $white;
+                    }
+                    &-phone {
+                        .icon {
+                            color: $notwhite;
+                        }
+                        a.phone {
+                            color: $notwhite;
+                        }
+                    }
+                }
+                &__menu {
+                    &-line {
+                        display: none;
+                    }
+                    &-link {
+                        color: $white;
+                    }
+                    &-dot {
+                        background-color: $white;
+                    }
+                    .icon {
+                        color: $white;
+                    }
+                }
+            }
+        }
+    }
+}
 
 
 

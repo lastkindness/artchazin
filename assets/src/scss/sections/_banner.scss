@@ -21,10 +21,17 @@
         display: flex;
         justify-content: space-between;
         z-index: 1;
+        @include respond-to( 'desktop-m') {
+            flex-flow: wrap;
+        }
     }
     &__descr {
         max-width: 474px;
         margin-top: 72px;
+        @include respond-to( 'desktop-m') {
+            order: 3;
+            max-width: 865px;
+        }
         &-title {
             text-align: left;
             color: $white;
@@ -53,10 +60,16 @@
     &__img {
         max-width: 468px;
         max-height: 480px;
+        @include respond-to( 'desktop-m') {
+            order: 1;
+        }
     }
     &__box {
         display: flex;
         flex-direction: column;
+        @include respond-to( 'desktop-m') {
+            order: 2;
+        }
         &-item {
             display: flex;
             flex-direction: row;

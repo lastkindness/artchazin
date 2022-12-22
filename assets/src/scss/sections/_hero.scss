@@ -20,15 +20,39 @@
         z-index: 1;
         position: relative;
         padding: 386px 0px 25px 0px;
+        @include respond-to('mobile') {
+            padding: 217px 0 32px 0;
+        }
+    }
+    &__navigation {
+        @include respond-to('tablet') {
+            display: none;
+        }
     }
     &__slide {
         display: flex;
         justify-content: center;
-        /*align-items: center;*/
         margin-bottom: 94px;
+        @include respond-to('mobile') {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
         &-img {
             width: 410px;
             height: 421px;
+            @include respond-to('laptop') {
+                width: 311px;
+                height: 320px;
+            }
+            @include respond-to('tablet') {
+                width: 311px;
+                height: 320px;
+            }
+            @include respond-to('mobile') {
+                width: 165px;
+                height: 170px;
+            }
         }
         &-content {
             display: flex;
@@ -38,6 +62,12 @@
             text-align: left;
             margin-left: 45px;
             max-width: 500px;
+            @include respond-to('mobile') {
+                margin: 0;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
         }
         &-title {
             margin-top: 4px;
@@ -45,13 +75,17 @@
             font-family: $fontCinzel;
         }
         &-descr {
-            color: transparentize($white, 0.7);
+            color: transparentize($white, 0.3);
             margin-top: 10px;
         }
         &-btn {
             &.btn {
                 align-self: flex-start;
                 margin: 55px 0 0 0;
+                @include respond-to('mobile') {
+                    margin-top: 32px;
+                    align-self: center;
+                }
 
             }
         }

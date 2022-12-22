@@ -86,6 +86,9 @@ section {
         width: 100vw;
         left: 50%;
         z-index: 5;
+        @include respond-to('tablet') {
+            display: none;
+        }
         .swiper {
             &-button {
                 &-next,

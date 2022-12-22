@@ -1,0 +1,63 @@
+.burger {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    font-size: 12px;
+    line-height: 12px;
+    @include respond-to('mobile') {
+        margin: 0 20px;
+    }
+    span {
+        position: relative;
+        display: block;
+        height: 4px;
+        margin-bottom: 5px;
+        background: $primary;
+        @include animate(all);
+        clear: both;
+        width: 28px;
+        @include animate(all);
+        border-radius: 2px;
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+    p {
+        margin: 0;
+    }
+    &:hover {
+        cursor: pointer;
+
+        span {
+            background: $primary;
+        }
+    }
+
+    &.clicked {
+        span {
+            height: 7px;
+            width: 35px;
+            background: $white;
+            &:nth-child(2) {
+                opacity: 0;
+                @include animate(all);
+            }
+
+            &:first-child {
+                position: absolute;
+                transform: rotate(-45deg);
+                left: -5px;
+                top: 50%;
+                @include animate(all);
+            }
+
+            &:last-child {
+                position: absolute;
+                transform: rotate(45deg);
+                left: -5px;
+                top: 50%;
+                @include animate(all);
+            }
+        }
+    }
+}

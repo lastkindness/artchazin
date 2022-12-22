@@ -103,4 +103,40 @@
             }
         }
     }
+    @include respond-to('tablet') {
+        .card {
+            &__text {
+                display: block;
+                z-index: 1;
+                opacity: 1;
+                /*max-height: 400px;*/
+                @include animate(all);
+            }
+            &__btn {
+                display: block;
+                position: static;
+                z-index: 1;
+                opacity: 1;
+                /*max-height: 70px;*/
+                @include animate(all);
+                &.btn {
+                    display: inline-flex;
+                }
+            }
+            &__img {
+                width: 65.67%;
+                height: 360px;
+                @include animate(all);
+            }
+        }
+    }
+    @include respond-to('mobile-sm') {
+        .card {
+            &__text {
+                display: none;
+                z-index: 1;
+                /*max-height: 400px;*/
+            }
+        }
+    }
 }
