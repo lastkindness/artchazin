@@ -2,7 +2,6 @@
     padding: 40px 57.5px 32px 57.5px;
     height: auto;
     background-color: $hovergold;
-    opacity: 0;
     display: flex;
     flex-direction: column;
     cursor: pointer;
@@ -87,22 +86,7 @@
             }
         }
     }
-    &.swiper {
-        &-slide {
-            &-active {
-                opacity: 1;
-                @include animate(all);
-                &+.card {
-                    opacity: 1;
-                    @include animate(all);
-                    &+.card {
-                        opacity: 1;
-                        @include animate(all);
-                    }
-                }
-            }
-        }
-    }
+
     @include respond-to('tablet') {
         .card {
             &__text {

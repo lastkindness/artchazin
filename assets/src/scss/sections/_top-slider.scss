@@ -32,6 +32,22 @@
         justify-content: space-between;
     }
     &__card {
-
+        opacity: 0;
+        &.swiper {
+            &-slide {
+                &-active {
+                    opacity: 1;
+                    @include animate(all);
+                    &+.card {
+                        opacity: 1;
+                        @include animate(all);
+                        &+.card {
+                            opacity: 1;
+                            @include animate(all);
+                        }
+                    }
+                }
+            }
+        }
     }
 }

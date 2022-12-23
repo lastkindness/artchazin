@@ -9,8 +9,6 @@ a {
 }
 html, body {
     overflow-x: hidden;
-    margin: 0;
-    padding: 0;
     background: $bgColor;
     min-height: 100vh;
     display: flex;
@@ -18,7 +16,15 @@ html, body {
     align-items: stretch;
     justify-content: center;
 }
+html {
+    margin: 0;
+    padding: 0;
+    &.nav-active {
+        overflow: hidden;
+    }
+}
 body {
+    padding: 220px 0 0;
     height: 100%;
     margin: 0;
     font-family: $font;
@@ -26,8 +32,18 @@ body {
     font-size: 20px;
     line-height: 1.6em;
     color: $fontColor;
+    @include respond-to('tablet') {
+        padding: 168px 0 0;
+    }
+    @include respond-to('tablet-sm') {
+        padding: 185px 0 0;
+    }
     @include respond-to('mobile') {
         font: 400 14px/17px $font;
+        padding: 108px 0 0;
+    }
+    &.home {
+        padding: 0;
     }
 }
 input, textarea {

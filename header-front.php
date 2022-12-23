@@ -40,12 +40,6 @@
                             <li class="header__menu-item"><a href="#" class="header__menu-link">JEWISH ARTWORK</a></li>
                             <li class="header__menu-item"><a href="#" class="header__menu-link">INSTITUTIONS AND ORGANIZATION</a></li>
                             <li class="header__menu-item"><a href="#" class="header__menu-link">THE ILLUMINATED TORAH</a></li>
-                            <li class="header__menu-item active"><a href="#" class="header__menu-link">GIFTS</a></li>
-                            <li class="header__menu-item"><a href="#" class="header__menu-link">KETUBAH</a></li>
-                            <li class="header__menu-item"><a href="#" class="header__menu-link">JEWISH ARTWORK</a></li>
-                            <li class="header__menu-item"><a href="#" class="header__menu-link">INSTITUTIONS AND ORGANIZATION</a></li>
-                            <li class="header__menu-item"><a href="#" class="header__menu-link">THE ILLUMINATED TORAH</a></li>
-
                         </ul>
                         <div class="header__menu-lang header__menu-lang_mobile">
                             <img src="<?php echo get_template_directory_uri(); ?>/assets/src/img/Eng.svg" alt="">
