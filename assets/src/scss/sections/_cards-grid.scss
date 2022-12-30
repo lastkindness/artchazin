@@ -6,11 +6,20 @@
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(420px, 1fr));
         grid-gap: 16px;
+        @include respond-to('tablet') {
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+        }
         @include respond-to('mobile') {
             display: flex;
             flex-direction: column;
         }
+    .card {
+        @include respond-to('tablet') {
+            padding: 40px 0 32px;
+        }
     }
+    }
+
     &__pagination {
         padding: 68px 0 0;
         display: flex;
