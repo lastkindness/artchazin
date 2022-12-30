@@ -1,0 +1,17 @@
+.main-title {
+    padding: 0 0 64px;
+    align-items: center;
+    &__wrapper {
+
+    }
+    &__divider {
+        width: 45%;
+        margin: 0 auto;
+        margin-top: 16px;
+        border: 1px solid $lightgold;
+    }
+    &__descr {
+        text-align: center;
+        margin-top: 8px;
+    }
+}

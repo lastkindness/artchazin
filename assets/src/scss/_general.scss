@@ -181,7 +181,7 @@ form {
         min-width: 411px;
     }
     input {
-        min-height: 57px;
+        line-height: 1em;
         background: $white;
         padding: 13px 22px;
         opacity: 0.8;
@@ -201,5 +201,14 @@ form {
         border-radius: 4px;
         box-shadow: inset 0px 0px 8px rgba(0, 0, 0, 0.8);
         min-height: 189px;
+    }
+}
+
+select {
+    /*-webkit-appearance: none;*/
+    padding: 0 6px;
+    cursor: pointer;
+    option {
+        padding: 0 6px;
     }
 }

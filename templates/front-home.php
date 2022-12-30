@@ -241,10 +241,8 @@ get_header('front'); ?>
                     <input class="callback__form-name" type="text" id="name" name="user_name" placeholder="Name">
                     <input class="callback__form-phone" type="email" id="mail" name="user_email" placeholder="Phone">
                     <textarea class="callback__form-comment" id="msg" name="user_message" placeholder="Comment"></textarea>
+                    <input class="callbacak__form-button btn btn_lite" value="Call Me" type="btn" id="btn" name="user_btn">
             </form>
-            <div class="callback__button button_lite">
-                <button class="callback__button_lite btn_lite" type="submit">Call Me</button>
-            </div>
         </div>
     </div>
 </section>

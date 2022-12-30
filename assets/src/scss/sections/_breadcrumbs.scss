@@ -1,0 +1,21 @@
+.breadcrumbs {
+    padding: 35px 0 66px;
+    &__wrapper {
+        display: flex;
+        align-items: center;
+    }
+    &__item {
+        margin-right: 17px;
+        &.active {
+            a {
+                color: $headingColor;
+            }
+        }
+        .breadcrumbs__link {
+            color: $greyColor;
+            .icon-smallarrow {
+                font-size: 10px;
+            }
+        }
+    }
+}

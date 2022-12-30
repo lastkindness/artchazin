@@ -1,0 +1,95 @@
+.contacts {
+    &__wrapper {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        @include respond-to('desktop-m') {
+            flex-wrap: wrap-reverse;
+        }
+        @include respond-to('laptop') {
+            flex-wrap: wrap;
+            flex-direction: column-reverse;
+            align-items: center;
+        }
+    }
+    &__descr {
+        max-width: 580px;
+        @include respond-to('desktop-m') {
+            order: 3;
+            max-width: 100%;
+        }
+        &-divider {
+            border: 1px solid $lightgold;
+            margin: 0 auto;
+            margin-top: 24px;
+            margin-bottom: 8px;
+            @include respond-to('desktop-m') {
+                max-width: 539px;
+            }
+        }
+        &-text {
+            text-align: left;
+        }
+    }
+    &__form {
+        max-width: 413px;
+        margin-top: 30px;
+        @include respond-to('desktop-m') {
+            margin-left: 400px;
+        }
+        @include respond-to('laptop') {
+            margin-left: 0;
+            order: 2;
+        }
+        &-name {
+            box-shadow: inset 0px 0px 8px rgba(0, 0, 0, 0.15);
+            margin: 0;
+        }
+        &-phone {
+            box-shadow: inset 0px 0px 8px rgba(0, 0, 0, 0.15);
+        }
+        textarea {
+            box-shadow: inset 0px 0px 8px rgba(0, 0, 0, 0.15);
+        }
+        &-button {
+            box-shadow: inset 0px 0px 8px rgba(0, 0, 0, 0.15);
+            margin-top: 16px;
+        }
+    }
+    &__contacts {
+        margin-top: 30px;
+        @include respond-to('desktop-m') {
+            margin-top: 20px;
+        }
+        &-list {
+            margin: 0;
+        }
+        &-link {
+            color: $darkgrey;
+        }
+        &-item {
+            font-size: 24px;
+            .icon {
+                margin-right: 10px;
+            }
+            .icon-telephone {
+                font-size: 20px;
+                color: #20A60A;
+            }
+            .icon-mail {
+                font-size: 16px;
+                color: $greyColor;
+            }
+            .icon-mapdot {
+                font-size: 24px;
+                color: #E27158;
+            }
+        }
+        &-map {
+            margin-top: 6px;
+        }
+    }
+}
+
+
+

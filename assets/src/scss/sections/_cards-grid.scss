@@ -1,0 +1,47 @@
+.cards-grid {
+    padding: 38px 0 0;
+    &__wrapper{
+    }
+    &__grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(420px, 1fr));
+        grid-gap: 16px;
+        @include respond-to('mobile') {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+    &__pagination {
+        padding: 68px 0 0;
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        justify-content: space-between;
+        max-width: 285px;
+        margin: 0 auto;
+    }
+    .pagination {
+        margin-bottom: 35px;
+        &__arrowl {
+            transform: rotate(180deg);
+            .pagination__link {
+                color: $black;
+            }
+        }
+        &__item {
+            &.active {
+                a {
+                    color: $black;
+                }
+            }
+            .pagination__link {
+                color: $greyColor;
+            }
+        }
+        &__arrow {
+            .pagination__link {
+                color: $black;
+            }
+        }
+    }
+}
