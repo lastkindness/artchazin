@@ -64,7 +64,7 @@ get_header('front'); ?>
                     <img src="<?php echo get_template_directory_uri(); ?>/assets/src/img/delivery.jpg" alt="" class="top-slider__card-img card__img">
                     <div class="card__content top-slider__card-content">
                         <h2 class="top-slider__card-title card__title">NAME OF PRODUCT</h2>
-                        <p class="card__text p3 top-slider__card-text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. </p>
+                        <p class="card__text p3 top-slider__card-text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. </p>
                         <div class="top-slider__card-price card__price p1">999$</div>
                     </div>
                     <a href="#" class="btn card__btn top-slider__card-btn">Go To Order</a>
@@ -82,7 +82,7 @@ get_header('front'); ?>
                     <img src="<?php echo get_template_directory_uri(); ?>/assets/src/img/productheart.png" alt="" class="top-slider__card-img card__img">
                     <div class="card__content top-slider__card-content">
                         <h2 class="top-slider__card-title card__title">NAME OF PRODUCT</h2>
-                        <p class="card__text p3 top-slider__card-text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh . </p>
+                        <p class="card__text p3 top-slider__card-text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh . Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. </p>
                         <div class="top-slider__card-price card__price p1">999$</div>
                     </div>
                     <a href="#" class="btn card__btn top-slider__card-btn">Go To Order</a>

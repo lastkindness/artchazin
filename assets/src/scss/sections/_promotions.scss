@@ -1,0 +1,41 @@
+.promotions {
+    padding: 0 0 140px;
+    &__wrapper {
+        overflow: visible;
+        visibility: visible;
+    }
+    &__descr {
+        max-width: 740px;
+        &-title {
+            text-align: left;
+        }
+        &-divider {
+            border: 1px solid $lightgold;
+            margin: 18px 0 16px;
+        }
+    }
+    &__cardwrap {
+        margin-top: 32px;
+        display: flex;
+        justify-content: space-between;
+    }
+    /*&__card {
+        opacity: 0;
+        &.swiper {
+            &-slide {
+                &-active {
+                    opacity: 1;
+                    @include animate(all);
+                    &+.card {
+                        opacity: 1;
+                        @include animate(all);
+                        &+.card {
+                            opacity: 1;
+                            @include animate(all);
+                        }
+                    }
+                }
+            }
+        }
+    }*/
+}

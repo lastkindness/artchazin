@@ -63,6 +63,7 @@ function rst_load_assets()
         wp_deregister_script('jquery');
         wp_register_script('jquery', '//ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js', false, null, false);
         wp_enqueue_script('jquery');
+        wp_enqueue_script('text-lines', get_template_directory_uri() . '/assets/lib/text-lines.js', ['jquery'], '1.0.0', true);
         wp_enqueue_script('app', get_template_directory_uri() . '/assets/dist/app.min.js', [], '1.0.0', true);
     }
 

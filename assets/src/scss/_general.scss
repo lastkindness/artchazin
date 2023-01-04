@@ -39,7 +39,7 @@ body {
         padding: 185px 0 0;
     }
     @include respond-to('mobile') {
-        font: 400 14px/17px $font;
+        font: 400 14px/20px $font;
         padding: 108px 0 0;
     }
     &.home {
@@ -212,3 +212,29 @@ select {
         padding: 0 6px;
     }
 }
+
+.ellipsis {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden
+}
+
+.ellip {
+    display: block;
+    height: 100%
+}
+
+.ellip-line {
+    display: inline-block;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    word-wrap: normal;
+    vertical-align: bottom
+}
+
+.ellip, .ellip-line {
+    position: relative;
+    overflow: hidden;
+    max-width: 100%
+}
+

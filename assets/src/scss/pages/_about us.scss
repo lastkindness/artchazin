@@ -1,8 +1,105 @@
 .about {
+    padding: 0 0 130px;
     &__wrapper {
 
     }
-    &__firts {
-        background-color: red;
+    &__item {
+        &:nth-child(odd) {
+            display: flex;
+            @include respond-to('laptop') {
+                flex-wrap: wrap-reverse;
+            }
+            .about {
+                &__descr {
+                    max-width: 680px;
+                    margin-right: 30px;
+                    @include respond-to('laptop') {
+                        max-width: 100%;
+                    }
+                    @include respond-to('mobile') {
+                        margin-right: 0;
+                    }
+                    &-title {
+                        margin-bottom: 32px;
+                        text-align: left;
+                        @include respond-to('laptop') {
+                            font-size: 40px;
+                        }
+                    }
+                    &-subtitle {
+                        margin-bottom: 19px;
+                        text-align: left;
+                        color: $headingColor;
+                        @include respond-to('laptop') {
+                            font-size: 32px;
+                        }
+                    }
+                    &-divider {
+                        border: 1px solid $lightgold;
+                        max-width: 680px;
+                        margin-bottom: 8px;
+                    }
+                    &-text {
+                        text-align: left;
+                    }
+                }
+                &__img {
+                    width: 50%;
+                    @include respond-to('laptop') {
+                        width: 70%;
+                    }
+                    @include respond-to('mobile') {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+        &:nth-child(even) {
+            display: flex;
+            margin-top: 128px;
+            @include respond-to('laptop') {
+                flex-wrap: wrap;
+            }
+            .about {
+                &__descr {
+                    max-width: 955px;
+                    &-title {
+                        margin-bottom: 19px;
+                        text-align: left;
+                        color: $headingColor;
+                        @include respond-to('laptop') {
+                            font-size: 32px;
+                        }
+                    }
+                    &-secondtitle {
+                        margin: 64px 0 19px;
+                        text-align: left;
+                        color: $headingColor;
+                        @include respond-to('laptop') {
+                            font-size: 32px;
+                        }
+                    }
+                    &-divider {
+                        border: 1px solid $lightgold;
+                        margin-bottom: 8px;
+                    }
+                }
+                &__img {
+                    max-height: 613px;
+                    max-width: 542px;
+                    margin-right: 32px;
+                    @include respond-to('tablet') {
+                        width: 55%;
+                    }
+                    @include respond-to('mobile') {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+
+    &__item {
+
     }
 }

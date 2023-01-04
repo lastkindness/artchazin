@@ -77,8 +77,8 @@ get_header('front'); ?>
     <div class="container">
         <div class="cards-grid__wrapper">
             <div class="cards-grid__grid">
-                <div class="card">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/src/img/delivery.jpg" alt="" class="card__img">
+                <div class="card_white">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/src/img/productcard2.png" alt="" class="card__img">
                     <div class="card__content">
                         <h2 class="card__title">NAME OF PRODUCT</h2>
                         <p class="card__text p3">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. </p>
@@ -86,8 +86,8 @@ get_header('front'); ?>
                     </div>
                     <a href="#" class="btn card__btn">Go To Order</a>
                 </div>
-                <div class="card">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/src/img/delivery.jpg" alt="" class="card__img">
+                <div class="card_article">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/src/img/productcard3.png" alt="" class="card__img">
                     <div class="card__content">
                         <h2 class="card__title">NAME OF PRODUCT</h2>
                         <p class="card__text p3">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. </p>

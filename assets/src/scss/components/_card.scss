@@ -1,5 +1,5 @@
 .card {
-    padding: 40px 33px 32px 33px;
+    padding: 32px;
     height: auto;
     background-color: $hovergold;
     display: flex;
@@ -8,6 +8,95 @@
     position: relative;
     min-height: 776px;
     @include animate(all);
+    &_white {
+        padding: 32px;
+        height: auto;
+        background-color: $white;
+        display: flex;
+        flex-direction: column;
+        cursor: pointer;
+        position: relative;
+        min-height: 776px;
+        @include animate(all);
+        &__content {
+            flex-grow: 1;
+            margin-top: 32px;
+        }
+        &:hover {
+            .card {
+                &__text {
+                    display: block;
+                    z-index: 1;
+                    opacity: 1;
+                    /*max-height: 400px;*/
+                    @include animate(all);
+                }
+                &__btn {
+                    display: block;
+                    position: static;
+                    z-index: 1;
+                    opacity: 1;
+                    /*max-height: 70px;*/
+                    @include animate(all);
+                    &.btn {
+                        display: inline-flex;
+                    }
+                }
+                &__img {
+                    width: 65.67%;
+                    height: 360px;
+                    @include animate(all);
+                }
+            }
+        }
+
+    }
+    &_article {
+        padding: 94px 61px 80px;
+        height: auto;
+        background-color: $white;
+        display: flex;
+        flex-direction: column;
+        cursor: pointer;
+        position: relative;
+        min-height: 776px;
+        &:hover {
+            background-color: $lightgold;
+        }
+        .card {
+            &__content {
+                margin-top: 94px;
+            }
+            &__title {
+                color: $headingColor;
+            }
+            &__text {
+                display: block;
+                z-index: 1;
+                opacity: 1;
+                /*max-height: 400px;*/
+                @include animate(all);
+            }
+            &__price {
+                display: none;
+            }
+            &__btn {
+                display: none;
+                position: relative;
+                z-index: 1;
+                opacity: 1;
+                @include animate(all);
+                &.btn {
+                    display: none;
+                }
+            }
+            &__img {
+                width: 80%;
+                height: 347px;
+                @include animate(all);
+            }
+        }
+    }
     &:hover {
         .card {
             &__text {
@@ -37,7 +126,7 @@
     }
     &__content {
         flex-grow: 1;
-        margin-top: 37px;
+        margin-top: 32px;
     }
     &__price {
         margin-top: 31px;
