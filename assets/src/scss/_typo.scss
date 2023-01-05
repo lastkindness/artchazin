@@ -95,11 +95,9 @@ h1 {
     line-height: 1.35em;
     color: $headingColor;
     margin: 0;
-
-    /*font-size: 64px;*/
     text-transform: uppercase;
-    @include respond-to('tablet') {
-        font-size: 48px;
+    @include respond-to('desktop') {
+        font-size: 42px;
     }
     @include respond-to('mobile-sm') {
         font-size: 36px;
@@ -111,9 +109,10 @@ h2 {
     font-weight: 400;
     font-size: 40px;
     line-height: 1.35em;
-
-    /*font-size: 39px;*/
     text-transform: uppercase;
+    @include respond-to('desktop') {
+        font-size: 32px;
+    }
     @include respond-to('mobile-sm') {
         font-size: 24px;
     }
@@ -125,8 +124,9 @@ h3 {
     font-weight: 400;
     font-size: 36px;
     line-height: 1.36em;
-
-    /*font-size: 30px;*/
+    @include respond-to('desktop') {
+        font-size: 28px;
+    }
     @include respond-to('mobile') {
         font-size: 22px;
     }
@@ -138,8 +138,10 @@ h4 {
     font-weight: 400;
     font-size: 32px;
     line-height: 1.34em;
-    /*font-size: 24px;*/
     text-transform: uppercase;
+    @include respond-to('desktop') {
+        font-size: 24px;
+    }
     @include respond-to('mobile') {
         font-size: 18px;
     }
@@ -151,8 +153,10 @@ h5 {
     font-weight: 400;
     font-size: 28px;
     line-height: 1.35em;
-    /*font-size: 18px;*/
     text-transform: uppercase;
+    @include respond-to('desktop') {
+        font-size: 20px;
+    }
     @include respond-to('mobile') {
         font-size: 16px;
     }
@@ -163,8 +167,9 @@ h6 {
     font-weight: 400;
     font-size: 24px;
     line-height: 1.33em;
-    /*font-weight: 700;
-    font-size: 18px;*/
+    @include respond-to('desktop') {
+        font-size: 18px;
+    }
     @include respond-to('mobile') {
         font-size: 16px;
     }
