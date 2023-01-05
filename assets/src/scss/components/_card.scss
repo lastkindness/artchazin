@@ -61,7 +61,20 @@
         position: relative;
         min-height: 776px;
         &:hover {
-            background-color: $lightgold;
+            .card {
+                &__img {
+                    transform: scale(120%);
+                    width: 80%;
+                    height: 347px;
+                    @include animate(all);
+                }
+                &__title {
+                    transform: scale(120%);
+                }
+                /*&__text {
+                    transform: scale(120%);
+                }*/
+            }
         }
         .card {
             &__content {

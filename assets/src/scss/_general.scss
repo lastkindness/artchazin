@@ -205,12 +205,28 @@ form {
 }
 
 select {
-    /*-webkit-appearance: none;*/
+    -webkit-appearance: none;
     padding: 0 6px;
     cursor: pointer;
+    &:before {
+        content: '\e900';
+        font-family: 'icomoon' !important;
+        font-size: 20px;
+        color: $black;
+        position: absolute;
+        top: 0;
+        right: 0;
+        padding: 1em;
+        transition: .25s all ease;
+        pointer-events: none;
+    }
+    &::-ms-expand {
+        display: none;
+    }
     option {
         padding: 0 6px;
     }
+
 }
 
 .ellipsis {

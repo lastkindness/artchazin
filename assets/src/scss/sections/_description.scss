@@ -1,0 +1,18 @@
+.description {
+    &__descr {
+        max-width: 740px;
+        &-title {
+            text-align: left;
+            @include respond-to('tablet') {
+                font-size: 40px;
+            }
+            @include respond-to('mobile') {
+                font-size: 28px;
+            }
+        }
+        &-divider {
+            border: 1px solid $lightgold;
+            margin: 18px 0 16px;
+        }
+    }
+}

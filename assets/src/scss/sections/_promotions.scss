@@ -1,23 +1,27 @@
 .promotions {
-    padding: 0 0 140px;
+    &:nth-child(even) {
+        padding: 0 0 140px;
+    }
     &__wrapper {
         overflow: visible;
         visibility: visible;
     }
-    &__descr {
-        max-width: 740px;
-        &-title {
-            text-align: left;
-        }
-        &-divider {
-            border: 1px solid $lightgold;
-            margin: 18px 0 16px;
-        }
+    &__subtitle {
+        text-align: left;
+        margin: 64px 0 32px;
+        color: $headingColor;
     }
     &__cardwrap {
         margin-top: 32px;
         display: flex;
         justify-content: space-between;
+    }
+    .card_white {
+        @include respond-to('tablet') {
+            &:active {
+
+            }
+        }
     }
     /*&__card {
         opacity: 0;

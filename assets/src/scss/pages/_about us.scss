@@ -25,6 +25,9 @@
                         @include respond-to('laptop') {
                             font-size: 40px;
                         }
+                        @include respond-to('mobile') {
+                            font-size: 32px;
+                        }
                     }
                     &-subtitle {
                         margin-bottom: 19px;
@@ -32,6 +35,9 @@
                         color: $headingColor;
                         @include respond-to('laptop') {
                             font-size: 32px;
+                        }
+                        @include respond-to('mobile') {
+                            font-size: 28px;
                         }
                     }
                     &-divider {
@@ -47,6 +53,7 @@
                     width: 50%;
                     @include respond-to('laptop') {
                         width: 70%;
+                        margin: 30px 0;
                     }
                     @include respond-to('mobile') {
                         width: 100%;
@@ -57,6 +64,9 @@
         &:nth-child(even) {
             display: flex;
             margin-top: 128px;
+            @include respond-to('laptop') {
+                margin-top: 40px;
+            }
             @include respond-to('laptop') {
                 flex-wrap: wrap;
             }
@@ -69,6 +79,9 @@
                         color: $headingColor;
                         @include respond-to('laptop') {
                             font-size: 32px;
+                        }
+                        @include respond-to('mobile') {
+                            font-size: 28px;
                         }
                     }
                     &-secondtitle {
@@ -90,6 +103,7 @@
                     margin-right: 32px;
                     @include respond-to('tablet') {
                         width: 55%;
+                        margin-bottom: 20px;
                     }
                     @include respond-to('mobile') {
                         width: 100%;
