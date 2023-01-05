@@ -17,6 +17,7 @@ $(document).ready(() => {
     main();
     header();
     burger();
+    textLines();
     heroSlider();
     topSlider();
     textLines();
