@@ -209,6 +209,7 @@ select {
     padding: 0 6px;
     cursor: pointer;
     &:before {
+        display: block;
         content: '\e900';
         font-family: 'icomoon' !important;
         font-size: 20px;

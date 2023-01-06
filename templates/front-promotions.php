@@ -33,7 +33,7 @@ get_header('front'); ?>
         <div class="promotions__wrapper swiper">
             <h3 class="promotions__subtitle">The Limited Edition, the Rennert Edition</h3>
             <div class="promotions__cardwrap swiper-wrapper">
-                <div class="promotions__card card_white swiper-slide">
+                <div class="promotions__card card card_white swiper-slide">
                     <img src="<?php echo get_template_directory_uri(); ?>/assets/src/img/productcard1.png" alt="" class="promotions__card-img card__img">
                     <div class="card__content promotions__card-content">
                         <h2 class="promotions__card-title card__title">NAME OF PRODUCT</h2>
@@ -42,7 +42,7 @@ get_header('front'); ?>
                     </div>
                     <a href="#" class="btn card__btn promotions__card-btn">Go To Order</a>
                 </div>
-                <div class="promotions__card card_white swiper-slide">
+                <div class="promotions__card card card_white swiper-slide">
                     <img src="<?php echo get_template_directory_uri(); ?>/assets/src/img/productcard2.png" alt="" class="promotions__card-img card__img">
                     <div class="card__content promotions__card-content">
                         <h2 class="promotions__card-title card__title">NAME OF PRODUCT</h2>
@@ -51,7 +51,7 @@ get_header('front'); ?>
                     </div>
                     <a href="#" class="btn card__btn top-slider__card-btn">Go To Order</a>
                 </div>
-                <div class="promotions__card card_white swiper-slide">
+                <div class="promotions__card card card_white swiper-slide">
                     <img src="<?php echo get_template_directory_uri(); ?>/assets/src/img/productheart.png" alt="" class="promotions__card-img card__img">
                     <div class="card__content promotions__card-content">
                         <h2 class="promotions__card-title card__title">NAME OF PRODUCT</h2>
@@ -60,7 +60,7 @@ get_header('front'); ?>
                     </div>
                     <a href="#" class="btn card__btn top-slider__card-btn">Go To Order</a>
                 </div>
-                <div class="promotions__card card_white swiper-slide">
+                <div class="promotions__card card card_white swiper-slide">
                     <img src="<?php echo get_template_directory_uri(); ?>/assets/src/img/torah2.png" alt="" class="promotions__card-img card__img">
                     <div class="card__content promotions__card-content">
                         <h2 class="promotions__card-title card__title">NAME OF PRODUCT</h2>

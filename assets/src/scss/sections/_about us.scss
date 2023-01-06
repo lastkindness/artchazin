@@ -4,6 +4,10 @@
 
     }
     &__item {
+        margin-bottom: 128px;
+        @include respond-to('laptop') {
+            margin-bottom: 40px;
+        }
         &:nth-child(odd) {
             display: flex;
             @include respond-to('laptop') {
@@ -63,10 +67,6 @@
         }
         &:nth-child(even) {
             display: flex;
-            margin-top: 128px;
-            @include respond-to('laptop') {
-                margin-top: 40px;
-            }
             @include respond-to('laptop') {
                 flex-wrap: wrap;
             }
@@ -110,6 +110,9 @@
                     }
                 }
             }
+        }
+        &:last-child {
+            margin-bottom: 0;
         }
     }
 
