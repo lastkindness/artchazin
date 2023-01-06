@@ -42,9 +42,13 @@
                             <li class="header__menu-item"><a href="#" class="header__menu-link">THE ILLUMINATED TORAH</a></li>
                         </ul>
                         <div class="header__menu-lang header__menu-lang_mobile">
-                            <img src="<?php echo get_template_directory_uri(); ?>/assets/src/img/Eng.svg" alt="">
+                            <span class="lang">
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/src/img/Eng.svg" alt="">
+                            </span>
                             <span class="header__menu-span">/</span>
-                            <img src="<?php echo get_template_directory_uri(); ?>/assets/src/img/Isr.svg" alt="">
+                            <a href="#" class="lang">
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/src/img/Isr.svg" alt="">
+                            </a>
                         </div>
                     </div>
                     <div class="header__menu-dot"></div>
@@ -52,9 +56,13 @@
                     <div class="burger header__burger"><span></span><span></span><span></span></div>
                 </nav>
                 <div class="header__menu-lang">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/src/img/Eng.svg" alt="">
+                    <span class="lang">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/src/img/Eng.svg" alt="">
+                    </span>
                     <span class="header__menu-span">/</span>
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/src/img/Isr.svg" alt="">
+                    <a href="#" class="lang">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/src/img/Isr.svg" alt="">
+                    </a>
                 </div>
             </div>
                 <div class="header__menu-line"></div>

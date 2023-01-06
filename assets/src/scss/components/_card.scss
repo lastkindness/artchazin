@@ -11,6 +11,124 @@
     @include respond-to('mobile') {
         height: auto;
     }
+    &:hover {
+        .card {
+            &__text {
+                position: relative;
+                top: 0;
+                z-index: 0;
+                opacity: 1;
+            }
+            &__btn {
+                display: block;
+                position: relative;
+                z-index: 1;
+                opacity: 1;
+                @include animate(all);
+                &.btn {
+                    display: inline-flex;
+                }
+            }
+            &__img {
+                position: relative;
+                z-index: 1;
+                width: 65.67%;
+                height: 330px;
+                @include animate(all);
+                @include respond-to('mobile') {
+                    width: 100%;
+                }
+            }
+            &__content {
+                justify-content: flex-start;
+                @include animate(all);
+            }
+        }
+    }
+    &__content {
+        flex-grow: 1;
+        margin-top: 32px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-end;
+        @include animate(all);
+    }
+    &__price {
+        margin-top: 31px;
+    }
+    &__text {
+        margin: 8px auto 0;
+        text-align: center;
+        opacity: 0;
+        position: absolute;
+        top: 100%;
+        z-index: -1;
+        width: 100%;
+        flex-grow: 1;
+        @include respond-to('tablet') {
+            z-index: 1;
+            opacity: 1;
+            position: relative;
+            top: 0;
+            @include animate(all);
+        }
+        @include respond-to('mobile-sm') {
+            display: none;
+            z-index: 1;
+        }
+    }
+    &__img {
+        flex-grow: 0;
+        width: 100%;
+        height: 577px;
+        object-fit: contain;
+        margin: 0 auto;
+        @include animate(all);
+        @include respond-to('tablet') {
+            width: 65.67%;
+            height: 360px;
+            @include animate(all);
+        }
+        @include respond-to('mobile') {
+            width: 100%;
+        }
+    }
+    &__title {
+        margin: 0;
+        @include respond-to('mobile') {
+            font-size: 24px;
+        }
+    }
+    &__price {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: center;
+        margin: 31px 0 0 0;
+    }
+    &__btn {
+        flex-grow: 0;
+        @include animate(all);
+        @include respond-to('tablet') {
+            display: block;
+            position: static;
+            z-index: 1;
+            opacity: 1;
+            @include animate(all);
+        }
+        &.btn {
+            display: none;
+            margin-top: 17px;
+            @include animate(all);
+            @include respond-to('tablet') {
+                display: inline-flex;
+            }
+            @include respond-to('mobile') {
+                padding: 8px 41.5px;
+            }
+        }
+    }
     &_white {
         padding: 32px;
         height: auto;
@@ -58,7 +176,7 @@
 
     }
     &_article {
-        padding: 94px 61px 80px;
+        padding: 54px 61px 57px;
         height: auto;
         background-color: $white;
         display: flex;
@@ -78,12 +196,14 @@
                     position: static;
                     opacity: 1;
                     z-index: 1;
+                    transition: none;
+                    transform: none;
                 }
             }
         }
         .card {
             &__content {
-                margin-top: 94px;
+                margin-top: 61px;
             }
             &__title {
                 color: $headingColor;
@@ -93,8 +213,8 @@
                 display: block;
                 z-index: 1;
                 opacity: 1;
-                /*max-height: 400px;*/
-                @include animate(all);
+                transition: none;
+                transform: none;
             }
             &__price {
                 display: none;
@@ -113,114 +233,6 @@
                 width: 80%;
                 height: 347px;
                 @include animate(all);
-            }
-        }
-    }
-    &:hover {
-        .card {
-            &__text {
-                position: relative;
-                top: 0;
-                z-index: 0;
-                opacity: 1;
-            }
-            &__btn {
-                display: block;
-                position: relative;
-                z-index: 1;
-                opacity: 1;
-                @include animate(all);
-                &.btn {
-                    display: inline-flex;
-                }
-            }
-            &__img {
-                position: relative;
-                z-index: 1;
-                width: 65.67%;
-                height: 330px;
-                @include animate(all);
-                @include respond-to('mobile') {
-                    width: 100%;
-                }
-            }
-        }
-    }
-    &__content {
-        flex-grow: 1;
-        margin-top: 32px;
-    }
-    &__price {
-        margin-top: 31px;
-    }
-    &__text {
-        margin: 8px auto 0;
-        text-align: center;
-        opacity: 0;
-        position: absolute;
-        top: 100%;
-        z-index: -1;
-        width: 100%;
-        @include respond-to('tablet') {
-            z-index: 1;
-            opacity: 1;
-            position: relative;
-            top: 0;
-            @include animate(all);
-        }
-        @include respond-to('mobile-sm') {
-            display: none;
-            z-index: 1;
-        }
-    }
-    &__img {
-        flex-grow: 0;
-        width: 100%;
-        height: 450px;
-        object-fit: contain;
-        margin: 0 auto;
-        @include animate(all);
-        @include respond-to('tablet') {
-            width: 65.67%;
-            height: 360px;
-            @include animate(all);
-        }
-        @include respond-to('mobile') {
-            width: 100%;
-        }
-    }
-    &__title {
-        margin: 0;
-        @include respond-to('mobile') {
-            font-size: 24px;
-        }
-    }
-    &__price {
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-end;
-        align-items: center;
-        margin: 31px 0 0 0;
-    }
-    &__btn {
-        flex-grow: 0;
-        @include animate(all);
-        @include respond-to('tablet') {
-            display: block;
-            position: static;
-            z-index: 1;
-            opacity: 1;
-            @include animate(all);
-        }
-        &.btn {
-            display: none;
-            margin-top: 17px;
-            @include animate(all);
-            @include respond-to('tablet') {
-                display: inline-flex;
-            }
-            @include respond-to('mobile') {
-                padding: 8px 41.5px;
             }
         }
     }

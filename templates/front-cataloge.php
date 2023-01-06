@@ -31,43 +31,51 @@ get_header('front'); ?>
     <div class="container">
         <div class="filters__wrapper">
             <form class="filters__form">
-                <div class="filters__price">
+                <div class="filters__price filters__item">
                     <p class="filters__price-text">Price:</p>
                     <label name="from" class="filters__price-text">From</label><input class="filters__price-inputone" type="text" name="from" id="from" placeholder="200$">
                     <label name="to" class="filters__price-text">To</label><input class="filters__price-inputtwo" type="text" name="to" id="to" placeholder="10 000$">
                 </div>
-                <div class="filters__style">
+                <div class="filters__style filters__item">
                     <label for="stule">Style:</label>
-                    <select name="style" id="stile-select" form="filter__form">
-                        <option value="luxury">Luxury</option>
-                        <option value="no Luxury">No Luxury</option>
-                        <option value="top">Top</option>
-                        <option value="magic">Magic</option>
-                    </select>
+                    <div class="select">
+                        <select name="style" id="stile-select" form="filter__form">
+                            <option value="luxury">Luxury</option>
+                            <option value="no Luxury">No Luxury</option>
+                            <option value="top">Top</option>
+                            <option value="magic">Magic</option>
+                        </select>
+                    </div>
                 </div>
-                <div class="filters__paper-type">
+                <div class="filters__paper-type filters__item">
                     <label for="paper-type">Paper Type:</label>
-                    <select name="paper-type" id="paper-type" form="filter__form">
-                        <option value="Pergament">Pergament</option>
-                        <option value="Paper">Paper</option>
-                        <option value="gold pergament">Gold Pergament</option>
-                        <option value="gold paper">Gold Paper</option>
-                    </select>
+                    <div class="select">
+                        <select name="paper-type" id="paper-type" form="filter__form">
+                            <option value="Pergament">Pergament</option>
+                            <option value="Paper">Paper</option>
+                            <option value="gold pergament">Gold Pergament</option>
+                            <option value="gold paper">Gold Paper</option>
+                        </select>
+                    </div>
                 </div>
-                <div class="filters__collection">
+                <div class="filters__collection filters__item">
                     <label for="collection">Collection:</label>
-                    <select name="collection" id="collection" form="filter__form">
-                        <option value="wedding gifts">Wedding Gifts</option>
-                        <option value="on birthday">On Birthday</option>
-                        <option value="for the anniversary">For the Anniversary</option>
-                    </select>
+                    <div class="select">
+                        <select name="collection" id="collection" form="filter__form">
+                            <option value="wedding gifts">Wedding Gifts</option>
+                            <option value="on birthday">On Birthday</option>
+                            <option value="for the anniversary">For the Anniversary</option>
+                        </select>
+                    </div>
                 </div>
             </form>
-            <div class="filters__sort">
-                <select class="filters__sort-text">
-                    <option value="low_price">Sort By: Price Lower First</option>
-                    <option value="hige_price">Sort By: Price Higer First</option>
-                </select>
+            <div class="filters__sort filters__item">
+                <div class="select">
+                    <select class="filters__sort-text">
+                        <option value="low_price">Sort By: Price Lower First</option>
+                        <option value="hige_price">Sort By: Price Higer First</option>
+                    </select>
+                </div>
             </div>
         </div>
     </div>
@@ -77,7 +85,7 @@ get_header('front'); ?>
     <div class="container">
         <div class="cards-grid__wrapper">
             <div class="cards-grid__grid">
-                <div class="card_white">
+                <div class="card card_white">
                     <img src="<?php echo get_template_directory_uri(); ?>/assets/src/img/productcard2.png" alt="" class="card__img">
                     <div class="card__content">
                         <h2 class="card__title">NAME OF PRODUCT</h2>
@@ -86,14 +94,31 @@ get_header('front'); ?>
                     </div>
                     <a href="#" class="btn card__btn">Go To Order</a>
                 </div>
-                <div class="card_article">
+                <div class="card card_article">
                     <img src="<?php echo get_template_directory_uri(); ?>/assets/src/img/productcard3.png" alt="" class="card__img">
                     <div class="card__content">
-                        <h2 class="card__title">NAME OF PRODUCT</h2>
+                        <h2 class="card__title">NAME OF POST</h2>
                         <p class="card__text p3">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. </p>
-                        <div class="card__price p1">999$</div>
                     </div>
-                    <a href="#" class="btn card__btn">Go To Order</a>
+                    <a href="#" class="btn card__btn">Read More</a>
+                </div>
+                <div class="promotions__card card card_white">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/src/img/torah2.png" alt="" class="promotions__card-img card__img">
+                    <div class="card__content promotions__card-content">
+                        <h2 class="promotions__card-title card__title">NAME OF PRODUCT</h2>
+                        <p class="card__text p3 promotions__card-text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+                        <div class="promotions__card-price card__price p1">999$</div>
+                    </div>
+                    <a href="#" class="btn card__btn promotions__card-btn">Go To Order</a>
+                </div>
+                <div class="promotions__card card">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/src/img/torah2.png" alt="" class="promotions__card-img card__img">
+                    <div class="card__content promotions__card-content">
+                        <h2 class="promotions__card-title card__title">NAME OF PRODUCT</h2>
+                        <p class="card__text p3 promotions__card-text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+                        <div class="promotions__card-price card__price p1">999$</div>
+                    </div>
+                    <a href="#" class="btn card__btn promotions__card-btn">Go To Order</a>
                 </div>
                 <div class="card">
                     <img src="<?php echo get_template_directory_uri(); ?>/assets/src/img/delivery.jpg" alt="" class="card__img">

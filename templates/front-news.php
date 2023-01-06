@@ -20,36 +20,54 @@ get_header('front'); ?>
         <div class="articles__wrapper">
             <h1 class="articles__title">News and Articles</h1>
             <div class="articles__grid">
-                <a class="card_article card">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/src/img/productcard2.png" alt="" class="card__img">
-                    <div class="card__title h2">NAME OF POST</div>
-                    <div class="card__text p">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. </div>
-                </a>
-                <a class="card_article card">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/src/img/productcard2.png" alt="" class="card__img">
-                    <div class="card__title h2">NAME OF POST</div>
-                    <div class="card__text p">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. </div>
-                </a>
-                <a class="card_article card">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/src/img/productcard2.png" alt="" class="card__img">
-                    <div class="card__title h2">NAME OF POST</div>
-                    <div class="card__text p">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. </div>
-                </a>
-                <a class="card_article card">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/src/img/productcard2.png" alt="" class="card__img">
-                    <div class="card__title h2">NAME OF POST</div>
-                    <div class="card__text p">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. </div>
-                </a>
-                <a class="card_article card">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/src/img/productcard2.png" alt="" class="card__img">
-                    <div class="card__title h2">NAME OF POST</div>
-                    <div class="card__text p">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. </div>
-                </a>
-                <a class="card_article card">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/src/img/productcard2.png" alt="" class="card__img">
-                    <div class="card__title h2">NAME OF POST</div>
-                    <div class="card__text p">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. </div>
-                </a>
+                <div class="card card_article">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/src/img/productcard3.png" alt="" class="card__img">
+                    <div class="card__content">
+                        <h2 class="card__title">NAME OF POST</h2>
+                        <p class="card__text p3">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. </p>
+                    </div>
+                    <a href="#" class="btn card__btn">Read More</a>
+                </div>
+                <div class="card card_article">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/src/img/productcard3.png" alt="" class="card__img">
+                    <div class="card__content">
+                        <h2 class="card__title">NAME OF POST</h2>
+                        <p class="card__text p3">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. </p>
+                    </div>
+                    <a href="#" class="btn card__btn">Read More</a>
+                </div>
+                <div class="card card_article">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/src/img/productcard3.png" alt="" class="card__img">
+                    <div class="card__content">
+                        <h2 class="card__title">NAME OF POST</h2>
+                        <p class="card__text p3">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. </p>
+                    </div>
+                    <a href="#" class="btn card__btn">Read More</a>
+                </div>
+                <div class="card card_article">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/src/img/productcard3.png" alt="" class="card__img">
+                    <div class="card__content">
+                        <h2 class="card__title">NAME OF POST</h2>
+                        <p class="card__text p3">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. </p>
+                    </div>
+                    <a href="#" class="btn card__btn">Read More</a>
+                </div>
+                <div class="card card_article">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/src/img/productcard3.png" alt="" class="card__img">
+                    <div class="card__content">
+                        <h2 class="card__title">NAME OF POST</h2>
+                        <p class="card__text p3">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. </p>
+                    </div>
+                    <a href="#" class="btn card__btn">Read More</a>
+                </div>
+                <div class="card card_article">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/src/img/productcard3.png" alt="" class="card__img">
+                    <div class="card__content">
+                        <h2 class="card__title">NAME OF POST</h2>
+                        <p class="card__text p3">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. </p>
+                    </div>
+                    <a href="#" class="btn card__btn">Read More</a>
+                </div>
             </div>
         </div>
     </div>

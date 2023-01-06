@@ -84,13 +84,14 @@
     &__menu {
         width: 100%;
         @include respond-to('tablet') {
-            margin-top: 60px;
+            padding: 10px 0 0;
         }
         @include respond-to('mobile') {
             margin: 0;
         }
         &-link {
             color: $greyColor;
+            font-family: "Inter-Italic", sans-serif;
         }
         &-lang {
             display: flex;
@@ -110,10 +111,11 @@
                     display: flex;
                 }
             }
-            img {
-                width: 32px;
+            .lang {
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
             }
-
         }
         &-wrapper{
             display: flex;
@@ -127,7 +129,7 @@
             width: 391px;
             margin-top: 16px;
             @include respond-to('desktop-m'){
-                max-width: 351px;
+                width: 221px;
             }
             @include respond-to('tablet'){
                 max-width: 196px;
@@ -139,7 +141,7 @@
             padding-right: 40px;
             width: 60%;
             @include respond-to('desktop-m') {
-                width: calc(100% - 90px - 351px);
+                width: calc(100% - 90px - 221px);
                 padding-left: 16px;
             }
             @include respond-to('tablet') {
@@ -172,6 +174,9 @@
             font-size: 16px;
             line-height: 19px;
             text-transform: uppercase;
+            @include respond-to('desktop-m') {
+                font-size: 14px;
+            }
             &-dot_adapt {
                 .dot_adapt {
                     @include respond-to('desktop-m') {
@@ -179,9 +184,6 @@
                     }
                 }
 
-            }
-            @include respond-to('desktop-m') {
-                max-width: 700px;
             }
         }
         &-item {
@@ -221,8 +223,6 @@
             line-height: 1em;
         }
         &-line {
-            /*display: flex;
-            align-items: flex-end;*/
             margin-top: 34px;
             width: 100%;
             height: 0px;
@@ -290,15 +290,7 @@ body.scroll {
                 align-items: center;
                 margin-bottom: 0;
             }
-            &-list {
-                @include respond-to('desktop-m') {
-                    max-width: 700px;
-                }
-            }
             &-item {
-                margin: 0 14px 16px 17px;
-                @include respond-to('tablet') {
-                }
                 &.active {
                     a {
                         color: $white;
