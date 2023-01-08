@@ -23,6 +23,15 @@ button {
     border-radius: 4px;
     width: auto;
     @include animate(all);
+    @include respond-to('desktop') {
+        padding: 10px 34px;
+        font-size: 20px;
+    }
+    @include respond-to('mobile') {
+        padding: 7px 24px;
+        font-size: 16px;
+        min-width: unset;
+    }
     &:hover {
         @include animate(all);
         background-color: $headingColor;

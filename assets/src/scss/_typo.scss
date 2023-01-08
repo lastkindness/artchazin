@@ -261,23 +261,32 @@ ol, ul {
     }
 }
 
-p1 {
+.p1 {
     font-family: $font;
     font-weight: 300;
     font-size: 24px;
     line-height: 1.2em;
+    @include respond-to('mobile') {
+        font-size: 16px;
+    }
 }
 .p2 {
     font-family: $font;
     font-weight: 300;
     font-size: 20px;
     line-height: 150%;
+    @include respond-to('mobile') {
+        font-size: 14px;
+    }
 }
 .p3 {
     font-family: $font;
     font-weight: 300;
     font-size: 16px;
     line-height: 150%;
+    @include respond-to('mobile') {
+        font-size: 14px;
+    }
 }
 .p3-regular {
     font-family: $font;

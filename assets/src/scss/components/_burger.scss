@@ -1,11 +1,8 @@
 .burger {
     display: block;
-    position: absolute;
-    right: 10px;
-    top: 50%;
-    transform: translateY(-50%);
     width: 26px;
-    height: 12px;
+    height: 20px;
+    cursor: pointer;
     span {
         display: block;
         height: 2px;
@@ -28,5 +25,11 @@
             }
         }
     }
+}
 
+.nav-active {
+    .burger {
+        position: absolute;
+        right: 10px;
+    }
 }

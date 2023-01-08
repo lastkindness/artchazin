@@ -16,12 +16,23 @@
         z-index: 0;
         background: linear-gradient(107.55deg, rgba(26, 30, 32, 0.8) 0%, rgba(39, 49, 54, 0.8) 107.79%);
     }
+    .container {
+        height: 100%;
+    }
     &__wrapper {
         z-index: 1;
         position: relative;
         padding: 386px 0px 25px 0px;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        @include respond-to('tablet') {
+            padding: 152px 0 32px 0;
+        }
         @include respond-to('mobile') {
-            padding: 217px 0 32px 0;
+            padding: 105px 0 32px 0;
         }
     }
     &__navigation {
@@ -33,6 +44,11 @@
         display: flex;
         justify-content: center;
         margin-bottom: 94px;
+        align-items: center;
+        height: auto;
+        @include respond-to('tablet') {
+            margin-bottom: 24px;
+        }
         @include respond-to('mobile') {
             display: flex;
             flex-direction: column;
@@ -50,7 +66,7 @@
                 height: 320px;
             }
             @include respond-to('mobile') {
-                width: 165px;
+                width: 100%;
                 height: 170px;
             }
         }
@@ -77,6 +93,9 @@
         &-descr {
             color: transparentize($white, 0.3);
             margin-top: 10px;
+            @include respond-to('mobile') {
+                text-align: center;
+            }
         }
         &-btn {
             &.btn {
@@ -85,6 +104,7 @@
                 @include respond-to('mobile') {
                     margin-top: 32px;
                     align-self: center;
+                    padding: 15px 30px;
                 }
 
             }
