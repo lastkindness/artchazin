@@ -29,7 +29,7 @@ get_header('front'); ?>
                 </div>
                 <div class="post__picture" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/src/img/onepost.jpg')">
                     <div class="post__picture-wrapper">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/src/img/pentagram.svg" alt="" class="post__picture-davidestar">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/src/img/bigdavidestar.svg" alt="" class="post__picture-davidestar">
                         <p class="post__picture-descr"><span class="post__picture-mark">Lorem ipsum</span> Dolor Sit Amet, Consectetuer Adipiscing Elit, Sed Diam Nonummy</p>
                     </div>
                 </div>

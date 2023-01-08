@@ -119,28 +119,28 @@ get_header('front'); ?>
             <img src="<?php echo get_template_directory_uri(); ?>/assets/src/img/product.png" alt="" class="banner__img">
             <div class="banner__box">
                 <div class="banner__box-item">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/src/img/pentagram.svg" alt="" class="banner__box-item-img">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/src/img/davidestar.svg" alt="" class="banner__box-item-img">
                     <div class="banner__box-item-descr">
                         <h6 class="banner__box-item-descr-title">Some Good Title</h6>
                         <p class="banner__box-item-descr-text p5">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy</p>
                     </div>
                 </div>
                 <div class="banner__box-item">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/src/img/pentagram.svg" alt="" class="banner__box-item-img">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/src/img/davidestar.svg" alt="" class="banner__box-item-img">
                     <div class="banner__box-item-descr">
                         <h6 class="banner__box-item-descr-title">Some Good Title</h6>
                         <p class="banner__box-item-descr-text p5">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy</p>
                     </div>
                 </div>
                 <div class="banner__box-item">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/src/img/pentagram.svg" alt="" class="banner__box-item-img">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/src/img/davidestar.svg" alt="" class="banner__box-item-img">
                     <div class="banner__box-item-descr">
                         <h6 class="banner__box-item-descr-title">Some Good Title</h6>
                         <p class="banner__box-item-descr-text p5">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy</p>
                     </div>
                 </div>
                 <div class="banner__box-item">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/src/img/pentagram.svg" alt="" class="banner__box-item-img">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/src/img/davidestar.svg" alt="" class="banner__box-item-img">
                     <div class="banner__box-item-descr">
                         <h6 class="banner__box-item-descr-title">Some Good Title</h6>
                         <p class="banner__box-item-descr-text p5">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy</p>
@@ -154,7 +154,7 @@ get_header('front'); ?>
 <section class="wall" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/src/img/peoplebg.jpg')" >
     <div class="container">
         <div class="wall__wrapper">
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/src/img/bigpentagram.svg" alt="" class="wall__pentagram">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/src/img/bigdavidestar.svg" alt="" class="wall__pentagram">
             <p class="wall__descr"><span class="wall__descr-mark">Lorem ipsum</span> Dolor Sit Amet, Consectetuer Adipiscing Elit, Sed Diam Nonummy</p>
         </div>
     </div>
