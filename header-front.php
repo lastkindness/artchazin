@@ -31,7 +31,9 @@
         <div class="container">
             <div class="header__menu-wrapper">
 <!--                <img src="<?php echo get_template_directory_uri(); ?>/assets/src/img/artlogo.svg" alt="" class="header__menu-logo">-->
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/src/img/artlogo3.svg" alt="" class="header__menu-logo">
+                <a href="#" class="header__menu-logo">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/src/img/artlogo3.svg" alt="">
+                </a>
                 <nav class="header__menu-nav">
                     <div class="header__menu-items">
                         <ul class="header__menu-list p3-italic">

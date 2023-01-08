@@ -33,10 +33,10 @@ body {
     line-height: 1.6em;
     color: $fontColor;
     @include respond-to('tablet') {
-        padding: 168px 0 0;
+        padding: 120px 0 0;
     }
     @include respond-to('tablet-sm') {
-        padding: 185px 0 0;
+        padding: 135px 0 0;
     }
     @include respond-to('mobile') {
         font: 400 14px/20px $font;
@@ -176,7 +176,7 @@ form {
     flex-direction: column;
     min-width: 413px;
     @include respond-to('mobile-sm') {
-        min-width: 411px;
+        min-width: 100%;
     }
     input {
         line-height: 1em;
@@ -203,6 +203,8 @@ label {
     font-size: 16px;
     color: $headingColor;
     padding: 0 10px 0 0;
+    display: flex;
+    align-items: center;
 }
 select {
     appearance: none;
@@ -243,6 +245,9 @@ select::-ms-expand {
     @include animate(all);
     pointer-events: none;
     transform: rotate(90deg);
+    @include respond-to('mobile') {
+        top: 7px;
+    }
 }
 .select:hover::after {
     color: $linkColor;

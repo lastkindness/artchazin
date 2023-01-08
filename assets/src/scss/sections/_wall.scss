@@ -22,6 +22,9 @@
         display: flex;
         align-items: center;
         justify-content: center;
+        @include respond-to('mobile') {
+            padding: 75px 0;
+        }
     }
     &__pentagram {
         display: flex;
@@ -46,7 +49,7 @@
         line-height: 150%;
         color: $white;
         @include respond-to('mobile-sm') {
-            font-size: 50px;
+            font-size: 42px;
         }
         &-mark {
             font-family: $fontArizonia;
@@ -58,6 +61,7 @@
             color: $lightgold;
             @include respond-to('mobile-sm') {
                 font-size: 72px;
+                line-height: 1.1em;
             }
         }
     }

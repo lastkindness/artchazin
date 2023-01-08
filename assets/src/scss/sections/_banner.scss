@@ -4,6 +4,9 @@
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+    @include respond-to( 'tablet') {
+        padding: 70px 0;
+    }
     &:before {
         display: block;
         content: "";
@@ -31,6 +34,9 @@
         @include respond-to( 'desktop-m') {
             order: 3;
             max-width: 865px;
+        }
+        @include respond-to( 'tablet') {
+            margin-top: 32px;
         }
         &-title {
             text-align: left;
@@ -63,6 +69,9 @@
         @include respond-to( 'desktop-m') {
             order: 1;
         }
+        @include respond-to( 'tablet') {
+            margin: 0 0 30px;
+        }
     }
     &__box {
         display: flex;
@@ -75,6 +84,10 @@
             flex-direction: row;
             max-width: 400px;
             margin:0 50px 32px 0;
+            @include respond-to('tablet') {
+                max-width: 100%;
+                margin:0 0 32px 0;
+            }
             &-descr {
                 display: flex;
                 flex-direction: column;

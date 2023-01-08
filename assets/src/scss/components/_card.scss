@@ -8,6 +8,12 @@
     position: relative;
     height: 776px;
     @include animate(all);
+    @include respond-to('desktop') {
+        height: 660px;
+    }
+    @include respond-to('tablet') {
+        padding: 20px;
+    }
     @include respond-to('mobile') {
         height: auto;
     }
@@ -32,12 +38,8 @@
             &__img {
                 position: relative;
                 z-index: 1;
-                width: 65.67%;
                 height: 330px;
                 @include animate(all);
-                @include respond-to('mobile') {
-                    width: 100%;
-                }
             }
             &__content {
                 justify-content: flex-start;
@@ -85,13 +87,12 @@
         object-fit: contain;
         margin: 0 auto;
         @include animate(all);
-        @include respond-to('tablet') {
-            width: 65.67%;
-            height: 360px;
-            @include animate(all);
+        @include respond-to('desktop') {
+            height: 420px;
         }
-        @include respond-to('mobile') {
-            width: 100%;
+        @include respond-to('tablet') {
+            height: 260px;
+            @include animate(all);
         }
     }
     &__title {
@@ -106,6 +107,9 @@
         justify-content: flex-end;
         align-items: center;
         margin: 31px 0 0 0;
+        @include respond-to('tablet') {
+            margin: 11px 0 0 0;
+        }
     }
     &__btn {
         flex-grow: 0;
@@ -130,14 +134,7 @@
         }
     }
     &_white {
-        padding: 32px;
-        height: auto;
         background-color: $white;
-        display: flex;
-        flex-direction: column;
-        cursor: pointer;
-        position: relative;
-        min-height: 776px;
         @include animate(all);
         &__content {
             flex-grow: 1;
@@ -164,7 +161,6 @@
                     }
                 }
                 &__img {
-                    width: 65.67%;
                     height: 360px;
                     @include animate(all);
                     @include respond-to('mobile') {
@@ -177,19 +173,14 @@
     }
     &_article {
         padding: 54px 61px 57px;
-        height: auto;
         background-color: $white;
-        display: flex;
-        flex-direction: column;
-        cursor: pointer;
-        position: relative;
-        min-height: 776px;
+        @include respond-to('tablet') {
+            padding: 20px;
+        }
         &:hover {
             .card {
                 &__img {
-                    transform: scale(120%);
-                    width: 80%;
-                    height: 347px;
+                    transform: scale(100%);
                     @include animate(all);
                 }
                 &__text {
@@ -230,7 +221,7 @@
                 }
             }
             &__img {
-                width: 80%;
+                transform: scale(80%);
                 height: 347px;
                 @include animate(all);
             }

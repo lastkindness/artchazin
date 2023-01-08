@@ -14,7 +14,7 @@
             max-width: 904px;
         }
         @include respond-to('mobile-sm') {
-            max-width: 311px;
+            display: none;
         }
     }
     &__main {
@@ -115,6 +115,11 @@
         font-size: 15px;
         line-height: 170%;
         color: $greyColor;
+        @include respond-to('mobile-sm') {
+            margin-top: 50px;
+            text-align: center;
+            align-items: center;
+        }
     }
 }
 

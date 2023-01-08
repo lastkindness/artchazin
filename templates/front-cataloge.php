@@ -85,7 +85,7 @@ get_header('front'); ?>
     <div class="container">
         <div class="cards-grid__wrapper">
             <div class="cards-grid__grid">
-                <div class="card card_white">
+                <div class="card">
                     <img src="<?php echo get_template_directory_uri(); ?>/assets/src/img/productcard2.png" alt="" class="card__img">
                     <div class="card__content">
                         <h2 class="card__title">NAME OF PRODUCT</h2>
@@ -94,34 +94,71 @@ get_header('front'); ?>
                     </div>
                     <a href="#" class="btn card__btn">Go To Order</a>
                 </div>
-                <div class="card card_article">
+                <div class="card">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/src/img/torah2.png" alt="" class="promotions__card-img card__img">
+                    <div class="card__content promotions__card-content">
+                        <h2 class="promotions__card-title card__title">NAME OF PRODUCT</h2>
+                        <p class="card__text p3 promotions__card-text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+                        <div class="promotions__card-price card__price p1">999$</div>
+                    </div>
+                    <a href="#" class="btn card__btn promotions__card-btn">Go To Order</a>
+                </div>
+                <div class="card">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/src/img/product5.jpg" alt="" class="promotions__card-img card__img">
+                    <div class="card__content promotions__card-content">
+                        <h2 class="promotions__card-title card__title">NAME OF PRODUCT</h2>
+                        <p class="card__text p3 promotions__card-text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+                        <div class="promotions__card-price card__price p1">999$</div>
+                    </div>
+                    <a href="#" class="btn card__btn promotions__card-btn">Go To Order</a>
+                </div>
+                <div class="card">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/src/img/delivery.jpg" alt="" class="card__img">
+                    <div class="card__content">
+                        <h2 class="card__title">NAME OF PRODUCT</h2>
+                        <p class="card__text p3">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. </p>
+                        <div class="card__price p1">999$</div>
+                    </div>
+                    <a href="#" class="btn card__btn">Go To Order</a>
+                </div>
+                <div class="card">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/src/img/product.png" alt="" class="card__img">
+                    <div class="card__content">
+                        <h2 class="card__title">NAME OF PRODUCT</h2>
+                        <p class="card__text p3">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. </p>
+                        <div class="card__price p1">999$</div>
+                    </div>
+                    <a href="#" class="btn card__btn">Go To Order</a>
+                </div>
+                <div class="card">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/src/img/productcard1.png" alt="" class="card__img">
+                    <div class="card__content">
+                        <h2 class="card__title">NAME OF PRODUCT</h2>
+                        <p class="card__text p3">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. </p>
+                        <div class="card__price p1">999$</div>
+                    </div>
+                    <a href="#" class="btn card__btn">Go To Order</a>
+                </div>
+                <div class="card">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/src/img/productcard2.png" alt="" class="card__img">
+                    <div class="card__content">
+                        <h2 class="card__title">NAME OF PRODUCT</h2>
+                        <p class="card__text p3">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. </p>
+                        <div class="card__price p1">999$</div>
+                    </div>
+                    <a href="#" class="btn card__btn">Go To Order</a>
+                </div>
+                <div class="card">
                     <img src="<?php echo get_template_directory_uri(); ?>/assets/src/img/productcard3.png" alt="" class="card__img">
                     <div class="card__content">
-                        <h2 class="card__title">NAME OF POST</h2>
+                        <h2 class="card__title">NAME OF PRODUCT</h2>
                         <p class="card__text p3">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. </p>
+                        <div class="card__price p1">999$</div>
                     </div>
-                    <a href="#" class="btn card__btn">Read More</a>
-                </div>
-                <div class="promotions__card card card_white">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/src/img/torah2.png" alt="" class="promotions__card-img card__img">
-                    <div class="card__content promotions__card-content">
-                        <h2 class="promotions__card-title card__title">NAME OF PRODUCT</h2>
-                        <p class="card__text p3 promotions__card-text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
-                        <div class="promotions__card-price card__price p1">999$</div>
-                    </div>
-                    <a href="#" class="btn card__btn promotions__card-btn">Go To Order</a>
-                </div>
-                <div class="promotions__card card">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/src/img/torah2.png" alt="" class="promotions__card-img card__img">
-                    <div class="card__content promotions__card-content">
-                        <h2 class="promotions__card-title card__title">NAME OF PRODUCT</h2>
-                        <p class="card__text p3 promotions__card-text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
-                        <div class="promotions__card-price card__price p1">999$</div>
-                    </div>
-                    <a href="#" class="btn card__btn promotions__card-btn">Go To Order</a>
+                    <a href="#" class="btn card__btn">Go To Order</a>
                 </div>
                 <div class="card">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/src/img/delivery.jpg" alt="" class="card__img">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/src/img/productheart.png" alt="" class="card__img">
                     <div class="card__content">
                         <h2 class="card__title">NAME OF PRODUCT</h2>
                         <p class="card__text p3">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. </p>
@@ -130,7 +167,7 @@ get_header('front'); ?>
                     <a href="#" class="btn card__btn">Go To Order</a>
                 </div>
                 <div class="card">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/src/img/delivery.jpg" alt="" class="card__img">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/src/img/product1.jpg" alt="" class="card__img">
                     <div class="card__content">
                         <h2 class="card__title">NAME OF PRODUCT</h2>
                         <p class="card__text p3">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. </p>
@@ -139,7 +176,7 @@ get_header('front'); ?>
                     <a href="#" class="btn card__btn">Go To Order</a>
                 </div>
                 <div class="card">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/src/img/delivery.jpg" alt="" class="card__img">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/src/img/product2.jpg" alt="" class="card__img">
                     <div class="card__content">
                         <h2 class="card__title">NAME OF PRODUCT</h2>
                         <p class="card__text p3">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. </p>
@@ -148,52 +185,7 @@ get_header('front'); ?>
                     <a href="#" class="btn card__btn">Go To Order</a>
                 </div>
                 <div class="card">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/src/img/delivery.jpg" alt="" class="card__img">
-                    <div class="card__content">
-                        <h2 class="card__title">NAME OF PRODUCT</h2>
-                        <p class="card__text p3">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. </p>
-                        <div class="card__price p1">999$</div>
-                    </div>
-                    <a href="#" class="btn card__btn">Go To Order</a>
-                </div>
-                <div class="card">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/src/img/delivery.jpg" alt="" class="card__img">
-                    <div class="card__content">
-                        <h2 class="card__title">NAME OF PRODUCT</h2>
-                        <p class="card__text p3">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. </p>
-                        <div class="card__price p1">999$</div>
-                    </div>
-                    <a href="#" class="btn card__btn">Go To Order</a>
-                </div>
-                <div class="card">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/src/img/delivery.jpg" alt="" class="card__img">
-                    <div class="card__content">
-                        <h2 class="card__title">NAME OF PRODUCT</h2>
-                        <p class="card__text p3">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. </p>
-                        <div class="card__price p1">999$</div>
-                    </div>
-                    <a href="#" class="btn card__btn">Go To Order</a>
-                </div>
-                <div class="card">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/src/img/delivery.jpg" alt="" class="card__img">
-                    <div class="card__content">
-                        <h2 class="card__title">NAME OF PRODUCT</h2>
-                        <p class="card__text p3">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. </p>
-                        <div class="card__price p1">999$</div>
-                    </div>
-                    <a href="#" class="btn card__btn">Go To Order</a>
-                </div>
-                <div class="card">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/src/img/delivery.jpg" alt="" class="card__img">
-                    <div class="card__content">
-                        <h2 class="card__title">NAME OF PRODUCT</h2>
-                        <p class="card__text p3">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. </p>
-                        <div class="card__price p1">999$</div>
-                    </div>
-                    <a href="#" class="btn card__btn">Go To Order</a>
-                </div>
-                <div class="card">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/src/img/delivery.jpg" alt="" class="card__img">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/src/img/product3.jpg" alt="" class="card__img">
                     <div class="card__content">
                         <h2 class="card__title">NAME OF PRODUCT</h2>
                         <p class="card__text p3">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. </p>
