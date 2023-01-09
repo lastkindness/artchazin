@@ -1,4 +1,4 @@
-.post {
+.service {
     padding: 0 0 120px;
     @include respond-to('desktop') {
         padding: 0 0 40px;
@@ -7,7 +7,7 @@
         text-align: left;
     }
     &__descr {
-        max-width: 940px;
+        max-width: 948px;
         @include respond-to('desktop-m') {
             max-width: 1680px;
         }
@@ -34,8 +34,8 @@
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center;
-        max-width: 650px;
         margin-left: 32px;
+        max-width: 682px;
         @include respond-to('desktop-m') {
             margin: 0 auto;
             margin-top: 30px;
@@ -54,7 +54,7 @@
         }
         &-wrapper {
             z-index: 1;
-            padding: 150px 30px 49px;
+            padding: 111px 50px 171px;
             position: relative;
             display: flex;
             align-items: center;
@@ -66,8 +66,8 @@
             justify-content: center;
             position: absolute;
             z-index: 0;
-            max-width: 130px;
-            max-height: 130px;
+            max-width: 157px;
+            max-height: 157px;
             color: $greyColor;
             opacity: 0.8;
             margin: 0 auto;

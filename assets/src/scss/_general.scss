@@ -174,7 +174,6 @@ section {
 form {
     display: flex;
     flex-direction: column;
-    min-width: 413px;
     @include respond-to('mobile-sm') {
         min-width: 100%;
     }
