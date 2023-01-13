@@ -37,11 +37,54 @@
                 <nav class="header__menu-nav">
                     <div class="header__menu-items">
                         <ul class="header__menu-list p3-italic">
-                            <li class="header__menu-item active"><a href="#" class="header__menu-link">GIFTS</a></li>
-                            <li class="header__menu-item"><a href="#" class="header__menu-link">KETUBAH</a></li>
-                            <li class="header__menu-item"><a href="#" class="header__menu-link">JEWISH ARTWORK</a></li>
-                            <li class="header__menu-item"><a href="#" class="header__menu-link">INSTITUTIONS AND ORGANIZATION</a></li>
-                            <li class="header__menu-item"><a href="#" class="header__menu-link">THE ILLUMINATED TORAH</a></li>
+                            <li class="header__menu-item">
+                                <a href="#" class="header__menu-link">GIFTS</a>
+                                <ul class="header__menu-sublist">
+                                    <li class="header__menu-item"><a href="#" class="header__menu-link">JEWISH ARTWORK</a></li>
+                                    <li class="header__menu-item active"><a href="#" class="header__menu-link">JEWISH ARTWORK</a></li>
+                                    <li class="header__menu-item"><a href="#" class="header__menu-link">JEWISH ARTWORK</a></li>
+                                    <li class="header__menu-item"><a href="#" class="header__menu-link">JEWISH ARTWORK</a></li>
+                                </ul></li>
+                            <li class="header__menu-item">
+                                <a href="#" class="header__menu-link">KETUBAH</a>
+                                <ul class="header__menu-sublist">
+                                    <li class="header__menu-item"><a href="#" class="header__menu-link">JEWISH ARTWORK</a></li>
+                                    <li class="header__menu-item"><a href="#" class="header__menu-link">JEWISH ARTWORK</a></li>
+                                </ul>
+                            </li>
+                            <li class="header__menu-item active">
+                                <a href="#" class="header__menu-link">JEWISH ARTWORK</a>
+                                <ul class="header__menu-sublist">
+                                    <li class="header__menu-item"><a href="#" class="header__menu-link">JEWISH ARTWORK</a></li>
+                                    <li class="header__menu-item active"><a href="#" class="header__menu-link">JEWISH ARTWORK</a></li>
+                                    <li class="header__menu-item"><a href="#" class="header__menu-link">JEWISH ARTWORK</a></li>
+                                    <li class="header__menu-item"><a href="#" class="header__menu-link">JEWISH ARTWORK</a></li>
+                                    <li class="header__menu-item"><a href="#" class="header__menu-link">JEWISH ARTWORK</a></li>
+                                    <li class="header__menu-item"><a href="#" class="header__menu-link">JEWISH ARTWORK</a></li>
+                                </ul>
+                            </li>
+                            <li class="header__menu-item">
+                                <a href="#" class="header__menu-link">INSTITUTIONS AND ORGANIZATION</a>
+                                <ul class="header__menu-sublist">
+                                    <li class="header__menu-item"><a href="#" class="header__menu-link">JEWISH ARTWORK</a></li>
+                                    <li class="header__menu-item active"><a href="#" class="header__menu-link">JEWISH ARTWORK</a></li>
+                                    <li class="header__menu-item"><a href="#" class="header__menu-link">JEWISH ARTWORK</a></li>
+                                    <li class="header__menu-item"><a href="#" class="header__menu-link">JEWISH ARTWORK</a></li>
+                                    <li class="header__menu-item"><a href="#" class="header__menu-link">JEWISH ARTWORK</a></li>
+                                    <li class="header__menu-item"><a href="#" class="header__menu-link">JEWISH ARTWORK</a></li>
+                                </ul>
+                            </li>
+                            <li class="header__menu-item">
+                                <a href="#" class="header__menu-link">THE ILLUMINATED TORAH</a>
+                                <ul class="header__menu-sublist">
+                                    <li class="header__menu-item"><a href="#" class="header__menu-link">JEWISH ARTWORK</a></li>
+                                    <li class="header__menu-item active"><a href="#" class="header__menu-link">JEWISH ARTWORK</a></li>
+                                    <li class="header__menu-item"><a href="#" class="header__menu-link">JEWISH ARTWORK</a></li>
+                                    <li class="header__menu-item"><a href="#" class="header__menu-link">JEWISH ARTWORK</a></li>
+                                    <li class="header__menu-item"><a href="#" class="header__menu-link">JEWISH ARTWORK</a></li>
+                                    <li class="header__menu-item"><a href="#" class="header__menu-link">JEWISH ARTWORK</a></li>
+                                </ul>
+                            </li>
                         </ul>
                         <div class="header__menu-lang header__menu-lang_mobile">
                             <span class="lang">
@@ -54,7 +97,15 @@
                         </div>
                     </div>
                     <div class="header__menu-dot"></div>
-                    <div class="icon-search icon"></div>
+                    <div class="header__search">
+                        <div class="icon-search icon"></div>
+                        <div class="header__search-drop active">
+                            <form action="#" class="header__search-form">
+                                <input class="header__search-input" type="text" placeholder="Search">
+                                <button class="icon icon-search header__search-btn btn"></button>
+                            </form>
+                        </div>
+                    </div>
                     <div class="burger header__burger"><span></span><span></span><span></span></div>
                 </nav>
                 <div class="header__menu-lang">

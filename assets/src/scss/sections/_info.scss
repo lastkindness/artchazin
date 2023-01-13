@@ -1,0 +1,42 @@
+.info {
+    &__item {
+        display: flex;
+        margin-bottom: 120px;
+    }
+    &__descr {
+        &:nth-child(1) {
+            max-width: 680px;
+            margin-right: 64px;
+        }
+        &:nth-child(2) {
+            max-width: 875px;
+            margin-left: 64px;
+        }
+        &:nth-child(3) {
+            max-width: 885px;
+            margin-right: 64px;
+        }
+        &:nth-child(4) {
+            max-width: 579px;
+            margin-left: 64px;
+        }
+        &-title {
+            text-align: left;
+        }
+        &-divider {
+            margin: 24px 0 16px;
+            border: 1px solid $lightgold;
+        }
+        &-text {
+            text-align: left;
+        }
+    }
+    &__img {
+        &:nth-child(1) {
+            width: 28%;
+        }
+        &:nth-child(2) {
+            width: 41%;
+        }
+    }
+}
