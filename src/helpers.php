@@ -30,6 +30,7 @@ function svg($filename, $return = false, $content = true, $dir = 'assets/dist/sv
 
 
 add_filter('upload_mimes', 'allowUploadSVG');
+define( 'ALLOW_UNFILTERED_UPLOADS', true );
 add_filter('generate_rewrite_rules', 'taxonomySlugAsPostType');
 
 /**
@@ -80,4 +81,42 @@ function taxonomySlugAsPostType($wp_rewrite)
     }
 
     $wp_rewrite->rules = $rules + $wp_rewrite->rules;
+}
+add_action( 'after_switch_theme', 'activate_my_theme' );
+function activate_my_theme() {
+    $template_directory= get_template_directory();
+    $dir_parts_blocks    = $template_directory.'/acf-blocks/';
+    $dir_parts_src    = $template_directory.'/assets/src/';
+    $folders = scandir($dir_parts_blocks);
+    $text_scss = "@import 'app';\r\n";
+    $text_js = "import import_js from './app.js';\r\nimport '../scss/styles.scss';\r\n";
+    foreach($folders as $folder){
+        if($folder=='..'||$folder=='.'||$folder=='_import.scss'||$folder=='import.js'){
+            continue;
+        }
+        $text_scss.="@import './../../../acf-blocks/".$folder."/scss/app';\r\n";
+        $text_js.="import ".preg_replace('/[^ a-zа-яё\d]/ui', '',$folder )."_block from '../../../acf-blocks/".$folder."/js/app.js';\r\n";
+    };
+//    file_put_contents($dir_parts_blocks.'_import.scss', $text_scss);
+//    file_put_contents($dir_parts_blocks.'import.js', $text_js);
+    file_put_contents($dir_parts_src.'scss/styles.scss', $text_scss);
+    file_put_contents($dir_parts_src.'js/script.js', $text_js);
+}
+
+/**
+ * Verify for the presence of real content in the standard WordPress editor
+ *
+ * @param $content
+ *
+ * @return string
+ */
+function getContentWpEditor($content):string
+{
+    $pattern = ['<p>', '</p>', '&nbsp;', '<br>', '</br>', '<br />'];
+
+    if ( trim(str_replace($pattern, '', $content)) ) {
+        return $content;
+    } else {
+        return '';
+    }
 }
