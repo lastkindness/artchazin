@@ -154,7 +154,7 @@ get_header('front'); ?>
 <section class="wall" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/src/img/peoplebg.jpg')" >
     <div class="container">
         <div class="wall__wrapper">
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/src/img/bigdavidestar.svg" alt="" class="wall__pentagram">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/src/img/bigdavidestar.svg" alt="" class="wall__davidestar curved-img">
             <p class="wall__descr"><span class="wall__descr-mark">Lorem ipsum</span> Dolor Sit Amet, Consectetuer Adipiscing Elit, Sed Diam Nonummy</p>
         </div>
     </div>
@@ -233,10 +233,10 @@ get_header('front'); ?>
     </div>
 </section>
 
-<section class="callback" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/src/img/peoplecallback.jpg')">
+<section class="callback parallax" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/src/img/peoplecallback.jpg')">
     <div class="container">
         <div class="callback__wrapper">
-            <div class="callback__title h1">get a call back</div>
+            <div class="callback__title h1">Get a call back</div>
             <form class="callback__form" action="/my-handling-form-page" method="post">
                     <input class="callback__form-name" type="text" id="name" name="user_name" placeholder="Name">
                     <input class="callback__form-phone" type="email" id="mail" name="user_email" placeholder="Phone">

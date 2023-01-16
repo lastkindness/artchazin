@@ -10,7 +10,7 @@ get_header('front'); ?>
         <div class="breadcrumbs__wrapper">
             <div class="breadcrumbs__item"><a href="#" class="breadcrumbs__link"><span class="icon icon-home"></span></a></div>
             <div class="breadcrumbs__item"><a href="#" class="breadcrumbs__link"><span class="icon icon-smallarrow"></span></a></div>
-            <div class="breadcrumbs__item active"><a href="#" class="breadcrumbs__link">Contact Us</a></div>
+            <div class="breadcrumbs__item active"><a href="#" class="breadcrumbs__link">Our service</a></div>
         </div>
     </div>
 </section>

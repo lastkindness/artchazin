@@ -10,6 +10,12 @@ import topSlider from "./modules/top-slider"
 import textLines from "./modules/text-lines"
 import promotionsSlider from "./modules/promotions-slider"
 import select from "./modules/select"
+import tabs from "./modules/tabs"
+import curvedImg from "./modules/curved-img"
+import parallax from "./modules/parallax"
+import productSlider from "./modules/product-slider"
+
+
 
 import '../scss/app.scss';
 
@@ -24,5 +30,9 @@ $(document).ready(() => {
     textLines();
     promotionsSlider();
     select();
+    tabs();
+    curvedImg();
+    parallax();
+    productSlider();
 
 });

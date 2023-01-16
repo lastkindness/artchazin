@@ -282,3 +282,11 @@ select::-ms-expand {
     max-width: 100%
 }
 
+.parallax {
+    background-size: cover;
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    padding-top: 5%;
+}
+

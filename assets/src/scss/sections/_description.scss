@@ -3,6 +3,7 @@
         max-width: 740px;
         &-title {
             text-align: left;
+            text-transform: capitalize;
             @include respond-to('tablet') {
                 font-size: 40px;
             }
