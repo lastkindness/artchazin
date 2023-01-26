@@ -1,4 +1,4 @@
-.top-slider {
+.product-gallery-slider {
     padding: 64px 0 64px 0;
     &__wrapper {
         overflow: visible;
@@ -11,9 +11,11 @@
     }
     &__divider {
         margin: 0 auto;
+        height: 2px;
         width: 45%;
         margin-top: 16px;
         align-items: center;
+        background-color: $lightgold;
         @include respond-to('desktop') {
             width: 75%;
         }
@@ -29,16 +31,13 @@
     }
     &__cardwrap {
         margin-top: 32px;
-        display: grid;
+        display: flex;
         justify-content: space-between;
-        align-items: stretch;
-        grid-template-columns: repeat(3, 1fr);
-        grid-gap: 20px;
     }
-    &__card {
+    /*&__card {
+        opacity: 0;
         &.swiper {
             &-slide {
-                opacity: 0;
                 &-active {
                     opacity: 1;
                     @include animate(all);
@@ -53,5 +52,5 @@
                 }
             }
         }
-    }
+    }*/
 }

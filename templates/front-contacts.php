@@ -20,7 +20,7 @@ get_header('front'); ?>
         <div class="contacts__wrapper">
             <div class="contacts__descr">
                 <h1 class="contacts__descr-title">Art Chazin Contacts</h1>
-                <div class="contacts__descr-divider"></div>
+                <div class="contacts__descr-divider divider"></div>
                 <p class="contacts__descr-text">We invest in providing gracious service, to every customer who contacts us, for every question or comment we are available to reply according. If you have any questions regarding the ordering process or anything else, please don't hesitate to contact us, our customer service team will be there to respond within 24 hours of contact (not including Shabbat and holidays).
                     Our customer service provides response in 6 languages: English, Hebrew, French, Russian, Yiddish and Flemish.
                     Choose the way most comfortable to you to contact us. </p>

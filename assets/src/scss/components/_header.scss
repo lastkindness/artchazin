@@ -144,6 +144,12 @@
                 order: 0;
                 margin: 0;
             }
+            .logo {
+                display: block;
+            }
+            .logo-scroll {
+                display: none;
+            }
         }
         &-nav {
             display: flex;
@@ -211,7 +217,7 @@
                 }
             }
             &.active {
-                a {
+                & > a {
                     color: $headingColor;
                 }
             }
@@ -226,6 +232,15 @@
             z-index: 1;
             border-radius: 4px;
             column-count: 2;
+            column-gap: 5px;
+            @include respond-to('tablet') {
+                width: 320px;
+            }
+            @include respond-to('mobile') {
+                position: static;
+                width: 280px;
+            }
+
         }
         &-dot {
             height: 4px;
@@ -272,6 +287,9 @@
         &-form {
             position: relative;
             right: 45%;
+            @include respond-to("tablet") {
+                margin-top: 25px;
+            }
             button {
                 &.btn {
                     background-color: transparent;
@@ -303,14 +321,12 @@
             @include respond-to('mobile') {
                 width: 250px;
             }
-            @include respond-to('mobile-sm') {
-                width: 200px;
-            }
         }
         &-input {
             position: relative;
             box-shadow: none;
-
+            padding: 13px 45px 13px 22px;
+            box-shadow: 0px 0px 15px rgba(119, 103, 103, 0.15);
         }
         &-btn {
             position: absolute;
@@ -355,6 +371,18 @@
 
 body.scroll {
     .header {
+        &__search {
+            .icon-search {
+                @include respond-to('mobile') {
+                    margin-bottom: 22px;
+                }
+            }
+        }
+        &__burger {
+            @include respond-to('mobile') {
+                margin-bottom: 20px;
+            }
+        }
         &__head {
             overflow: hidden;
             padding: 0;
@@ -364,7 +392,7 @@ body.scroll {
         &__menu {
             @include animate(all);
             background: $headingColor;
-            padding: 15px 0;
+            padding: 5px 0;
             @include respond-to('tablet') {
                 margin: 0;
             }
@@ -381,6 +409,12 @@ body.scroll {
             &-logo {
                 width: 195px;
                 margin: 0;
+                .logo {
+                    display: none;
+                }
+                .logo-scroll {
+                    display: block;
+                }
             }
             &-nav {
                 align-items: center;
@@ -400,6 +434,7 @@ body.scroll {
                 }
                 @include respond-to('mobile') {
                     display: block;
+                    margin-bottom: 20px;
                 }
             }
             .icon {

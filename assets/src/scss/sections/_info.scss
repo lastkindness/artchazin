@@ -22,10 +22,10 @@
         }
         &-title {
             text-align: left;
+            text-transform: capitalize;
         }
         &-divider {
             margin: 24px 0 16px;
-            border: 1px solid $lightgold;
         }
         &-text {
             text-align: left;

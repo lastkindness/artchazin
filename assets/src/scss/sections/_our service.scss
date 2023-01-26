@@ -5,6 +5,7 @@
     }
     &__title {
         text-align: left;
+        text-transform: capitalize;
     }
     &__descr {
         max-width: 948px;
@@ -16,7 +17,6 @@
             color: $headingColor;
         }
         &-divider {
-            border: 1px solid $lightgold;
             max-width: 903px;
             text-align: left;
             margin: 15px 0 8px;

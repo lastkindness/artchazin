@@ -1,0 +1,48 @@
+.tabs {
+    &__nav {
+        display: flex;
+        border-bottom: 1px solid #eee;
+        list-style: none;
+        padding: 0;
+        margin: 0 0 30px;
+        li {
+            cursor: pointer;
+            padding: 4px 16px;
+            margin: 0 24px 0 0;
+            @include respond-to('desktop-m') {
+                margin: 0 12px 0 0;
+                font-size: 16px;
+            }
+            &.active {
+                border: 1px solid $headingColor;
+                border-radius: 4px;
+            }
+            &:hover {
+
+            }
+        }
+    }
+    &__content {
+        opacity: 0;
+        height: 0;
+        pointer-events: none;
+        transition: all 0.3s;
+        position: absolute;
+        top: 0;
+        &.active {
+            opacity: 1;
+            height: auto;
+            pointer-events: auto;
+            position: relative;
+        }
+        p {
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+
+        &__wrap {
+            position: relative;
+        }
+    }
+}

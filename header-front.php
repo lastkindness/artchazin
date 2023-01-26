@@ -32,7 +32,8 @@
             <div class="header__menu-wrapper">
 <!--                <img src="<?php echo get_template_directory_uri(); ?>/assets/src/img/artlogo.svg" alt="" class="header__menu-logo">-->
                 <a href="#" class="header__menu-logo">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/src/img/artlogo3.svg" alt="">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/src/img/artlogo3.svg" alt="" class="logo">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/src/img/scroll-logo.svg" alt="" class="logo-scroll ">
                 </a>
                 <nav class="header__menu-nav">
                     <div class="header__menu-items">

@@ -7,7 +7,7 @@
     @include respond-to( 'tablet') {
         height: auto;
     }
-    &:before {
+    &:before .parallax {
         display: block;
         content: "";
         position: absolute;
