@@ -31,13 +31,16 @@
     }
     &__cardwrap {
         margin-top: 32px;
-        display: flex;
+        display: grid;
         justify-content: space-between;
+        align-items: stretch;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 20px;
     }
     &__card {
-        opacity: 0;
         &.swiper {
             &-slide {
+                opacity: 0;
                 &-active {
                     opacity: 1;
                     @include animate(all);
