@@ -9,6 +9,10 @@
             cursor: pointer;
             padding: 4px 16px;
             margin: 0 24px 0 0;
+            @include respond-to('desktop-m') {
+                margin: 0 12px 0 0;
+                font-size: 16px;
+            }
             &.active {
                 border: 1px solid $headingColor;
                 border-radius: 4px;

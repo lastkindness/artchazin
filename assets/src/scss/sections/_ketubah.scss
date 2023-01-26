@@ -1,0 +1,36 @@
+.ketubah {
+    &__wrapper {
+        display: flex;
+    }
+    &__descr {
+        width: 585px;
+        &-title {
+            text-align: left;
+            text-transform: capitalize;
+        }
+        &-subtitle {
+            text-align: left;
+            text-transform: capitalize;
+            margin-top: 16px;
+        }
+        &__divider {
+            margin: 16px 0 8px;
+        }
+        &-text {
+            text-align: left;
+        }
+    }
+    &__gallery {
+        /*height: 570px;*/
+        margin-left: 52px;
+        display: flex;
+        /*justify-content: flex-start;*/
+        .container {
+            display: flex;
+            flex-direction: column;
+        }
+        .center-item {
+            height: 570px;
+        }
+    }
+}

@@ -5,7 +5,7 @@
 
 get_header('front'); ?>
 
-<section class="error" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/src/img/peoplecallback.jpg')">
+<section class="error parallax" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/src/img/peoplecallback.jpg')">
     <div class="container">
         <div class="error__wrapper">
             <img src="<?php echo get_template_directory_uri(); ?>/assets/src/img/404.svg" alt="" class="error__img">

@@ -4,6 +4,8 @@
 @import '~swiper/modules/grid/grid';
 @import '~swiper/modules/effect-fade/effect-fade';
 
+@import '~@fancyapps/fancybox/dist/jquery.fancybox.css';
+
 @import "fonts";
 @import "mixins";
 @import "vars";
@@ -37,7 +39,11 @@
 @import "sections/our service";
 @import "sections/info";
 @import "sections/product";
+@import "sections/product-gallery-slider";
+@import "sections/ketubah";
+@import "sections/gallery-grid";
 
 
 @import "pages/404";
+@import "pages/content";
 

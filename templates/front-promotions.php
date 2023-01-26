@@ -20,7 +20,7 @@ get_header('front'); ?>
         <div class="description__wrapper">
             <div class="description__descr">
                 <div class="description__descr-title h1">Promotions And Discount</div>
-                <div class="description__descr-divider"></div>
+                <div class="description__descr-divider divider"></div>
                 <p class="description__descr-text">Art Chazin was founded in Jerusalem in 2000 by the artist and designer Rabbi Avraham Chazin, born into a family of artists and painters.
                     Today Art Chazin is the leading company </p>
             </div>

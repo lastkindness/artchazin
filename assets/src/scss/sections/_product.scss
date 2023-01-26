@@ -1,32 +1,158 @@
 .product {
     padding: 0 0 64px;
     &__wrapper {
-        display: flex;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 10px;
+        row-gap: 1em;
+        grid-auto-rows: auto;
+
     }
     &__gallery {
+        grid-column: 1/2;
+        grid-row: 1/3;
         display: flex;
+        align-items: flex-start;
+        justify-content: stretch;
+    }
+    .main {
+        height: 100%;
+        width: calc(100% - 86px - 20px);
+    }
+    .thumbs {
+        width: 86px;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin: 0 10px 0 0;
+        .swiper-button {
+            position: static;
+            transform: rotate(-90deg);
+            margin: 0;
+        }
+    }
+    .mySwiper {
+        .swiper-wrapper {
+            height: 100%;
+            margin: 0 50px 0 0;
+        }
+        .swiper-slide {
+            width: 100%;
+            height: 108px;
+            cursor: pointer;
+            border: 2px solid black;
+            &-thumb-active {
+                border: 2px solid red;
+            }
+        }
+    }
+    .mySwiper2 {
+        /*width: 100%;
+        height: 100%;*/
+        position: relative;
+        z-index: 0;
+        margin: 0;
+        img {
+            object-fit: cover;
+            object-position: 50% 50%;
+        }
+    }
+    .zoomer-box {
+        position: relative;
+        z-index: 1;
+        &:hover,
+        &:active {
+            cursor: zoom-in;
+            display: block;
+            .lens {
+                opacity: 1;
+            }
+        }
+        &.swiper-slide-active {
+            z-index: 90;
+        }
+        .lens {
+            width: 340px;
+            height: 340px;
+            background-repeat: no-repeat;
+            background-color: #FFF;
+            box-shadow: 0 5px 10px -2px rgba(0,0,0,0.3);
+            pointer-events: none;
+            position: absolute;
+            opacity: 0;
+            border: 4px solid whitesmoke;
+            z-index: 99;
+            border-radius: 100%;
+            display: block;
+            transition: opacity .2s;
+        }
     }
     &__pictures {
+        width: 100%;
+        @include respond-to('laptop') {
+            width: 100%;
+            order: 1;
+        }
         &-wrap {
-            padding: 17px 17px 8px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: flex-start;
+            @include respond-to('laptop') {
+                flex-direction: row;
+                flex-wrap: wrap;
+            }
+        }
+        &-item {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 117px !important;
+            width: 117px;
+            padding: 17px 17px;
             background-color: $hovergold;
             margin-bottom: 32px;
         }
-        &-item {
-            width: 73px;
+        &-img {
             height: 81px;
+            width: 73px;
         }
     }
     &__img {
-        padding: 93px 52px;
         background-color: $hovergold;
         margin-left: 32px;
+        height: 820px;
+        width: 681px;
+        @include respond-to('desktop-m') {
+
+        }
+        @include respond-to('laptop') {
+            width: 100%;
+            height: 420px;
+            order: 0;
+            margin-left: 0;
+        }
+        &-item {
+            padding: 93px 52px;
+        }
         &-img {
-            height: 634px;
-            width: 577px;
+            /*width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: 50% 50%;
+            display: block;*/
+        }
+    }
+    &__container {
+        @include respond-to('laptop') {
+            width: calc(100% - 32px - 348px)
         }
     }
     &__content {
+        grid-column: 2/3;
+        grid-row: 1/2;
         max-width: 527px;
         margin-left: 32px;
         &-title {
@@ -34,7 +160,6 @@
             text-transform: capitalize;
         }
         &-divider {
-            border: 1px solid $lightgold;
             margin: 9px 0 7px;
         }
         &-price {
@@ -42,14 +167,11 @@
             color: $headingColor;
             margin-top: 32px;
         }
-        &-btn {
+        .btn {
             margin-top: 24px;
         }
         &-item {
             font-size: 24px;
-            /*&:nth-child(odd) {
-                margin-top: 32px;
-            }*/
             margin-top: 16px;
             .icon {
                 margin-right: 10px;
@@ -68,11 +190,16 @@
         }
     }
     &__tabs {
+        grid-column: 2/3;
+        grid-row: 2/3;
         margin: 64px 0 0 32px;
     }
     &__container {
         display: flex;
         flex-direction: column;
+        @include respond-to('laptop') {
+            flex-wrap: nowrap;
+        }
     }
 }
 

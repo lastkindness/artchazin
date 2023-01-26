@@ -19,7 +19,7 @@ get_header('front'); ?>
     <div class="container">
         <div class="main-title__wrapper">
             <h1 class="main-title__title">SOME GOOD TOTLE</h1>
-            <div class="main-title__divider"></div>
+            <div class="main-title__divider divider"></div>
             <div class="main-title__descr">
                 <p class="p3">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
             </div>

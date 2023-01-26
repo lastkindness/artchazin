@@ -1,4 +1,4 @@
-.top-slider {
+.product-gallery-slider {
     padding: 64px 0 64px 0;
     &__wrapper {
         overflow: visible;
@@ -11,9 +11,11 @@
     }
     &__divider {
         margin: 0 auto;
+        height: 2px;
         width: 45%;
         margin-top: 16px;
         align-items: center;
+        background-color: $lightgold;
         @include respond-to('desktop') {
             width: 75%;
         }
@@ -32,7 +34,7 @@
         display: flex;
         justify-content: space-between;
     }
-    &__card {
+    /*&__card {
         opacity: 0;
         &.swiper {
             &-slide {
@@ -50,5 +52,5 @@
                 }
             }
         }
-    }
+    }*/
 }

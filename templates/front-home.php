@@ -55,7 +55,7 @@ get_header('front'); ?>
     <div class="container">
         <div class="top-slider__wrapper swiper">
             <h1 class="top-slider__title">SOME GOOD TOTLE</h1>
-            <div class="top-slider__divider"></div>
+            <div class="top-slider__divider divider"></div>
             <div class="top-slider__descr">
                 <p class="p3">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
             </div>
@@ -164,7 +164,7 @@ get_header('front'); ?>
     <div class="container">
         <div class="top-slider__wrapper swiper">
             <h1 class="top-slider__title">SOME GOOD TOTLE</h1>
-            <div class="top-slider__divider"></div>
+            <div class="top-slider__divider divider"></div>
             <div class="top-slider__descr">
                 <p class="p3">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
             </div>

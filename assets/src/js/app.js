@@ -1,7 +1,15 @@
 'use strict';
+import productGallerySlider from './modules/product-gallery-slider';
+
 /**
  *  Load modules
  */
+// Require jQuery (Fancybox dependency)
+window.$ = window.jQuery = require('jquery');
+
+// Fancybox
+const fancybox = require('@fancyapps/fancybox');
+
 import main from "./modules/main"
 import burger from "./modules/burger"
 import header from "./modules/header"
@@ -14,6 +22,9 @@ import tabs from "./modules/tabs"
 import curvedImg from "./modules/curved-img"
 import parallax from "./modules/parallax"
 import productSlider from "./modules/product-slider"
+import zoomlens from './modules/zoomlens'
+/* import productGallerySlider from './modules/product-gallery-slider' */
+
 
 
 
@@ -34,5 +45,7 @@ $(document).ready(() => {
     curvedImg();
     parallax();
     productSlider();
+    zoomlens();
+    productGallerySlider();
 
 });
