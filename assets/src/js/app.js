@@ -31,7 +31,6 @@ import zoomlens from './modules/zoomlens'
 import '../scss/app.scss';
 
 $(document).ready(() => {
-
     main();
     header();
     burger();
@@ -47,5 +46,4 @@ $(document).ready(() => {
     productSlider();
     zoomlens();
     productGallerySlider();
-
 });
