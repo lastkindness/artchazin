@@ -23,7 +23,8 @@ import curvedImg from "./modules/curved-img"
 import parallax from "./modules/parallax"
 import productSlider from "./modules/product-slider"
 import zoomlens from './modules/zoomlens'
-/* import productGallerySlider from './modules/product-gallery-slider' */
+import searchDrop from './modules/search-drop'
+
 
 
 
@@ -47,5 +48,5 @@ $(document).ready(() => {
     productSlider();
     zoomlens();
     productGallerySlider();
-
+    searchDrop();
 });

@@ -26,26 +26,23 @@ get_header('front'); ?>
                     The Ketubah is the most important thing of the Jewish wedding. Apart from its design and visual beauty you have the significant elements for the Jewish law to ensure for a successful marriage. We are here to accompany you through this process and we guarantee to satisfy you with our quality and service.
                     Here we present you with a vast selection of Ketubahs which can be purchased, in different styles and with a variety of options to upgrade and customize your print to the level of an original, within your budget. Scroll down and select your favourite print.</p>
             </div>
-            <div class="ketubah__gallery">
-                <div class="container">
-                    <a class="ketubah__gallery-item zoomer-box" href="<?php echo get_template_directory_uri(); ?>/assets/src/img/galleryitem2.png" data-fancybox="gallery">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/src/img/galleryitem2.png" alt="" class="ketubah__gallery-img">
-                    </a>
-                    <a class="ketubah__gallery-item zoomer-box" href="<?php echo get_template_directory_uri(); ?>/assets/src/img/galleryitem1.png" data-fancybox="gallery">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/src/img/galleryitem1.png" alt="" class="ketubah__gallery-img">
-                    </a>
-                </div>
-                <a class="ketubah__gallery-item center-item zoomer-box" href="<?php echo get_template_directory_uri(); ?>/assets/src/img/productcard1.png" data-fancybox="gallery">
+            <div class="ketubah__gallery ">
+                <a class="ketubah__gallery-item zoomer-box" href="<?php echo get_template_directory_uri(); ?>/assets/src/img/galleryitem2.png" data-fancybox="gallery">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/src/img/galleryitem2.png" alt="" class="ketubah__gallery-img">
+                </a>
+                <a class="ketubah__gallery-item zoomer-box" href="<?php echo get_template_directory_uri(); ?>/assets/src/img/galleryitem1.png" data-fancybox="gallery">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/src/img/galleryitem1.png" alt="" class="ketubah__gallery-img">
+                </a>
+                <a class="ketubah__gallery-item big zoomer-box" href="<?php echo get_template_directory_uri(); ?>/assets/src/img/productcard1.png" data-fancybox="gallery">
                     <img src="<?php echo get_template_directory_uri(); ?>/assets/src/img/productcard1.png" alt="" class="ketubah__gallery-img">
                 </a>
-                <div class="container">
-                    <a class="ketubah__gallery-item zoomer-box" href="<?php echo get_template_directory_uri(); ?>/assets/src/img/galleryitem3.png" data-fancybox="gallery">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/src/img/galleryitem3.png" alt="" class="ketubah__gallery-img">
-                    </a>
-                    <a class="ketubah__gallery-item zoomer-box" href="<?php echo get_template_directory_uri(); ?>/assets/src/img/galleryitem4.png" data-fancybox="gallery">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/src/img/galleryitem4.png" alt="" class="ketubah__gallery-img">
-                    </a>
-                </div>
+                <a class="ketubah__gallery-item zoomer-box" href="<?php echo get_template_directory_uri(); ?>/assets/src/img/galleryitem3.png" data-fancybox="gallery">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/src/img/galleryitem3.png" alt="" class="ketubah__gallery-img">
+                </a>
+                <a class="ketubah__gallery-item zoomer-box" href="<?php echo get_template_directory_uri(); ?>/assets/src/img/galleryitem4.png" data-fancybox="gallery">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/src/img/galleryitem4.png" alt="" class="ketubah__gallery-img">
+                </a>
+
             </div>
         </div>
     </div>
