@@ -2,23 +2,85 @@
     &__item {
         display: flex;
         margin-bottom: 120px;
+        @include respond-to('laptop') {
+            flex-direction: column-reverse;
+            margin-bottom: 60px;
+            &:nth-child(even) {
+                flex-direction: column;
+            }
+        }
+        &:nth-child(1n) {
+            .info__descr {
+                width: 40%;
+                margin-right: 64px;
+                @include respond-to('laptop') {
+                    width: 100%;
+                }
+            }
+            .info__img {
+                width: 41%;
+                @include respond-to('desktop-m') {
+                    width: 54%;
+                }
+                @include respond-to('laptop') {
+                    width: 70%;
+                }
+            }
+        }
+        &:nth-child(2n) {
+            .info__img {
+                width: 28%;
+                @include respond-to('laptop') {
+                    width: 50%;
+                }
+            }
+
+            .info__descr {
+                width: 51%;
+                margin-left: 64px;
+                @include respond-to('laptop') {
+                    width: 100%;
+                    margin-left: 0;
+                }
+            }
+        }
+        &:nth-child(3n) {
+            .info__descr {
+                width: 52%;
+                margin-right: 64px;
+                @include respond-to('laptop') {
+                    width: 100%;
+                }
+            }
+
+            .info__img {
+                width: 22%;
+                @include respond-to('laptop') {
+                    width: 50%;
+                }
+            }
+        }
+        &:nth-child(4n) {
+            .info__img {
+                width: 28%;
+                @include respond-to('laptop') {
+                    width: 50%;
+
+                }
+                .info__descr {
+                    width: 34%;
+                    margin-left: 64px;
+                    @include respond-to('laptop') {
+                        width: 100%;
+                        margin-left: 0;
+                    }
+                }
+            }
+        }
     }
     &__descr {
-        &:nth-child(1) {
-            max-width: 680px;
-            margin-right: 64px;
-        }
-        &:nth-child(2) {
-            max-width: 875px;
-            margin-left: 64px;
-        }
-        &:nth-child(3) {
-            max-width: 885px;
-            margin-right: 64px;
-        }
-        &:nth-child(4) {
-            max-width: 579px;
-            margin-left: 64px;
+        @include respond-to('laptop') {
+            margin-top: 32px;
         }
         &-title {
             text-align: left;
@@ -29,14 +91,6 @@
         }
         &-text {
             text-align: left;
-        }
-    }
-    &__img {
-        &:nth-child(1) {
-            width: 28%;
-        }
-        &:nth-child(2) {
-            width: 41%;
         }
     }
 }
