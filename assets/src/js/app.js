@@ -25,10 +25,6 @@ import productSlider from "./modules/product-slider"
 import zoomlens from './modules/zoomlens'
 import searchDrop from './modules/search-drop'
 
-
-
-
-
 import '../scss/app.scss';
 
 $(document).ready(() => {
