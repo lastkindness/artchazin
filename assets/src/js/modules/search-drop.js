@@ -1,8 +1,12 @@
 export default () => {
-    console.log('test2');
-    document.getElementById("search").addEventListener('click',function (){
-        document.getElementById('drop').classList.add('active');
-        console.log('test');
-    })
-
+    document.getElementById("search").addEventListener('click',function (event){
+        event.stopPropagation();
+        document.getElementById('search-drop').classList.toggle('active');
+    });
+    document.getElementById("body").addEventListener('click',function (){
+        document.getElementById('search-drop').classList.remove('active');
+    });
+    document.getElementById("search-drop").addEventListener('click',function (event){
+        event.stopPropagation();
+    });
 };

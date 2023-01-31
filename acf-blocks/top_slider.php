@@ -29,7 +29,9 @@
                                 <?php endif ; ?>
                             </div>
                             <?php if($link_to_product = $slide['link_to_product']) : ?>
-                                <a href="#" class="btn card__btn top-slider__card-btn"><?php echo $link_to_product;?></a>
+                                <a href="<?php echo $link_to_product['url'];?>" class="btn card__btn top-slider__card-btn">
+                                    <?php echo $link_to_product['title'];?>
+                                </a>
                             <?php endif ; ?>
                         </div>
                     <?php endforeach; ?>

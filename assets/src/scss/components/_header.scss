@@ -22,10 +22,13 @@
         @include respond-to('tablet') {
             display: none;
         }
-        &-link {
+        .link {
             color: $darkgrey;
             font-family: $fontItalic;
             @include animate(all);
+            &:hover {
+                color: transparentize($darkgrey, 0.5);
+            }
         }
         &-wrapper {
             display: flex;
@@ -40,7 +43,7 @@
                 }
             }
         }
-        &-nav {
+        .menu-header-main-menu-container {
             width: 60%;
             @include respond-to('desktop-m') {
                 width: calc(90% - 170px);
@@ -58,7 +61,7 @@
             font-size: 14px;
             line-height: 17px;
         }
-        &-item {
+        .menu-item {
             margin-right: 29px;
             &.active {
                 a {
@@ -93,10 +96,13 @@
         @include respond-to('mobile') {
             margin: 0;
         }
-        &-link {
+        .link {
             @include animate(all);
             color: $greyColor;
             font: $fontItalic;
+            &:hover {
+                color: transparentize($greyColor, 0.5);
+            }
         }
         &-lang {
             display: flex;
@@ -119,10 +125,16 @@
                     display: flex;
                 }
             }
-            .lang {
+            .lang-item {
+                margin: 0 0 0 15px;
+                list-style: none;
                 display: inline-flex;
                 align-items: center;
                 justify-content: center;
+                img {
+                    width: 32px !important;
+                    height: 24px !important;
+                }
             }
         }
         &-wrapper{
@@ -167,7 +179,7 @@
                 padding: 0;
                 align-items: center;
                 justify-content: space-between;
-                margin: 30px 0 0;
+                margin: 15px 0 0;
             }
             @include respond-to('mobile') {
                 justify-content: flex-end;
@@ -177,7 +189,7 @@
                 margin-bottom: 10px;
             }
         }
-        &-items {
+        .menu-header-privacy-menu-container {
             @include animate(all);
             @include respond-to('mobile') {
                 display: none;
@@ -208,12 +220,12 @@
 
             }
         }
-        &-item {
+        .menu-item {
             margin: 0 12px 16px 0;
             position: relative;
             display: inline-block;
             &:hover {
-                .header__menu-sublist {
+                .sub-menu {
                     display: block;
                 }
             }
@@ -222,8 +234,21 @@
                     color: $headingColor;
                 }
             }
+            &.menu-item-has-children {
+                position: relative;
+                &:before {
+                    display: block;
+                    content: '';
+                    width: 100%;
+                    background-color: transparent;
+                    height: 50px;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                }
+            }
         }
-        &-sublist {
+        .sub-menu {
             display: none;
             padding: 20px 20px 0;
             position: absolute;
@@ -279,15 +304,16 @@
             border: 1px solid $hovergold;
             @include respond-to('tablet') {
                 margin-top: 24px;
+                display: none;
             }
         }
     }
     &__search {
         position: relative;
+        cursor: pointer;
         /*display: none;*/
         &-form {
             position: relative;
-            right: 45%;
             @include respond-to("tablet") {
                 margin-top: 25px;
             }
@@ -312,8 +338,7 @@
         }
         &-drop {
             position: absolute;
-            left: 50%;
-            transform: translateX(-50%);
+            right: 0;
             top: 100%;
             width: 360px;
             display: none;
@@ -324,7 +349,9 @@
                 width: 300px;
             }
             @include respond-to('mobile') {
-                width: 250px;
+                left: 50%;
+                transform: translateX(-50%);
+                width: 100vw;
             }
         }
 
@@ -344,9 +371,12 @@
         background-color: transparent;
         .header {
             &__head {
-                &-link {
+                .link {
                     color: $white;
                     @include animate(all);
+                    &:hover {
+                        color: transparentize($white, 0.5);
+                    }
                 }
                 &-phone {
                     .icon {
@@ -361,9 +391,12 @@
                 &-line {
                     display: none;
                 }
-                &-link {
+                .link {
                     color: $white;
                     @include animate(all);
+                    &:hover {
+                        color: transparentize($white, 0.5);
+                    }
                 }
                 &-dot {
                     background-color: $white;
@@ -399,15 +432,15 @@ body.scroll {
         &__menu {
             @include animate(all);
             background: $headingColor;
-            padding: 5px 0;
+            padding: 5px 0 10px;
             @include respond-to('tablet') {
                 margin: 0;
             }
-            &-link {
+            .link {
                 @include animate(all);
                 color: $greyColor;
                 &:hover {
-                    color: $hovergold;
+                    color: $linkColor;
                 }
             }
             &-wrapper{
@@ -427,7 +460,7 @@ body.scroll {
                 align-items: center;
                 margin-bottom: 0;
             }
-            &-item {
+            .menu-item {
                 &.active {
                     a {
                         color: $white;
@@ -457,9 +490,12 @@ body.scroll {
         &_transparent {
             .header {
                 &__head {
-                    &-link {
+                    .link {
                         @include animate(all);
                         color: $white;
+                        &:hover {
+                            color: transparentize($white, 0.5);
+                        }
                     }
                     &-phone {
                         .icon {
@@ -474,9 +510,12 @@ body.scroll {
                     &-line {
                         display: none;
                     }
-                    &-link {
+                    .link {
                         @include animate(all);
                         color: $white;
+                        &:hover {
+                            color: transparentize($white, 0.5);
+                        }
                     }
                     &-dot {
                         background-color: $white;
@@ -507,11 +546,14 @@ html.nav-active {
                 justify-content: center;
                 align-items: center;
             }
-            &-link {
+            .link {
                 @include animate(all);
                 color: $white;
+                &:hover {
+                    color: transparentize($white, 0.5);
+                }
             }
-            &-item {
+            .menu-item {
                 margin-bottom: 24px;
                 &.active, &:hover {
                     a {
@@ -519,7 +561,7 @@ html.nav-active {
                     }
                 }
             }
-            &-items {
+            .menu-header-privacy-menu-container {
                 padding: 84px 20px;
                 display: flex;
                 position: fixed;
@@ -534,6 +576,9 @@ html.nav-active {
                 transform: translate(-50%, -50%);
                 background: linear-gradient(107.55deg, rgba(26, 30, 32, 1) 0%, rgba(39, 49, 54, 1) 107.79%);
                 @include animate(all);
+                @include respond-to('mobile') {
+                    justify-content: center;
+                }
                 &:before {
                     content: "";
                     display: block;

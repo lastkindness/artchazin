@@ -34,6 +34,11 @@
         align-items: stretch;
         grid-template-columns: repeat(3, 1fr);
         grid-gap: 20px;
+        &.swiper-wrapper {
+            display: flex;
+            justify-content: flex-start;
+            grid-gap: unset;
+        }
     }
     &__card {
         &.swiper {

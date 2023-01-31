@@ -20,7 +20,7 @@
     &__main {
         margin-top: 55px;
         display: flex;
-        align-items: flex-end;
+        align-items: flex-start;
         justify-content: space-between;
         @include respond-to('desktop') {
             align-items: flex-start;
@@ -37,10 +37,14 @@
             display: none;
         }
     }
-    &__nav {
+    .menu-footer-menu-container {
         width: 55%;
         @include respond-to('laptop') {
             width: 75%;
+        }
+        @include respond-to('tablet-sm') {
+            width: 100%;
+            margin: 0 0 40px;
         }
     }
     &__menu{
@@ -56,14 +60,22 @@
             gap: 2px 5px;
         }
         @include respond-to('tablet-sm') {
-            display: none;
+            grid-template-columns: repeat(3, 1fr);
+            justify-content: center;
+            align-items: center;
         }
-        &-link {
+        .link {
             color: $headingColor;
+            &:hover {
+                color: transparentize($headingColor, 0.5);
+            }
         }
-        &-item {
+        .menu-item {
             font-size: 16px;
             margin: 0;
+            @include respond-to('tablet-sm') {
+                text-align: center;
+            }
         }
     }
     &__contacts {
@@ -115,8 +127,11 @@
         font-size: 15px;
         line-height: 170%;
         color: $greyColor;
-        @include respond-to('mobile-sm') {
+        @include respond-to('tablet-sm') {
             margin-top: 50px;
+        }
+        @include respond-to('mobile-sm') {
+            margin-top: 30px;
             text-align: center;
             align-items: center;
         }

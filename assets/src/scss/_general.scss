@@ -32,8 +32,11 @@ body {
     font-size: 20px;
     line-height: 1.6em;
     color: $fontColor;
+    @include respond-to('desktop-m') {
+        padding: 170px 0 0;
+    }
     @include respond-to('tablet') {
-        padding: 120px 0 0;
+        padding: 110px 0 0;
     }
     @include respond-to('tablet-sm') {
         padding: 135px 0 0;

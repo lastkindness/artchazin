@@ -79,6 +79,7 @@ function load_assets_admin() {
     if (is_admin()) {
         // Styles
         wp_enqueue_style('admin-acf-blocks', get_template_directory_uri() . '/assets/dist/admin.min.css');
+        wp_enqueue_style('app', get_template_directory_uri() . '/assets/dist/admin.min.css');
     }
 }
 
@@ -117,4 +118,12 @@ add_filter( 'upload_mimes', 'svg_upload_allow' );
 function svg_upload_allow( $mimes ) {
     $mimes['svg']  = 'image/svg';
     return $mimes;
+}
+
+add_filter( 'nav_menu_link_attributes', 'wpse156165_menu_add_class', 10, 3 );
+
+function wpse156165_menu_add_class( $atts, $item, $args ) {
+    $class = 'link'; // or something based on $item
+    $atts['class'] = $class;
+    return $atts;
 }

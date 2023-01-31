@@ -26,6 +26,7 @@ import zoomlens from './modules/zoomlens'
 import searchDrop from './modules/search-drop'
 
 import '../scss/app.scss';
+import '../scss/admin.scss';
 
 $(document).ready(() => {
     main();

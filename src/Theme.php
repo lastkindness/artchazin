@@ -73,7 +73,9 @@ final class Theme extends Singleton
     {
 
         $menus = [
-            'primary' => esc_html__('Primary', 'rst')
+            'privacy' => esc_html__('Header Privacy Menu', 'rst'),
+            'main' => esc_html__('Header Main Menu', 'rst'),
+            'footer' => esc_html__('Footer Menu', 'rst')
         ];
 
         register_nav_menus($menus);

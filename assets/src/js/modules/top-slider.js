@@ -1,10 +1,10 @@
 import Swiper from 'swiper/swiper-bundle.min';
 
 export default () => {
-   const swiper = new Swiper(".top-slider__wrapper.swiper", {
+   const swiper = new Swiper(".top-slider .swiper", {
        cssMode: true,
-       slidesPerView: 3,
-       spaceBetween: 32,
+       slidesPerView: 1,
+       spaceBetween: 10,
        navigation: {
            nextEl: ".swiper-button-next",
            prevEl: ".swiper-button-prev",

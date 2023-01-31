@@ -12,7 +12,8 @@ module.exports = {
 
     entry: {
         app: './assets/src/js/app.js',
-        blocks: './blocks/entry.js'
+        blocks: './blocks/entry.js',
+        admin: './assets/src/scss/admin.scss'
     },
 
     output: {

@@ -100,7 +100,7 @@
                     <div class="header__menu-dot"></div>
                     <div class="header__search">
                         <div class="icon-search icon" id="search"></div>
-                        <div class="header__search-drop" id="drop">
+                        <div class="header__search-drop" id="search-drop">
                             <form action="#" class="header__search-form">
                                 <input class="header__search-input" type="text" placeholder="Search">
                                 <button class="icon icon-search header__search-btn btn"></button>
