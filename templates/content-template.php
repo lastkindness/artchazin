@@ -4,13 +4,13 @@
  */
 
 get_header(); ?>
-    <section class="content-section">
+<section class="content-section">
+    <div class="container">
         <div class="content-section__wrapper">
-            <div class="container">
-                <h1><?php the_title(); ?></h1>
-                <?php the_post();
-                the_content();?>
-            </div>
+            <h1><?php the_title(); ?></h1>
+            <?php the_post();
+            the_content();?>
         </div>
-    </section>
+    </div>
+</section>
 <?php get_footer();
