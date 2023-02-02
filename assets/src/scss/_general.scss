@@ -50,7 +50,8 @@ body {
     }
 }
 
-.page-template-404 {
+.page-template-404,
+.error404 {
     padding: 0;
 }
 
@@ -302,5 +303,28 @@ select::-ms-expand {
     background-repeat: no-repeat;
     background-attachment: fixed;
     padding-top: 5%;
+}
+
+.wpcf7-form-control-wrap {
+    display: flex;
+    width: 100%;
+    margin: 0 auto;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    .wpcf7-not-valid-tip {
+        font-size: 12px;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        color: $error;
+    }
+}
+
+.wpcf7-response-output {
+    color: $greyColor;
+    font-size: 14px;
+    margin: 20px 0 10px;
+    text-align: center;
 }
 

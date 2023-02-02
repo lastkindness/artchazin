@@ -23,6 +23,7 @@
         position: relative;
         display: flex;
         justify-content: space-between;
+        align-items: center;
         z-index: 1;
         @include respond-to( 'desktop-m') {
             flex-flow: wrap;
@@ -94,9 +95,11 @@
                 justify-content: flex-start;
                 align-items: flex-start;
                 color: $white;
+                width: calc(100% - 84px - 32px);
                 &-title {
                     margin: 0;
                     color: $white;
+                    text-align: left;
                 }
                 &-text {
                     color: $greyColor;
@@ -105,6 +108,7 @@
             &-img {
                 width: 84px;
                 height: 84px;
+                display: block;
                 margin-right: 32px;
             }
         }

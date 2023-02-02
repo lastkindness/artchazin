@@ -7,6 +7,7 @@
     <?php wp_head(); ?>
 </head>
 <body id="body" <?php body_class(); ?>>
+<?php if (pll_current_language('slug') != 'en') : $current_lang = pll_current_language('slug'); endif; ?>
 <header class="header <?php if(is_front_page()) : echo ' header_transparent'; endif; ?>" id="header">
     <div class="header__head">
         <div class="container">
@@ -19,16 +20,16 @@
                             'items_wrap'     => '<ul id="%1$s" class="header__head-list">%3$s</ul>',
                         )
                     ); endif ?>
-                <?php if($phones = get_field('phones', 'option')) : ?>
+                <?php if($phones = get_field('phones'.$current_lang, 'option')) : ?>
                     <div class="header__head-phone p3-italic">
-                        <?php foreach ($phones as $item) : ?>
-                            <?php if($phone = $item['phone']) : ?>
+                        <?php $i = 0; foreach ($phones as $item) : ?>
+                            <?php if($i==0) : ?>
                                 <a href="tel:<?php echo mb_strtolower(preg_replace('/[^0-9+]/', '', $phone))?>" target="_blank" class="phone">
                                     <span class="icon icon-telephone"></span>
-                                    <span><?php echo $phone ;?></span>
+                                    <span><?php echo $item['phone'] ;?></span>
                                 </a>
-                            <?php endif ; ?>
-                        <?php endforeach; ?>
+                            <?php endif; ?>
+                        <?php $i++; endforeach; ?>
                     </div>
                 <?php endif ?>
             </div>
@@ -38,9 +39,9 @@
         <div class="container">
             <div class="header__menu-wrapper">
                 <a <?php echo (!is_front_page()) ? 'href="' . get_home_url() . '"' : ''; ?> class="header__menu-logo">
-                    <?php if(is_front_page()) { $logoHeaderHome = get_field('logo_header_home', 'option');
-                        } else { $logoHeader = get_field('logo_header', 'option');}
-                        $logoHeaderScroll = get_field('logo_header_scroll', 'option');
+                    <?php if(is_front_page()) { $logoHeaderHome = get_field('logo_header_home'.$current_lang, 'option');
+                        } else { $logoHeader = get_field('logo_header'.$current_lang, 'option');}
+                        $logoHeaderScroll = get_field('logo_header_scroll'.$current_lang, 'option');
                         if (!empty($logoHeader)) {
                         if (false !== stripos($logoHeader['mime_type'], 'svg')) { ?>
                             <img src="<?php echo wp_get_attachment_image_url($logoHeader['id']); ?>"

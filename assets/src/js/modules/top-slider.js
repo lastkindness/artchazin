@@ -2,9 +2,10 @@ import Swiper from 'swiper/swiper-bundle.min';
 
 export default () => {
    const swiper = new Swiper(".top-slider .swiper", {
-       cssMode: true,
        slidesPerView: 1,
        spaceBetween: 10,
+       loop: true,
+       //speed: 1000,
        navigation: {
            nextEl: ".swiper-button-next",
            prevEl: ".swiper-button-prev",
@@ -13,6 +14,9 @@ export default () => {
            el: ".swiper-pagination",
            clickable: true,
        },
+       /*autoplay: {
+           delay: 2000,
+       },*/
        mousewheel: true,
        keyboard: true,
        breakpoints: {

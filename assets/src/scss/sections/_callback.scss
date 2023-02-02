@@ -7,7 +7,7 @@
     @include respond-to( 'tablet') {
         height: auto;
     }
-    &:before .parallax {
+    &:before {
         display: block;
         content: "";
         position: absolute;
@@ -21,12 +21,13 @@
         opacity: 0.4;
     }
     &__wrapper {
-        padding: 135px 0;
+        padding: 35px 0;
         z-index: 1;
         position: relative;
         display: flex;
         flex-direction: column;
         align-items: center;
+        justify-content: center;
         @include respond-to( 'tablet') {
             padding: 75px 0;
         }
@@ -37,18 +38,10 @@
         text-align: center;
     }
     &__form {
-        &-name {
+        max-width: 413px;
+        &-input {
             margin-top: 35px;
             box-shadow: none;
-            max-width: 413px;
-        }
-        &-phone {
-            box-shadow: none;
-            max-width: 413px;
-        }
-        &-comment {
-            box-shadow: none;
-            width: 413px;
         }
         .btn_lite {
             padding: 8px 64px                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       ;
@@ -58,7 +51,8 @@
         }
     }
     &__button {
-        margin-top: 45px;
+        margin: 45px auto 0;
+        display: block;
         .btn_lite {
             @include respond-to('tablet') {
                 padding: 8px 64px;

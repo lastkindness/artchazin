@@ -1,8 +1,20 @@
-<section class="wall" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/src/img/peoplebg.jpg')" >
+<section class="wall"
+    <?php if($background = get_sub_field('background')): ?>
+         style="background-image: url('<?php echo $background['url'];?>')">
+    <?php endif ; ?>>
     <div class="container">
         <div class="wall__wrapper">
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/src/img/bigdavidestar.svg" alt="" class="wall__pentagram">
-            <p class="wall__descr"><span class="wall__descr-mark">Lorem ipsum</span> Dolor Sit Amet, Consectetuer Adipiscing Elit, Sed Diam Nonummy</p>
+            <?php if($image = get_sub_field('image')) : ?>
+                <img src="<?php echo $image['url'];?>" alt="<?php echo $image['alt'];?>" class="wall__davidestar curved-img">
+            <?php endif ; ?>
+            <?php if($title = get_sub_field('title')) : ?>
+                <p class="wall__descr">
+                    <?php if($mark = get_sub_field('mark')) : ?>
+                        <span class="wall__descr-mark"><?php echo $mark;?></span>
+                    <?php endif ; ?>
+                    <?php echo $title;?>
+                </p>
+            <?php endif ; ?>
         </div>
     </div>
 </section>

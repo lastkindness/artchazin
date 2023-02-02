@@ -1,10 +1,17 @@
 .error {
-    padding: 290px 0px 170px;
+    padding: 340px 0px 170px;
     position: relative;
     height: 100vh;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    @include respond-to('mobile') {
+        padding: 140px 0px 70px;
+    }
     &:before {
         display: block;
         content: "";
@@ -21,7 +28,7 @@
     &__wrapper {
         z-index: 1;
         backdrop-filter: blur(4.88667px);
-        padding: 100px 0;
+        padding: 100px 20px;
         position: relative;
         display: flex;
         flex-direction: column;
@@ -29,6 +36,9 @@
         justify-content: center;
         max-width: 862px;
         margin: 0 auto;
+        @include respond-to('mobile-sm') {
+            padding: 50px 10px;
+        }
     }
     &__text {
         margin-top: 42px;

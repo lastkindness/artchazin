@@ -22,15 +22,22 @@ get_header();
 
 ?>
 
-
-
-<section class="error">
+<?php if (pll_current_language('slug') != 'en') : $current_lang = pll_current_language('slug'); endif; ?>
+<section class="error parallax" style="background-image: url('<?php if($background = get_field('404_background'.$current_lang, 'option')['url'])
+        { echo $background; }
+        else { echo(get_template_directory_uri()."/assets/src/img/peoplecallback.jpg");}
+    echo "')";?>">
     <div class="container">
         <div class="error__wrapper">
-            <h1 class="h1 error__title">404</h1>
-            <h3 class="h3 error__subtitle"><?php _e( 'Not Found', 'RST' ); ?></h3>
-            <h4 class="h4"><?php _e( 'Sorry, but you are looking for something that isn\'t here.', 'RST' ); ?></h4>
-            <a class="btn" href="<?php echo home_url() ; ?>"><?php _e( 'Back to Home', 'RST' ); ?></a>
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/src/img/404.svg" alt="" class="error__img">
+            <?php if($title = get_field('404_title'.$current_lang, 'option')) : ?>
+                <p class="error__text h6"><?php echo $title;?></p>
+            <?php endif; ?>
+            <?php if($button = get_field('404_button'.$current_lang, 'option')) : ?>
+                <a href="/" class="error__btn btn_lite">
+                    <span class="icon icon-smallarrow"></span><?php echo $button;?>
+                </a>
+            <?php endif; ?>
         </div>
     </div>
 </section>
