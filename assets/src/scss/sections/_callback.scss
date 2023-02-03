@@ -39,6 +39,10 @@
     }
     &__form {
         max-width: 413px;
+        @include respond-to('mobile') {
+            width: 100%;
+            max-width: 100%;
+        }
         &-input {
             margin-top: 35px;
             box-shadow: none;

@@ -1,0 +1,47 @@
+html {
+    &[lang="he_IL"] {
+        .fancybox-content,
+        .hero__slide-content,
+        .banner__descr-title,
+        .banner__box-item-descr-title,
+        .contacts__descr-text,
+        .promotions__subtitle,
+        .description__descr-title,
+        .articles__title,
+        .about__item:nth-child(odd) .about__descr-title,
+        .about__item:nth-child(odd) .about__descr-subtitle,
+        .about__item:nth-child(odd) .about__descr-text,
+        .about__item:nth-child(even) .about__descr-title,
+        .about__item:nth-child(even) .about__descr-secondtitle,
+        .post__title,
+        .post__descr-title,
+        .post__descr-divider,
+        .service__title,
+        .service__descr-title,
+        .service__descr-divider,
+        .info__descr-title,
+        .info__descr-text,
+        .product__content-title,
+        .ketubah__descr-title,
+        .ketubah__descr-subtitle,
+        .ketubah__descr-text,
+        .payment__title,
+        .payment__subtitle,
+        .payment__descr-title {
+            text-align: right;
+        }
+        &.page-template-content-template {
+            h1,
+            h2,
+            h3,
+            h4,
+            h5,
+            h6 {
+                text-align: right;
+            }
+        }
+        .swiper-navigation {
+            flex-direction: row-reverse;
+        }
+    }
+}

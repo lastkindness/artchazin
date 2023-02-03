@@ -5,7 +5,9 @@ export default () => {
        slidesPerView: 1,
        spaceBetween: 10,
        loop: true,
-       //speed: 1000,
+       mousewheel: true,
+       keyboard: true,
+       speed: 600,
        navigation: {
            nextEl: ".swiper-button-next",
            prevEl: ".swiper-button-prev",
@@ -14,11 +16,6 @@ export default () => {
            el: ".swiper-pagination",
            clickable: true,
        },
-       /*autoplay: {
-           delay: 2000,
-       },*/
-       mousewheel: true,
-       keyboard: true,
        breakpoints: {
            240: {
                slidesPerView: 1,
@@ -36,10 +33,16 @@ export default () => {
                slidesPerView: 2,
                spaceBetween: 32,
            },
+           1025: {
+               mousewheel: false,
+               keyboard: false,
+           },
            1280: {
+               mousewheel: false,
+               keyboard: false,
                slidesPerView: 3,
                spaceBetween: 32,
-           }
+           },
        },
     });
 };

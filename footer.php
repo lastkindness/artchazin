@@ -5,7 +5,7 @@
             <div class="footer__divider"></div>
             <div class="footer__main">
                 <?php if (pll_current_language('slug') != 'en') : $current_lang = pll_current_language('slug'); endif; ?>
-                <a <?php echo (!is_front_page()) ? 'href="' . get_home_url() . '"' : ''; ?> class="footer__logo">
+                <a href="/" class="footer__logo">
                     <?php $logoHeader = get_field('logo_footer'.$current_lang, 'option');
                     if (!empty($logoHeader)) {
                         if (false !== stripos($logoHeader['mime_type'], 'svg')) { ?>

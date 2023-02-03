@@ -18,7 +18,8 @@ export default () => {
        keyboard: true,
        breakpoints: {
            1025: {
-
+               mousewheel: false,
+               keyboard: false,
            },
        },
     });

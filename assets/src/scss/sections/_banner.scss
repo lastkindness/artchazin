@@ -114,3 +114,14 @@
         }
     }
 }
+
+html {
+    &[lang="he_IL"] {
+        .banner__box-item {
+            margin: 0 0 32px 0;
+            &-img {
+                margin: 0 0 0 32px;
+            }
+        }
+    }
+}

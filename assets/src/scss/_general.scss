@@ -22,6 +22,12 @@ html {
     &.nav-active {
         overflow: hidden;
     }
+    &[lang="he_IL"] {
+        direction: rtl !important;
+        * {
+            direction: rtl !important;
+        }
+    }
 }
 body {
     padding: 220px 0 0;
@@ -210,6 +216,11 @@ form {
         border-radius: 4px;
         box-shadow: inset 0px 0px 8px rgba(0, 0, 0, 0.8);
         min-height: 189px;
+        resize: none;
+        width: 100%;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
     }
 }
 label {

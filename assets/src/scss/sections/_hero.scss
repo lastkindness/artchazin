@@ -28,8 +28,10 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
+        overflow: visible;
         @include respond-to('tablet') {
             padding: 152px 0 32px 0;
+            overflow: hidden;
         }
         @include respond-to('mobile') {
             padding: 105px 0 32px 0;
@@ -157,7 +159,13 @@
     }
 }
 
-
+html {
+    &[lang="he_IL"] {
+        .hero__slide-content {
+            margin: 0 45px 0 0;
+        }
+    }
+}
 
 
 

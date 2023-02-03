@@ -38,7 +38,7 @@
     <div class="header__menu">
         <div class="container">
             <div class="header__menu-wrapper">
-                <a <?php echo (!is_front_page()) ? 'href="' . get_home_url() . '"' : ''; ?> class="header__menu-logo">
+                <a href="/" class="header__menu-logo">
                     <?php if(is_front_page()) { $logoHeaderHome = get_field('logo_header_home'.$current_lang, 'option');
                         } else { $logoHeader = get_field('logo_header'.$current_lang, 'option');}
                         $logoHeaderScroll = get_field('logo_header_scroll'.$current_lang, 'option');
