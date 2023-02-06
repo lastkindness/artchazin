@@ -6,7 +6,6 @@
                     <h1 class="top-slider__title"><?php echo $top_slider_title;?></h1>
                 <?php endif ; ?>
                 <?php if($top_slider_description = get_sub_field('top_slider_description')): ?>
-                    <div class="top-slider__divider"></div>
                     <div class="top-slider__descr">
                         <p class="p3"><?php echo $top_slider_description;?></p>
                     </div>

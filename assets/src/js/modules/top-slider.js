@@ -2,9 +2,12 @@ import Swiper from 'swiper/swiper-bundle.min';
 
 export default () => {
    const swiper = new Swiper(".top-slider .swiper", {
-       cssMode: true,
        slidesPerView: 1,
        spaceBetween: 10,
+       loop: true,
+       mousewheel: true,
+       keyboard: true,
+       speed: 600,
        navigation: {
            nextEl: ".swiper-button-next",
            prevEl: ".swiper-button-prev",
@@ -13,8 +16,6 @@ export default () => {
            el: ".swiper-pagination",
            clickable: true,
        },
-       mousewheel: true,
-       keyboard: true,
        breakpoints: {
            240: {
                slidesPerView: 1,
@@ -32,10 +33,16 @@ export default () => {
                slidesPerView: 2,
                spaceBetween: 32,
            },
+           1025: {
+               mousewheel: false,
+               keyboard: false,
+           },
            1280: {
+               mousewheel: false,
+               keyboard: false,
                slidesPerView: 3,
                spaceBetween: 32,
-           }
+           },
        },
     });
 };

@@ -28,9 +28,9 @@
                     <?php endforeach; ?>
                 </div>
                 <?php if (count($hero_slider)>1) : ?>
-                    <div class="hero__navigation">
-                        <div class="swiper-button-next icon icon-arrowr"></div>
+                    <div class="hero__navigation swiper-navigation">
                         <div class="swiper-button-prev icon icon-arrowr"></div>
+                        <div class="swiper-button-next icon icon-arrowr"></div>
                     </div>
                     <div class="hero__pagination swiper-pagination"></div>
                 <?php endif ; ?>

@@ -4,8 +4,9 @@
         <div class="footer__wrapper">
             <div class="footer__divider"></div>
             <div class="footer__main">
-                <a <?php echo (!is_front_page()) ? 'href="' . get_home_url() . '"' : ''; ?> class="footer__logo">
-                    <?php $logoHeader = get_field('logo_footer', 'option');
+                <?php if (pll_current_language('slug') != 'en') : $current_lang = pll_current_language('slug'); endif; ?>
+                <a href="/" class="footer__logo">
+                    <?php $logoHeader = get_field('logo_footer'.$current_lang, 'option');
                     if (!empty($logoHeader)) {
                         if (false !== stripos($logoHeader['mime_type'], 'svg')) { ?>
                             <img src="<?php echo wp_get_attachment_image_url($logoHeader['id']); ?>"
@@ -26,7 +27,7 @@
                     ); ?>
                 <?php endif ; ?>
                 <ul class="footer__contacts">
-                    <?php if($phones = get_field('phones', 'option')) : ?>
+                    <?php if($phones = get_field('phones'.$current_lang, 'option')) : ?>
                     <?php foreach ($phones as $item) : ?>
                         <?php if($phone = $item['phone']) : ?>
                             <li class="footer__contacts-item footer__contacts-phone">
@@ -39,7 +40,7 @@
                         <?php endif ; ?>
                     <?php endforeach; ?>
                     <?php endif ; ?>
-                    <?php if($emails = get_field('emails', 'option')) : ?>
+                    <?php if($emails = get_field('emails'.$current_lang, 'option')) : ?>
                     <?php foreach ($emails as $item) : ?>
                         <?php if($email = $item['email']) : ?>
                             <li class="footer__contacts-item footer__contacts-phone">
@@ -51,7 +52,7 @@
                         <?php endif ; ?>
                     <?php endforeach; ?>
                     <?php endif ; ?>
-                    <?php if($partners = get_field('partners', 'option')) : ?>
+                    <?php if($partners = get_field('partners'.$current_lang, 'option')) : ?>
                     <?php foreach ($partners as $item) : ?>
                         <?php if($partner = $item['partner']) : ?>
                             <li class="footer__contacts-item footer__contacts-phone">
@@ -65,7 +66,7 @@
                     <?php endif ; ?>
                 </ul>
             </div>
-            <?php if($copyright = get_field('footer_copyright_text', 'option')) : ?>
+            <?php if($copyright = get_field('footer_copyright_text'.$current_lang, 'option')) : ?>
                 <div class="footer__copyright"><?php echo $copyright; ?></div>
             <?php endif ; ?>
         </div>

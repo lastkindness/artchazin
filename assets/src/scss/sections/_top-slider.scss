@@ -8,14 +8,17 @@
         @include respond-to('mobile-sm') {
             font-size: 32px;
         }
-    }
-    &__divider {
-        margin: 0 auto;
-        width: 45%;
-        margin-top: 16px;
-        align-items: center;
-        @include respond-to('desktop') {
-            width: 75%;
+        &:after {
+            display: block;
+            content: '';
+            margin: 0 auto;
+            margin-top: 16px;
+            width: 45%;
+            height: 2px;
+            background-color: $lightgold;
+            @include respond-to('mobile') {
+                width: 75%;
+            }
         }
     }
     &__descr {
@@ -34,6 +37,12 @@
         align-items: stretch;
         grid-template-columns: repeat(3, 1fr);
         grid-gap: 20px;
+        @include respond-to('desktop') {
+            grid-template-columns: repeat(2, 1fr);
+        }
+        @include respond-to('mobile-sm') {
+            grid-template-columns: repeat(1, 1fr);
+        }
         &.swiper-wrapper {
             display: flex;
             justify-content: flex-start;
