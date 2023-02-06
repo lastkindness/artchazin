@@ -249,7 +249,7 @@
             }
         }
         .sub-menu {
-            display: none;
+            display: block;
             padding: 20px 20px 0;
             position: absolute;
             background-color: #f1f1f1;
@@ -265,6 +265,7 @@
             @include respond-to('mobile') {
                 position: static;
                 width: 280px;
+                display: block;
             }
 
         }
