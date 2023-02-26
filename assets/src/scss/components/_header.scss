@@ -111,7 +111,7 @@
         &-lang {
             display: flex;
             align-items: center;
-            justify-content: flex-end;
+            justify-content: flex-start;
             width: 170px;
             @include respond-to('desktop-m') {
                 width: 90px;
@@ -135,6 +135,19 @@
                 display: inline-flex;
                 align-items: center;
                 justify-content: center;
+                font-size: 0;
+                line-height: 0;
+                &:nth-child(even) {
+                    margin-left: 0;
+                    &:before {
+                        content: "/";
+                        line-height: 1em;
+                        font-size: 20px;
+                        color: $white;
+                        align-self: center;
+                        margin: 0 4px;
+                    }
+                }
                 img {
                     width: 32px !important;
                     height: 24px !important;
@@ -200,13 +213,13 @@
                 display: none;
             }
         }
-        &-list {
+        &-list, .menu-header-privacy-menu-container {
             display: flex;
             align-items: center;
             justify-content: flex-start;
             flex-wrap: wrap;
             list-style-type: none;
-            margin: 0 0 -16px;
+            margin: 0 0 -8px;
             padding: 0;
             font-family: $fontItalic;
             font-weight: 400;
@@ -257,7 +270,7 @@
         }
         &-sublist,
         .sub-menu {
-            display: block;
+            display: none;
             padding: 20px 20px 0;
             position: absolute;
             background-color: #f1f1f1;
@@ -271,11 +284,18 @@
                 width: 320px;
             }
             @include respond-to('mobile') {
+                padding: 5px 5px 0 0px;
+                margin: 0;
                 position: static;
                 width: 280px;
                 display: block;
+                background-color: transparent;
+                box-shadow: none;
+                .header__menu-item {
+                    font-size: 10px;
+                    color: white;
+                }
             }
-
         }
         &-dot {
             height: 4px;
@@ -359,7 +379,7 @@
             }
             @include respond-to('mobile') {
                 left: 50%;
-                transform: translateX(-50%);
+                transform: translateX(-78%);
                 width: 100vw;
             }
         }
@@ -417,9 +437,18 @@
                 }
                 &-sublist,
                 .sub-menu {
+                    &.menu-item {
+                        @include respond-to('mobile') {
+                            font-size: 10px;
+                        }
+                    }
                     a,
                     .link {
                         color: $headingColor;
+                        @include respond-to('mobile') {
+                            color: $white;
+                            font-size: 10px;
+                        }
                         @include animate(all);
                         &:hover {
                             color: transparentize($headingColor, 0.5);
@@ -553,6 +582,10 @@ body.scroll {
                         a,
                         .link {
                             color: $headingColor;
+                            @include respond-to('mobile') {
+                                color: $white;
+                                font-size: 10px;
+                            }
                             @include animate(all);
                             &:hover {
                                 color: transparentize($headingColor, 0.5);
@@ -581,6 +614,9 @@ html.nav-active {
                 flex-direction: column;
                 justify-content: center;
                 align-items: center;
+                @include respond-to('mobile') {
+                    align-items: flex-start;
+                }
             }
             a,
             .link {
@@ -592,15 +628,17 @@ html.nav-active {
             }
             li,
             .menu-item {
-                margin-bottom: 24px;
+                margin-bottom: 14px;
+                /*&:nth-last-child(-n + 2) {
+                    margin-bottom: 0;
+                }*/
                 &.active, &:hover {
                     a {
                         color: $greyColor;
                     }
                 }
             }
-            .header__menu-items,
-            .menu-header-privacy-menu-container {
+            .header__menu-items {
                 padding: 84px 20px;
                 display: flex;
                 position: fixed;
@@ -616,7 +654,7 @@ html.nav-active {
                 background: linear-gradient(107.55deg, rgba(26, 30, 32, 1) 0%, rgba(39, 49, 54, 1) 107.79%);
                 @include animate(all);
                 @include respond-to('mobile') {
-                    justify-content: center;
+                    justify-content: space-around;
                 }
                 &:before {
                     content: "";

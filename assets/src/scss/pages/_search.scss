@@ -1,0 +1,30 @@
+.search {
+    &__page {
+        &-wrapper {
+            padding: 72px 0 86px;
+            @include respond-to('tablet') {
+                padding: 20px 0;
+            }
+        }
+        &-title {
+            text-align: left;
+            &:after {
+                content: "";
+                display: block;
+                border: 1px solid $lightgold;
+                width: 43%;
+            }
+        }
+        &-text {
+            text-align: left;
+        }
+    }
+    &__post {
+        &-title {
+            text-align: left;
+        }
+        &-text {
+            text-align: left;
+        }
+    }
+}

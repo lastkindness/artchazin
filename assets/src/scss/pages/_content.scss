@@ -16,6 +16,10 @@
         }
     }
     .main {
+        padding: 72px 0 120px;
+        @include respond-to('tablet') {
+            padding: 32px 0 40px;
+        }
         .container {
             max-width: 978px;
             margin: 0 auto;
