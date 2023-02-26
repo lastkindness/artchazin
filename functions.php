@@ -5,6 +5,14 @@
  */
 require_once 'vendor/autoload.php';
 
+function post_types_setup() {
+    add_theme_support( 'widgets' );
+    add_theme_support( 'custom-logo' );
+    add_theme_support( 'post-thumbnails' );
+}
+
+add_action( 'init', 'post_types_setup' );
+
 use RST\Theme;
 
 $theme = Theme::getInstance();
@@ -91,11 +99,28 @@ add_action( 'admin_init', 'basetheme_options_capability' );
 
 //theme options tab in appearance
 if( function_exists( 'acf_add_options_sub_page' ) && current_user_can( 'theme_options_view' ) ) {
-    acf_add_options_sub_page(
-        array(
+
+    acf_add_options_sub_page(array(
             'title'  => 'Theme Options',
             'parent' => 'themes.php',
-        ) );
+    ));
+
+    acf_add_options_sub_page(array(
+        'menu_title'    => 'Products Archive Settings',
+        'page_title'    => 'Products Settings',
+        'parent_slug'   => 'edit.php?post_type=product',
+    ));
+}
+
+
+add_filter('wpcf7_autop_or_not', '__return_false');
+
+
+
+if ( file_exists(get_template_directory() . '/inc/Walker_Icons_Menu.php') ) {
+
+    require_once 'inc/Walker_Icons_Menu.php';
+
 }
 
 add_action('acf/init', 'relaunch_acf_init_blocks');
@@ -109,8 +134,11 @@ function relaunch_acf_init_blocks()
     }
 }
 
+require_once 'inc/wp-custom-post-types/product.php';
+
 require_once 'src/helpers.php';
 require_once 'src/Hooks/user-creating.php';
+require_once 'parts/core/breadcrumbs.php';
 
 add_filter( 'upload_mimes', 'svg_upload_allow' );
 

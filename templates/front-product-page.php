@@ -22,7 +22,7 @@ get_header('front'); ?>
         <div class="product__wrapper">
             <div class="product__gallery">
                 <div class="thumbs">
-                    <div class="swiper-button swiper-button-next"></div>
+                    <div class="swiper-button swiper-button-next icon icon-arrowr"></div>
                     <div class="product__pictures mySwiper swiper">
                         <div class="product__pictures-wrap swiper-wrapper">
                             <div class="product__pictures-item swiper-slide">
@@ -35,20 +35,14 @@ get_header('front'); ?>
                                 <img src="<?php echo get_template_directory_uri(); ?>/assets/src/img/product3.jpg" alt="" class="product__pictures-img">
                             </div>
                             <div class="product__pictures-item swiper-slide">
-                                <img src="<?php echo get_template_directory_uri(); ?>/assets/src/img/product3.jpg" alt="" class="product__pictures-img">
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/src/img/product7.jpg" alt="" class="product__pictures-img">
                             </div>
                             <div class="product__pictures-item swiper-slide">
-                                <img src="<?php echo get_template_directory_uri(); ?>/assets/src/img/product3.jpg" alt="" class="product__pictures-img">
-                            </div>
-                            <div class="product__pictures-item swiper-slide">
-                                <img src="<?php echo get_template_directory_uri(); ?>/assets/src/img/product3.jpg" alt="" class="product__pictures-img">
-                            </div>
-                            <div class="product__pictures-item swiper-slide">
-                                <img src="<?php echo get_template_directory_uri(); ?>/assets/src/img/product3.jpg" alt="" class="product__pictures-img">
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/src/productheart.jpg" alt="" class="product__pictures-img">
                             </div>
                         </div>
                     </div>
-                    <div class="swiper-button swiper-button-prev"></div>
+                    <div class="swiper-button swiper-button-prev icon icon-arrowr"></div>
                 </div>
                 <div class="main">
                     <div class="product__img mySwiper2 swiper">
@@ -65,11 +59,15 @@ get_header('front'); ?>
                                 <img src="<?php echo get_template_directory_uri(); ?>/assets/src/img/product3.jpg" alt="" class="product__img-img">
                                 <div class="lens" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/src/img/product3.jpg')"></div>
                             </a>
+                            <a class="product__img-item swiper-slide zoomer-box" href="<?php echo get_template_directory_uri(); ?>/assets/src/img/product7.jpg" data-fancybox="gallery">
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/src/img/product7.jpg" alt="" class="product__img-img">
+                                <div class="lens" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/src/img/product7.jpg')"></div>
+                            </a>
+                            <a class="product__img-item swiper-slide zoomer-box" href="<?php echo get_template_directory_uri(); ?>/assets/src/img/productheart.jpg" data-fancybox="gallery">
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/src/img/productheart.jpg" alt="" class="product__img-img">
+                                <div class="lens" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/src/img/productheart.jpg')"></div>
+                            </a>
                         </div>
-<!--                        <div class="product__navigation swiper-navigation">
-                            <div class="swiper-button-prev icon icon-arrowr"></div>
-                            <div class="swiper-button-next icon icon-arrowr"></div>
-                        </div>-->
                     </div>
                 </div>
             </div>
