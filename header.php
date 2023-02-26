@@ -24,7 +24,7 @@
                     <div class="header__head-phone p3-italic">
                         <?php $i = 0; foreach ($phones as $item) : ?>
                             <?php if($i==0) : ?>
-                                <a href="tel:<?php echo mb_strtolower(preg_replace('/[^0-9+]/', '', $phone))?>" target="_blank" class="phone">
+                                <a href="tel:<?php echo mb_strtolower(preg_replace('/[^0-9+]/', '', $item['phone']))?>" target="_blank" class="phone">
                                     <span class="icon icon-telephone"></span>
                                     <span><?php echo $item['phone'] ;?></span>
                                 </a>
@@ -38,7 +38,7 @@
     <div class="header__menu">
         <div class="container">
             <div class="header__menu-wrapper">
-                <a href="/" class="header__menu-logo">
+                <a href="/<?php echo $current_lang; ?>" class="header__menu-logo">
                     <?php if(is_front_page()) { $logoHeaderHome = get_field('logo_header_home'.$current_lang, 'option');
                         } else { $logoHeader = get_field('logo_header'.$current_lang, 'option');}
                         $logoHeaderScroll = get_field('logo_header_scroll'.$current_lang, 'option');

@@ -251,9 +251,8 @@ figcaption {
 }
 
 ol, ul {
-    color: $headingColor;
+    color: $fontColor;
     font-weight: 400;
-    list-style-type: none;
     padding: 0 0 0 20px;
     margin: 16px 0;
     li {

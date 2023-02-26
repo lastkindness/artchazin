@@ -1,0 +1,379 @@
+<?php
+
+/**
+ * Breadcrumbs for WordPress
+ *
+ * @param  string [$sep  = '']     Delimiter. Default' » '
+ * @param  array  [$l10n = array()] For localization. See variable $default_l10n.
+ * @param  array  [$args = array()] Options. See variable $def_args
+ * @return string Displays HTML code
+ *
+ * version 3.3.2
+ */
+function kama_breadcrumbs( $sep = '  ', $l10n = array(), $args = array() ){
+    $kb = new Kama_Breadcrumbs;
+    echo $kb->get_crumbs( $sep, $l10n, $args );
+}
+
+class Kama_Breadcrumbs {
+
+    public $arg;
+
+    // Localization
+    static $l10n = array(
+        'home'       => '<span class="icon icon-home"></span>',
+        'paged'      => 'Page %d',
+        '_404'       => 'Error 404',
+        'search'     => 'Search results by query - <b>%s</b>',
+        'author'     => 'Authors Archive: <b>%s</b>',
+        'year'       => 'Archive for <b>%d</b> year',
+        'month'      => 'Archive for: <b>%s</b>',
+        'day'        => 'Archive for <b>%1$s number</b>, %2$s', // Архив за 5 число, среда
+        'attachment' => 'Media: %s',
+        'tag'        => 'Tagged entries: <b>%s</b>',
+        'tax_tag'    => '%1$s of "%2$s" by tag: <b>%3$s</b>',
+    );
+
+    // Default parameters
+    static $args = array(
+        'on_front_page'   => true,  // display crumbs on the home page
+        'show_post_title' => true,  // Whether to show the post title at the end (the last element). For posts, pages, attachments
+        'show_term_title' => true,  // Whether to show the name of the taxonomy element at the end (last element). For tags, headings and other taxes
+        'title_patt'      => '<div property="itemListElement" typeof="ListItem" class="breadcrumbs__item active"><span property="name" class="breadcrumbs__link post post-page current-item">%s</span><meta property="url" content="/"><meta property="position" content="3"></div>', // template for the last heading. If enabled: show_post_title or show_term_title
+        'last_sep'        => true,  // show the last separator when no title is displayed at the end
+        'markup'          => 'schema.org', // 'markup' - microdata. May be: 'rdf.data-vocabulary.org', 'schema.org', '' - without micro-markup
+        // or you can specify your own markup array:
+        // array( 'wrappatt'=>'<div class="kama_breadcrumbs">%s</div>', 'linkpatt'=>'<a href="%s">%s</a>', 'sep_after'=>'', )
+        'priority_tax'    => array('category'), // priority taxonomies, needed when recording in multiple taxes
+        'priority_terms'  => array(), // 'priority_terms' - priority taxonomy items when the entry is in several items of the same tax at the same time.
+        // For example: array( 'category'=>array(45,'term_name'), 'tax_name'=>array(1,2,'name') )
+        // 'category' - the tax for which the prior is indicated. elements: 45 - term ID and 'term_name' - label.
+        // he order is 45 and 'term_name' matters: the earlier the more important. All specified terms are more important than unspecified ...
+        'nofollow' => false, // add rel = nofollow to links?
+
+        // service
+        'sep'             => '',
+        'linkpatt'        => '',
+        'pg_end'          => '',
+    );
+
+    function get_crumbs( $sep, $l10n, $args ){
+        global $post, $wp_query, $wp_post_types;
+
+        self::$args['sep'] = $sep;
+
+        // Filters defaults and drains
+        $loc = (object) array_merge( apply_filters('kama_breadcrumbs_default_loc', self::$l10n ), $l10n );
+        $arg = (object) array_merge( apply_filters('kama_breadcrumbs_default_args', self::$args ), $args );
+
+        $arg->sep = ''. $arg->sep .''; // complement
+
+        // simplify
+        $sep = & $arg->sep;
+        $this->arg = & $arg;
+
+        // microdata ---
+        if(1){
+            $mark = & $arg->markup;
+
+            // Default markup
+            if( ! $mark ) $mark = array(
+                'wrappatt'  => '<div class="breadcrumbs__wrapper">%s</div>',
+                'linkpatt'  => '<div property="itemListElement" typeof="ListItem" class="breadcrumbs__item"><a class="breadcrumbs__link" property="item" typeof="WebPage" title="" href="%s"><span property="name">%s</span></a><meta property="position" content="1"></div>
+                <div class="breadcrumbs__item"><span class="breadcrumbs__link"><span class="icon icon-smallarrow"></span></span></div>',
+                'sep_after' => '',
+            );
+            // rdf
+            elseif( $mark === 'rdf.data-vocabulary.org' ) $mark = array(
+                'wrappatt'   => '<div class="breadcrumbs__wrapper" prefix="v: http://rdf.data-vocabulary.org/#">%s</div>',
+                'linkpatt'   => '<div property="itemListElement" typeof="ListItem" class="breadcrumbs__item"><a class="breadcrumbs__link" property="item" typeof="WebPage" title="" href="%s" itemprop="item"><span property="name">%s</a><meta property="position" content="1"></div>
+                <div class="breadcrumbs__item"><span class="breadcrumbs__link"><span class="icon icon-smallarrow"></span></span></div>',
+                'sep_after'  => '', // close the span after the separator!
+            );
+            // schema.org
+            elseif( $mark === 'schema.org' ) $mark = array(
+                'wrappatt'   => '<div class="breadcrumbs__wrapper" itemscope itemtype="http://schema.org/BreadcrumbList">%s</div>',
+                'linkpatt'   => '<div property="itemListElement" typeof="ListItem" class="breadcrumbs__item"><a class="breadcrumbs__link" property="item" typeof="WebPage" title="" href="%s" itemprop="item"><span property="name">%s</span></a><meta property="position" content="1"></div>
+                <div class="breadcrumbs__item"><span class="breadcrumbs__link"><span class="icon icon-smallarrow"></span></span></div>',
+                'sep_after'  => '',
+            );
+
+            elseif( ! is_array($mark) )
+                die( __CLASS__ .': "markup" parameter must be array...');
+
+            $wrappatt  = $mark['wrappatt'];
+            $arg->linkpatt  = $arg->nofollow ? str_replace('<a ','<a rel="nofollow"', $mark['linkpatt']) : $mark['linkpatt'];
+            $arg->sep      .= $mark['sep_after']."\n";
+        }
+
+        $linkpatt = $arg->linkpatt; // simplify
+
+        $q_obj = get_queried_object();
+
+        // maybe it's an empty dachshund archive?
+        $ptype = null;
+        if( empty($post) ){
+            if( isset($q_obj->taxonomy) )
+                $ptype = & $wp_post_types[ get_taxonomy($q_obj->taxonomy)->object_type[0] ];
+        }
+        else $ptype = & $wp_post_types[ $post->post_type ];
+
+        // paged
+        $arg->pg_end = '';
+        if( ($paged_num = get_query_var('paged')) || ($paged_num = get_query_var('page')) )
+            $arg->pg_end = $sep . sprintf( $loc->paged, (int) $paged_num );
+
+        $pg_end = $arg->pg_end; // simplify
+
+        $out = '';
+
+        if( is_front_page() ){
+            return $arg->on_front_page ? sprintf( $wrappatt, ( $paged_num ? sprintf($linkpatt, get_home_url(), $loc->home) . $pg_end : $loc->home ) ) : '';
+        }
+        // page of records when a separate page is set for the main one.
+        elseif( is_home() ) {
+            $out = $paged_num ? ( sprintf( $linkpatt, get_permalink($q_obj), esc_html($q_obj->post_title) ) . $pg_end ) : esc_html($q_obj->post_title);
+        }
+        elseif( is_404() ){
+            $out = $loc->_404;
+        }
+        elseif( is_search() ){
+            $out = sprintf( $loc->search, esc_html( $GLOBALS['s'] ) );
+        }
+        elseif( is_author() ){
+            $tit = sprintf( $loc->author, esc_html($q_obj->display_name) );
+            $out = ( $paged_num ? sprintf( $linkpatt, get_author_posts_url( $q_obj->ID, $q_obj->user_nicename ) . $pg_end, $tit ) : $tit );
+        }
+        elseif( is_year() || is_month() || is_day() ){
+            $y_url  = get_year_link( $year = get_the_time('Y') );
+
+            if( is_year() ){
+                $tit = sprintf( $loc->year, $year );
+                $out = ( $paged_num ? sprintf($linkpatt, $y_url, $tit) . $pg_end : $tit );
+            }
+            // month day
+            else {
+                $y_link = sprintf( $linkpatt, $y_url, $year);
+                $m_url  = get_month_link( $year, get_the_time('m') );
+
+                if( is_month() ){
+                    $tit = sprintf( $loc->month, get_the_time('F') );
+                    $out = $y_link . $sep . ( $paged_num ? sprintf( $linkpatt, $m_url, $tit ) . $pg_end : $tit );
+                }
+                elseif( is_day() ){
+                    $m_link = sprintf( $linkpatt, $m_url, get_the_time('F'));
+                    $out = $y_link . $sep . $m_link . $sep . get_the_time('l');
+                }
+            }
+        }
+        // Tree records
+        elseif( is_singular() && $ptype->hierarchical ){
+            $out = $this->_add_title( $this->_page_crumbs($post), $post );
+        }
+        // Taxes, flat entries and attachments
+        else {
+            $term = $q_obj; // taxonomies
+
+            // define a term for posts (including attachments)
+            if( is_singular() ){
+                // change $ post to define the parent term of the attachment
+                if( is_attachment() && $post->post_parent ){
+                    $save_post = $post; // save
+                    $post = get_post($post->post_parent);
+                }
+
+                // takes into account if attachments are attached to taxes in a tree - everything can happen :)
+                $taxonomies = get_object_taxonomies( $post->post_type );
+                // we will leave only tree-like and public ones, you never know ...
+                $taxonomies = array_intersect( $taxonomies, get_taxonomies( array('hierarchical' => true, 'public' => true) ) );
+
+                if( $taxonomies ){
+                    // sort by priority
+                    if( ! empty($arg->priority_tax) ){
+                        usort( $taxonomies, function($a,$b)use($arg){
+                            $a_index = array_search($a, $arg->priority_tax);
+                            if( $a_index === false ) $a_index = 9999999;
+
+                            $b_index = array_search($b, $arg->priority_tax);
+                            if( $b_index === false ) $b_index = 9999999;
+
+                            return ( $b_index === $a_index ) ? 0 : ( $b_index < $a_index ? 1 : -1 ); // lower index - higher
+                        } );
+                    }
+
+                    // trying to get terms, in order of tax priority
+                    foreach( $taxonomies as $taxname ){
+                        if( $terms = get_the_terms( $post->ID, $taxname ) ){
+                            // check the priority terms for the tax
+                            $prior_terms = & $arg->priority_terms[ $taxname ];
+                            if( $prior_terms && count($terms) > 2 ){
+                                foreach( (array) $prior_terms as $term_id ){
+                                    $filter_field = is_numeric($term_id) ? 'term_id' : 'slug';
+                                    $_terms = wp_list_filter( $terms, array($filter_field=>$term_id) );
+
+                                    if( $_terms ){
+                                        $term = array_shift( $_terms );
+                                        break;
+                                    }
+                                }
+                            }
+                            else
+                                $term = array_shift( $terms );
+
+                            break;
+                        }
+                    }
+                }
+
+                if( isset($save_post) ) $post = $save_post; // 	return back (for attachments)
+            }
+
+            // conclusion
+
+            // all kinds of entries with terms or terms
+            if( $term && isset($term->term_id) ){
+                $term = apply_filters('kama_breadcrumbs_term', $term );
+
+                // attachment
+                if( is_attachment() ){
+                    if( ! $post->post_parent )
+                        $out = sprintf( $loc->attachment, esc_html($post->post_title) );
+                    else {
+                        if( ! $out = apply_filters('attachment_tax_crumbs', '', $term, $this ) ){
+                            $_crumbs    = $this->_tax_crumbs( $term, 'self' );
+                            $parent_tit = sprintf( $linkpatt, get_permalink($post->post_parent), get_the_title($post->post_parent) );
+                            $_out = implode( $sep, array($_crumbs, $parent_tit) );
+                            $out = $this->_add_title( $_out, $post );
+                        }
+                    }
+                }
+                // single
+                elseif( is_single() ){
+                    if( ! $out = apply_filters('post_tax_crumbs', '', $term, $this ) ){
+                        $_crumbs = $this->_tax_crumbs( $term, 'self' );
+                        $out = $this->_add_title( $_crumbs, $post );
+                    }
+                }
+                // non-tree dachshund (tags)
+                elseif( ! is_taxonomy_hierarchical($term->taxonomy) ){
+                    // label
+                    if( is_tag() )
+                        $out = $this->_add_title('', $term, sprintf( $loc->tag, esc_html($term->name) ) );
+                    // dachshund
+                    elseif( is_tax() ){
+                        $post_label = $ptype->labels->name;
+                        $tax_label = $GLOBALS['wp_taxonomies'][ $term->taxonomy ]->labels->name;
+                        $out = $this->_add_title('', $term, sprintf( $loc->tax_tag, $post_label, $tax_label, esc_html($term->name) ) );
+                    }
+                }
+                // tree dachshund (ribriques)
+                else {
+                    if( ! $out = apply_filters('term_tax_crumbs', '', $term, $this ) ){
+                        $_crumbs = $this->_tax_crumbs( $term, 'parent' );
+                        $out = $this->_add_title( $_crumbs, $term, esc_html($term->name) );
+                    }
+                }
+            }
+            // benefits from recording without terms
+            elseif( is_attachment() ){
+                $parent = get_post($post->post_parent);
+                $parent_link = sprintf( $linkpatt, get_permalink($parent), esc_html($parent->post_title) );
+                $_out = $parent_link;
+
+                // attachment from a tree record type record
+                if( is_post_type_hierarchical($parent->post_type) ){
+                    $parent_crumbs = $this->_page_crumbs($parent);
+                    $_out = implode( $sep, array( $parent_crumbs, $parent_link ) );
+                }
+
+                $out = $this->_add_title( $_out, $post );
+            }
+            // entries without terms
+            elseif( is_singular() ){
+                $out = $this->_add_title( '', $post );
+            }
+        }
+
+        // replacing the link to the archive page for the post type
+        $home_after = apply_filters('kama_breadcrumbs_home_after', '', $linkpatt, $sep, $ptype );
+
+        if( '' === $home_after ){
+            // Link to an archived post type page for: individual pages of that post type; archives of this type; taxonomies associated with this type.
+            if( $ptype && $ptype->has_archive && ! in_array( $ptype->name, array('post','page','attachment') )
+                && ( is_post_type_archive() || is_singular() || (is_tax() && in_array($term->taxonomy, $ptype->taxonomies)) )
+            ){
+                $pt_title = $ptype->labels->name;
+
+                // first page of record type archive
+                if( is_post_type_archive() && ! $paged_num )
+                    $home_after = sprintf( $this->arg->title_patt, $pt_title );
+                // singular, paged post_type_archive, tax
+                else{
+                    $home_after = sprintf( $linkpatt, get_post_type_archive_link($ptype->name), $pt_title );
+
+                    $home_after .= ( ($paged_num && ! is_tax()) ? $pg_end : $sep ); // pagination
+                }
+            }
+        }
+
+        $before_out = sprintf( $linkpatt, home_url(), $loc->home ) . ( $home_after ? $sep.$home_after : ($out ? $sep : '') );
+
+        $out = apply_filters('kama_breadcrumbs_pre_out', $out, $sep, $loc, $arg );
+
+        $out = sprintf( $wrappatt, $before_out . $out );
+
+        return apply_filters('kama_breadcrumbs', $out, $sep, $loc, $arg );
+    }
+
+    function _page_crumbs( $post ){
+        $parent = $post->post_parent;
+
+        $crumbs = array();
+        while( $parent ){
+            $page = get_post( $parent );
+            $crumbs[] = sprintf( $this->arg->linkpatt, get_permalink($page), esc_html($page->post_title) );
+            $parent = $page->post_parent;
+        }
+
+        return implode( $this->arg->sep, array_reverse($crumbs) );
+    }
+
+    function _tax_crumbs( $term, $start_from = 'self' ){
+        $termlinks = array();
+        $term_id = ($start_from === 'parent') ? $term->parent : $term->term_id;
+        while( $term_id ){
+            $term       = get_term( $term_id, $term->taxonomy );
+            $termlinks[] = sprintf( $this->arg->linkpatt, get_term_link($term), esc_html($term->name) );
+            $term_id    = $term->parent;
+        }
+
+        if( $termlinks )
+            return implode( $this->arg->sep, array_reverse($termlinks) ) /*. $this->arg->sep*/;
+        return '';
+    }
+
+    // adds a title to the passed text, taking into account all options. Adds a separator to the beginning, if necessary.
+    function _add_title( $add_to, $obj, $term_title = '' ){
+        $arg = & $this->arg; // simplify...
+        $title = $term_title ? $term_title : esc_html($obj->post_title); // $term_title is cleaned up separately, tags can be ...
+        $show_title = $term_title ? $arg->show_term_title : $arg->show_post_title;
+
+        // pagination
+        if( $arg->pg_end ){
+            $link = $term_title ? get_term_link($obj) : get_permalink($obj);
+            $add_to .= ($add_to ? $arg->sep : '') . sprintf( $arg->linkpatt, $link, $title ) . $arg->pg_end;
+        }
+        // complement - put sep
+        elseif( $add_to ){
+            if( $show_title )
+                $add_to .= $arg->sep . sprintf( $arg->title_patt, $title );
+            elseif( $arg->last_sep )
+                $add_to .= $arg->sep;
+        }
+        // sep will come later ...
+        elseif( $show_title )
+            $add_to = sprintf( $arg->title_patt, $title );
+
+        return $add_to;
+    }
+}
