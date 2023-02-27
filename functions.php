@@ -160,10 +160,11 @@ add_filter( 'query_vars', function($public_query_vars) {
     return $public_query_vars;
 });
 
-add_action('events_add_filters_sidebar', 'add_filter_archive_event');
-function add_filter_archive_event() {
-    echo '111';
-};
-
 require_once get_stylesheet_directory() . '/filters/base-filter.php';
 require_once get_stylesheet_directory() . '/filters/filters-functions.php';
+
+add_action('events_add_filters_sidebar', 'add_filter_archive_event');
+function add_filter_archive_event() {
+    echo get_filter_by_taxonomy_links('group', 'Categories:', 'group-filter', 'OR');
+    echo get_filter_by_taxonomy_links('post_tag', 'Tags:', 'tag-filter');
+};

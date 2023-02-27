@@ -81,3 +81,39 @@ $taxGroup->setArgs( // the taxonomy panel appears in the sidebar of the
 );
 
 $taxGroup->uses($product);
+
+/*$tagroup = new Taxonomy('post_tag', 'post_tag');
+
+$tagroup->setLabels(
+    [
+        'name' => __('Tags', 'RST'),
+        'menu_name' => __('Tags', 'RST'),
+        'singular_name' => __('Tag', 'RST'),
+        'search_items' => __('Search Tag', 'RST'),
+        'all_items' => __('All Tags', 'RST'),
+        'parent_item' => __('Parent Tag', 'RST'),
+        'parent_item_colon' => __('Parent Tag:', 'RST'),
+        'edit_item' => __('Edit Tag', 'RST'),
+        'update_item' => __('Update Tag', 'RST'),
+        'add_new_item' => __('Add New Tag', 'RST'),
+        'view_item' => __('View Tag', 'RST'),
+        'new_item_name' => __('New name Tag', 'RST'),
+        'not_found' => __('No Tag found', 'RST'),
+    ]
+);
+
+$tagroup->setArgs( // the taxonomy panel appears in the sidebar of the
+    [
+        'public' => TRUE,
+        'publicly_queryable' => TRUE, // taxonomy: use in front
+        'query_var' => TRUE, // taxonomy: use in front
+        'show_admin_column' => TRUE, // taxonomy: show column on the page-list of All CPT items
+        'show_in_quick_edit' => TRUE, // taxonomy: show in the page-list of All CPT items
+        'show_in_nav_menus' => TRUE, // taxonomy: show in admin Appearance -> Menus
+        'show_tagcloud' => TRUE, // taxonomy: use in widgets
+        'hierarchical' => TRUE, // taxonomy: TRUE - like a category; FALSE - like a tag
+        'show_in_rest' => TRUE, // TRUE - visible taxonomy in sidebar Gutenberg editor, FALSE - only WYSIWYG
+    ]
+);
+
+$tagroup->uses($product);*/
