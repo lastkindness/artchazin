@@ -8,8 +8,7 @@ get_header();
     <div class="container">
         <div class="breadcrumbs__wrapper">
             <?php if(function_exists('bcn_display'))
-            {
-                bcn_display();
+            { bcn_display();
             } ?>
         </div>
     </div>
@@ -35,7 +34,7 @@ if ($main_title) { ?>
 <section class="filters">
     <div class="container">
         <div class="filters__wrapper">
-            <?php add_filter( 'wp_dropdown_cats', '__return_false' ); ?>
+
         </div>
     </div>
 </section>

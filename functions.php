@@ -155,3 +155,15 @@ function wpse156165_menu_add_class( $atts, $item, $args ) {
     $atts['class'] = $class;
     return $atts;
 }
+
+add_filter( 'query_vars', function($public_query_vars) {
+    return $public_query_vars;
+});
+
+add_action('events_add_filters_sidebar', 'add_filter_archive_event');
+function add_filter_archive_event() {
+    echo '111';
+};
+
+require_once get_stylesheet_directory() . '/filters/base-filter.php';
+require_once get_stylesheet_directory() . '/filters/filters-functions.php';

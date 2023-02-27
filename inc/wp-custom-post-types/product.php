@@ -40,6 +40,7 @@ $product->setArgs(
         'supports' => ['title', 'thumbnail', 'revisions'],
         'show_in_nav_menus' => TRUE, // cpt: admin Appearance -> Menus
         'exclude_from_search' => TRUE,
+        'taxonomies' => array('post_tag')
     ]
 );
 

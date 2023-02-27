@@ -36,7 +36,16 @@ if ($main_title) { ?>
 <section class="filters">
     <div class="container">
         <div class="filters__wrapper">
-            <?php add_filter( 'wp_dropdown_cats', '__return_false' ); ?>
+            <?php
+                global $wp_query;
+            ?>
+            <?php
+                do_action('events_add_filters_sidebar');
+                $secondaru_query = new WP_Query([
+                    'posts_per_page' => 2,
+                ]);
+                if ( $secondaru_query->have_posts() ) : do_action('ocean_after_content_wrap'); endif;
+            ?>
         </div>
     </div>
 </section>
