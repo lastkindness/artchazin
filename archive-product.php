@@ -42,10 +42,26 @@ if ($main_title) { ?>
             <?php
                 do_action('events_add_filters_sidebar');
                 $secondaru_query = new WP_Query([
-                    'posts_per_page' => 2,
+                    'posts_per_page' => 9,
                 ]);
                 if ( $secondaru_query->have_posts() ) : do_action('ocean_after_content_wrap'); endif;
             ?>
+            <div class="events-posts-filter">
+            <span class="sorting-desc">
+                <?php
+                    if($current_lang=='he') {
+                        _e('סוג:', 'rst');
+                    } else {
+                        _e('Sort:', 'rst');
+                    }
+                ?>
+                <span><?php echo isset($_GET['orderby']) ? events_get_orderby()[$_GET['orderby']] : events_get_orderby()['date-asc']; ?></span>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M6 9L12 15L18 9" stroke="#8DA3C6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+            </span>
+                <?php events_get_orderby_html_list(); ?>
+            </div>
         </div>
     </div>
 </section>
@@ -56,7 +72,7 @@ if ($main_title) { ?>
             <div class="cards-grid__grid">
                 <?php
                 $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
-                $args = array( 'paged' => $paged, 'post_type' => 'product', 'posts_per_page' => '3');
+                $args = array( 'paged' => $paged, 'post_type' => 'product', 'posts_per_page' => '9');
                 $product = new WP_Query( $args );
                 if ( $product->have_posts() ) : ?>
                     <?php while( $product->have_posts() ) : $product->the_post();
@@ -93,7 +109,28 @@ if ($main_title) { ?>
                 <?php endif; ?>
             </div>
             <div class="cards-grid__pagination pagination">
-                <?php wp_pagenavi(array('query' => $product)); ?>
+                <?php
+                $big = 999999999; // need an unlikely integer
+
+                $paginate_links = paginate_links( array(
+                    'base' => str_replace( $big, '%#%', esc_url( get_pagenum_link( $big ) ) ),
+                    'format' => '?paged=%#%',
+                    'current' => max( 1, get_query_var('paged') ),
+                    'total' => $wp_query->max_num_pages,
+                    'type' => 'array',
+                    'prev_text'    => __('« '),
+                    'next_text'    => __(' »'),
+                ) );
+                if ($wp_query->max_num_pages > 1) :
+                    ?>
+                    <div class="cards-grid__pagination pagination">
+                        <?php
+                        foreach ( $paginate_links as $page ) {
+                            echo '<div class="pagination__item">' . $page . '</div>';
+                        }
+                        ?>
+                    </div>
+                <?php endif; ?>
             </div>
         </div>
     </div>
