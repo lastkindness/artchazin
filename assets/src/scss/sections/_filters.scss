@@ -3,6 +3,7 @@
         display: flex;
         flex-direction: row;
         justify-content: space-between;
+        flex-wrap: wrap;
         @include respond-to('desktop-m') {
             flex-direction: column;
             flex-wrap: wrap;
@@ -22,17 +23,16 @@
     }
     &__item {
         margin: 0 32px 10px 0;
-        display: flex;
-        justify-content: space-between;
         @include respond-to('mobile-sm') {
             width: 100%;
             margin: 0 0 10px;
         }
     }
     &__price {
-        display: flex;
+        display: block;
         align-items: center;
         flex-direction: row;
+        width: 100%;
         @include respond-to('mobile-sm') {
             width: 100%;
         }
@@ -56,6 +56,16 @@
             box-shadow: none;
             background-color: $white;
             border: 1px solid $headingColor;
+        }
+        &-range {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+            margin-top: 10px;
+            span {
+                display: inline-block;
+            }
         }
     }
 }

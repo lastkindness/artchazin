@@ -19,7 +19,7 @@ if ($main_title) { ?>
     <section class="main-title">
         <div class="container">
             <div class="main-title__wrapper">
-                <h1 class="main-title__title"><?php echo $main_title;?></h1>
+                <h1 class="main-title__title"><?php echo single_term_title();?></h1>
                 <?php if ($main_descr) { ?>
                     <div class="main-title__divider divider"></div>
                     <div class="main-title__descr">
@@ -30,14 +30,6 @@ if ($main_title) { ?>
         </div>
     </section>
 <?php } ?>
-
-<section class="filters">
-    <div class="container">
-        <div class="filters__wrapper">
-
-        </div>
-    </div>
-</section>
 
 <section class="cards-grid taxonomy">
     <div class="container">
@@ -55,7 +47,7 @@ if ($main_title) { ?>
                 $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
                 $args = array(
                     'paged' => $paged,
-                    'posts_per_page' => '3',
+                    'posts_per_page' => '9',
                     'post_type' => 'product',
                     'tax_query' => array(
                         array (
@@ -102,7 +94,28 @@ if ($main_title) { ?>
                 <?php wp_reset_postdata(); ?>
             </div>
             <div class="cards-grid__pagination pagination">
-                <?php wp_pagenavi(array('query' => $product)); ?>
+                <?php
+                $big = 999999999; // need an unlikely integer
+
+                $paginate_links = paginate_links( array(
+                    'base' => str_replace( $big, '%#%', esc_url( get_pagenum_link( $big ) ) ),
+                    'format' => '?paged=%#%',
+                    'current' => max( 1, get_query_var('paged') ),
+                    'total' => $wp_query->max_num_pages,
+                    'type' => 'array',
+                    'prev_text'    => __('« '),
+                    'next_text'    => __(' »'),
+                ) );
+                if ($wp_query->max_num_pages > 1) :
+                    ?>
+                    <div class="cards-grid__pagination pagination">
+                        <?php
+                        foreach ( $paginate_links as $page ) {
+                            echo '<div class="pagination__item">' . $page . '</div>';
+                        }
+                        ?>
+                    </div>
+                <?php endif; ?>
             </div>
         </div>
     </div>
