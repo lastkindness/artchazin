@@ -82,9 +82,9 @@ function get_filter_by_taxonomy_links($taxonomy = '', $title = '', $class = '', 
     }
     // var_dump($fn());
 
-    ?><div class="event_filter_block filters__item">
-    <p class="filters__price-text"><?php _e($title, 'rst'); ?></p>
-    <ul class="<?php echo $class; ?> filters__select">
+    ?><div class="event_filter_block dropdown filters__item">
+    <p class="filters__price-text dropdown__title"><?php _e($title, 'rst'); ?></p>
+    <ul class="<?php echo $class; ?> filters__select dropdown__block">
         <?php foreach ($terms as $term) : ?>
             <?php
             $count = isset($result[$term->term_id]) ? $result[$term->term_id] : 0;
@@ -336,7 +336,7 @@ function events_get_orderby()
 function events_get_orderby_html_list()
 {
     $orderby = events_get_orderby();
-    echo '<ul>';
+    echo '<ul class="filters__select dropdown__block">';
 
     $link = get_events_string_url();
 

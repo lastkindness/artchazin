@@ -1,0 +1,36 @@
+.dropdown {
+    position: relative;
+    color: $headingColor;
+    &__block {
+        display: none;
+        position: absolute;
+        top: 20px;
+        right: 0;
+    }
+    &.active {
+        .dropdown {
+            &__block {
+                display: block;
+            }
+        }
+    }
+    &__title {
+        display: flex;
+        line-height: 1em;
+        @include respond-to('tablet') {
+            font-size: 14px;
+        }
+        &:after {
+            margin: 2px 0 0 8px;
+            display: inline-block;
+            content: "\e906";
+            position: relative;
+            font-family: icomoon;
+            font-size: 16px;
+            rotate: 90deg;
+        }
+        svg {
+            display: none;
+        }
+    }
+}

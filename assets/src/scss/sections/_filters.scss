@@ -1,10 +1,12 @@
 .filters {
+    position: relative;
+    z-index: 1;
     &__wrapper {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
         flex-wrap: wrap;
-        @include respond-to('desktop-m') {
+        @include respond-to('mobile') {
             flex-direction: column;
             flex-wrap: wrap;
         }
@@ -23,9 +25,88 @@
     }
     &__item {
         margin: 0 32px 10px 0;
+        position: relative;
+        @include respond-to('tablet') {
+            margin: 0 0 20px;
+        }
         @include respond-to('mobile-sm') {
             width: 100%;
-            margin: 0 0 10px;
+        }
+        a {
+            color: $fontColor;
+        }
+        li {
+            margin: 0 0 7px;
+            font-size: 14px;
+            line-height: 1em;
+            span {
+                font-size: 14px;
+            }
+        }
+        &:nth-child(1) {
+            z-index: 10;
+        }
+        &:nth-child(2) {
+            z-index: 9;
+        }
+        &:nth-child(3) {
+            z-index: 8;
+        }
+        &:nth-child(4) {
+            z-index: 7;
+        }
+    }
+    &__select {
+        margin: 0;
+        padding: 10px;
+        list-style-type: none;
+        border: 1px solid $black;
+        border-radius: 8px;
+        position: absolute;
+        top: 40px;
+        left: 0;
+        width: 200px;
+        background-color: $creamwhite;
+    }
+    .filter-tags {
+        line-height: 1em;
+        a {
+            display: inline-flex;
+            line-height: 1em;
+            &:before {
+                width: 15px;
+                height: 15px;
+                border: 1px solid $black;
+                border-radius: 4px;
+                display: block;
+                content: "";
+                margin-right: 5px;
+            }
+            &:after {
+                display: none;
+                content: "";
+                width: 7px;
+                height: 7px;
+                position: absolute;
+                top: 5px;
+                left: 5px;
+                background-color: $black;
+            }
+        }
+        li {
+            display: flex;
+            align-items: center;
+            &.active {
+                a {
+                    &:after {
+                        display: block;
+                    }
+                }
+            }
+        }
+        span {
+            display: inline-block;
+            margin-left: 5px;
         }
     }
     &__price {
@@ -37,9 +118,14 @@
             width: 100%;
         }
         &-text {
-            font-size: 16px;
+            font-size: 20px;
             margin: 0 8px 0;
             line-height: 1em;
+            color: $headingColor;
+            @include respond-to('tablet') {
+                font-size: 14px;
+                margin: 0;
+            }
         }
         &-inputone {
             max-width: 112px;
@@ -63,9 +149,11 @@
             justify-content: space-between;
             width: 100%;
             margin-top: 10px;
+            color: $headingColor;
             span {
                 display: inline-block;
             }
         }
     }
 }
+

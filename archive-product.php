@@ -46,8 +46,8 @@ if ($main_title) { ?>
                 ]);
                 if ( $secondaru_query->have_posts() ) : do_action('ocean_after_content_wrap'); endif;
             ?>
-            <div class="events-posts-filter">
-            <span class="sorting-desc">
+            <div class="events-posts-filter dropdown filters__item">
+            <span class="sorting-desc dropdown__title">
                 <?php
                     if($current_lang=='he') {
                         _e('סוג:', 'rst');
@@ -56,9 +56,6 @@ if ($main_title) { ?>
                     }
                 ?>
                 <span><?php echo isset($_GET['orderby']) ? events_get_orderby()[$_GET['orderby']] : events_get_orderby()['date-asc']; ?></span>
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M6 9L12 15L18 9" stroke="#8DA3C6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                </svg>
             </span>
                 <?php events_get_orderby_html_list(); ?>
             </div>

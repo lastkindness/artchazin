@@ -339,3 +339,39 @@ select::-ms-expand {
     text-align: center;
 }
 
+.noUi {
+    &-base {
+        height: 5px;
+    }
+    &-connects {
+        border-radius: 4px;
+        border-color: $black;
+    }
+    &-connect {
+        background: $lightgold;
+    }
+    &-tooltip {
+        font-size: 16px;
+    }
+    &-target {
+        height: 5px;
+    }
+    &-touch-area {
+        width: 2px;
+    }
+    &-horizontal {
+        .noUi-handle {
+            height: 34px;
+            width: 4px;
+            background-color: $headingColor;
+            top: -15px;
+            right: 0;
+            &:before {
+                display: none;
+            }
+            &:after {
+                display: none;
+            }
+        }
+    }
+}

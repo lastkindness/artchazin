@@ -27,6 +27,7 @@ import productSlider from "./modules/product-slider"
 import zoomlens from './modules/zoomlens'
 import searchDrop from './modules/search-drop'
 import noUiSliderInit from './modules/no-ui-slider'
+import dropDown from './modules/dropdown'
 
 import '../scss/app.scss';
 import '../scss/admin.scss';
@@ -49,4 +50,5 @@ $(document).ready(() => {
     productGallerySlider();
     searchDrop();
     noUiSliderInit();
+    dropDown();
 });
