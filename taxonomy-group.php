@@ -13,23 +13,73 @@ get_header();
         </div>
     </div>
 </section>
-<?php $main_title = get_field('product_archive_main_title'.$current_lang, 'options');
-$main_descr = get_field('product_archive_main_descr'.$current_lang, 'options');
-if ($main_title) { ?>
-    <section class="main-title">
-        <div class="container">
-            <div class="main-title__wrapper">
-                <h1 class="main-title__title"><?php echo single_term_title();?></h1>
-                <?php if ($main_descr) { ?>
-                    <div class="main-title__divider divider"></div>
-                    <div class="main-title__descr">
-                        <p class="p3"><?php echo $main_descr;?></p>
-                    </div>
-                <?php } ?>
+
+<section class="main-title">
+    <div class="container">
+        <div class="main-title__wrapper">
+            <h1 class="main-title__title"><?php echo single_term_title();?></h1>
+            <div class="main-title__divider divider"></div>
+            <div class="main-title__descr">
+                <p class="p3"><?php echo term_description();?></p>
             </div>
         </div>
-    </section>
-<?php } ?>
+    </div>
+</section>
+
+<section class="filters">
+    <div class="container">
+        <div class="filters__wrapper">
+            <?php
+            global $wp_query;
+            ?>
+            <?php
+            do_action('events_add_filters_sidebar');
+            $secondaru_query = new WP_Query([
+                'posts_per_page' => 9,
+            ]);
+            if ( $secondaru_query->have_posts() ) : do_action('ocean_after_content_wrap'); endif;
+            ?>
+            <?php $terms = get_terms(array(
+                'taxonomy' => 'group',
+                'hide_empty' => false,
+            ));
+
+            $current_term_id = get_queried_object_id();
+
+            if (!empty($terms) && !is_wp_error($terms)) {?>
+            <div class="dropdown filters__item">
+                <span class="sorting-desc dropdown__title">
+                    <?php
+                    if($current_lang=='he') {
+                        _e('קטגוריות:', 'rst');
+                    } else {
+                        _e('Сategories:', 'rst');
+                    }
+                    ?>
+                </span>
+                <?php echo '<ul class="dropdown__block filters__select filter-groups">';
+                foreach ($terms as $term) {
+                    $class = ($current_term_id == $term->term_id) ? ' class="active"' : '';
+                    echo '<li' . $class . '><a href="' . get_term_link($term) . '"' . $class . '>' . $term->name . '</a></li>';
+                }
+                echo '</ul></div>';
+            }?>
+            <div class="events-posts-filter dropdown filters__item">
+                <span class="sorting-desc dropdown__title">
+                    <?php
+                    if($current_lang=='he') {
+                        _e('סוג:', 'rst');
+                    } else {
+                        _e('Sort:', 'rst');
+                    }
+                    ?>
+                    <span><?php echo isset($_GET['orderby']) ? events_get_orderby()[$_GET['orderby']] : events_get_orderby()['date-asc']; ?></span>
+                </span>
+                <?php events_get_orderby_html_list(); ?>
+            </div>
+        </div>
+    </div>
+</section>
 
 <section class="cards-grid taxonomy">
     <div class="container">

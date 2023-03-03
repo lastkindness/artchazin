@@ -37,30 +37,55 @@ if ($main_title) { ?>
     <div class="container">
         <div class="filters__wrapper">
             <?php
-                global $wp_query;
+            global $wp_query;
             ?>
             <?php
-                do_action('events_add_filters_sidebar');
-                $secondaru_query = new WP_Query([
-                    'posts_per_page' => 9,
-                ]);
-                if ( $secondaru_query->have_posts() ) : do_action('ocean_after_content_wrap'); endif;
+            do_action('events_add_filters_sidebar');
+            $secondaru_query = new WP_Query([
+                'posts_per_page' => 9,
+            ]);
+            if ( $secondaru_query->have_posts() ) : do_action('ocean_after_content_wrap'); endif;
             ?>
-            <div class="events-posts-filter dropdown filters__item">
-            <span class="sorting-desc dropdown__title">
-                <?php
+            <?php $terms = get_terms(array(
+                'taxonomy' => 'group',
+                'hide_empty' => false,
+            ));
+
+            $current_term_id = get_queried_object_id();
+
+            if (!empty($terms) && !is_wp_error($terms)) {?>
+            <div class="dropdown filters__item">
+                <span class="sorting-desc dropdown__title">
+                    <?php
+                    if($current_lang=='he') {
+                        _e('קטגוריות:', 'rst');
+                    } else {
+                        _e('Сategories:', 'rst');
+                    }
+                    ?>
+                </span>
+                <?php echo '<ul class="dropdown__block filters__select filter-groups">';
+                foreach ($terms as $term) {
+                    $class = ($current_term_id == $term->term_id) ? ' class="active"' : '';
+                    echo '<li' . $class . '><a href="' . get_term_link($term) . '"' . $class . '>' . $term->name . '</a></li>';
+                }
+                echo '</ul></div>';
+                }?>
+                <div class="events-posts-filter dropdown filters__item">
+                <span class="sorting-desc dropdown__title">
+                    <?php
                     if($current_lang=='he') {
                         _e('סוג:', 'rst');
                     } else {
                         _e('Sort:', 'rst');
                     }
-                ?>
-                <span><?php echo isset($_GET['orderby']) ? events_get_orderby()[$_GET['orderby']] : events_get_orderby()['date-asc']; ?></span>
-            </span>
-                <?php events_get_orderby_html_list(); ?>
+                    ?>
+                    <span><?php echo isset($_GET['orderby']) ? events_get_orderby()[$_GET['orderby']] : events_get_orderby()['date-asc']; ?></span>
+                </span>
+                    <?php events_get_orderby_html_list(); ?>
+                </div>
             </div>
         </div>
-    </div>
 </section>
 
 <section class="cards-grid catalog">

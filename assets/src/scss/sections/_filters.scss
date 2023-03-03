@@ -34,6 +34,9 @@
         }
         a {
             color: $fontColor;
+            &:hover {
+                color: $linkColor;
+            }
         }
         li {
             margin: 0 0 7px;
@@ -41,6 +44,11 @@
             line-height: 1em;
             span {
                 font-size: 14px;
+            }
+            &.active {
+                a {
+                    color: $error;
+                }
             }
         }
         &:nth-child(1) {

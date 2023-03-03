@@ -168,11 +168,11 @@ function add_filter_archive_event() {
     $current_lang = pll_current_language('slug');
     if ($current_lang == 'he') {
         echo get_events_range_slider( 'price', 'מחיר:', '', '' );
-        echo get_filter_by_taxonomy_links('group', 'קטגוריות:', 'filter-groups', 'OR');
+        //echo get_filter_by_taxonomy_links('group', 'קטגוריות:', 'filter-groups', 'OR');
         echo get_filter_by_taxonomy_links('post_tag', 'תגים:', 'filter-tags', 'AND');
     } else {
         echo get_events_range_slider( 'price', 'Price', '', '' );
-        echo get_filter_by_taxonomy_links('group', 'Categories:', 'filter-groups', 'OR');
+        //echo get_filter_by_taxonomy_links('group', 'Categories:', 'filter-groups', 'OR');
         echo get_filter_by_taxonomy_links('post_tag', 'Tags:', 'filter-tags', 'AND');
     }
 };
