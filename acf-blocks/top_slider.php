@@ -15,7 +15,8 @@
                     <?php while (have_rows('top_slider')) : the_row() ?>
                         <?php if($slide = get_sub_field('slide')) : ?>
                             <?php $title = get_the_title($slide);
-                            $img = get_the_post_thumbnail_url($slide);?>
+                            $img = get_the_post_thumbnail_url($slide);
+                            $link = get_the_permalink($slide); ?>
                             <div class="top-slider__card card <?php if (count($top_slider)>3) : echo ' swiper-slide'; endif ; ?>">
                                 <?php if ($img) { ?>
                                     <img src="<?php echo $img;?>" title="<?php if ($title) echo $title;?>" alt="<?php if ($title) echo $title;?>" class="top-slider__card-img card__img">
@@ -35,8 +36,8 @@
                                     <?php } ?>
                                 </div>
                                 <?php $archive_product_btn = get_field('archive_product_btn'.$current_lang, 'options'); ?>
-                                <?php if (!empty($archive_product_btn)) { ?>
-                                    <a href="<?php echo $archive_product_btn['url'];?>" class="btn card__btn top-slider__card-btn">
+                                <?php if (!empty($link)) { ?>
+                                    <a href="<?php echo $link;?>" class="btn card__btn top-slider__card-btn">
                                         <?php echo $archive_product_btn['title'];?>
                                     </a>
                                 <?php } ?>

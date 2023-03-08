@@ -40,7 +40,7 @@
         }
         li {
             margin: 0 0 7px;
-            font-size: 14px;
+            font-size: 16px;
             line-height: 1em;
             span {
                 font-size: 14px;
@@ -48,6 +48,7 @@
             &.active {
                 a {
                     color: $error;
+                    text-decoration: underline;
                 }
             }
         }
@@ -73,8 +74,16 @@
         position: absolute;
         top: 40px;
         left: 0;
-        width: 200px;
+        width: 300px;
         background-color: $creamwhite;
+        &>li {
+            &>a {
+                font-weight: 700;
+            }
+        }
+        ul {
+            margin-top: 5px;
+        }
     }
     .filter-tags {
         line-height: 1em;

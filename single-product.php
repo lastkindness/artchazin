@@ -152,7 +152,9 @@ get_header();
                     <?php while (have_rows('slider')) : the_row() ?>
                         <?php if($slide = get_sub_field('slide')) : ?>
                             <?php $title = get_the_title($slide);
-                                $img = get_the_post_thumbnail_url($slide);?>
+                                $img = get_the_post_thumbnail_url($slide);
+                                $link = get_the_permalink($slide);
+                            ?>
                             <div class="product-gallery-slider__card card swiper-slide">
                                 <?php if ($img) { ?>
                                     <img src="<?php echo $img;?>" alt="<?php if ($title) echo $title;?>" class="product-gallery-slider__card-img card__img">
@@ -174,8 +176,8 @@ get_header();
                                     <?php } ?>
                                 </div>
                                 <?php $archive_product_btn = get_field('archive_product_btn'.$current_lang, 'options'); ?>
-                                <?php if (!empty($archive_product_btn)) { ?>
-                                    <a href="<?php echo $archive_product_btn['url'];?>" class="btn card__btn product-gallery-slider__card-btn">
+                                <?php if (!empty($link)) { ?>
+                                    <a href="<?php echo $link;?>" class="btn card__btn product-gallery-slider__card-btn">
                                         <?php echo $archive_product_btn['title'];?>
                                     </a>
                                 <?php } ?>
