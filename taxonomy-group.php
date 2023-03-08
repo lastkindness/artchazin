@@ -33,7 +33,6 @@ get_header();
             global $wp_query;
             ?>
             <?php
-            do_action('events_add_filters_sidebar');
             $secondaru_query = new WP_Query([
                 'posts_per_page' => 9,
             ]);
@@ -57,28 +56,34 @@ get_header();
                     }
                     ?>
                 </span>
-                <?php echo '<ul class="dropdown__block filters__select filter-groups">';
+                <?php
+                $taxonomy = 'group';
+                $terms = get_terms($taxonomy, array('parent' => 0, 'hide_empty' => false));
+
+                function display_child_terms($term_id, $taxonomy, $current_term_id) {
+                    $terms = get_terms($taxonomy, array('parent' => $term_id, 'hide_empty' => false));
+                    if ($terms) {
+                        echo '<ul>';
+                        foreach ($terms as $term) {
+                            $class = ($current_term_id == $term->term_id) ? ' class="active"' : '';
+                            echo '<li' . $class . '><a href="' . get_term_link($term) . '">' . $term->name . '</a>';
+                            display_child_terms($term->term_id, $taxonomy, $current_term_id);
+                            echo '</li>';
+                        }
+                        echo '</ul>';
+                    }
+                }
+
+                echo '<ul class="dropdown__block filters__select filter-groups">';
                 foreach ($terms as $term) {
                     $class = ($current_term_id == $term->term_id) ? ' class="active"' : '';
-                    echo '<li' . $class . '><a href="' . get_term_link($term) . '"' . $class . '>' . $term->name . '</a></li>';
+                    echo '<li' . $class . '><a href="' . get_term_link($term) . '">' . $term->name . '</a>';
+                    display_child_terms($term->term_id, $taxonomy, $current_term_id);
+                    echo '</li>';
                 }
-                echo '</ul></div>';
-            }?>
-            <div class="events-posts-filter dropdown filters__item">
-                <span class="sorting-desc dropdown__title">
-                    <?php
-                    if($current_lang=='he') {
-                        _e('סוג:', 'rst');
-                    } else {
-                        _e('Sort:', 'rst');
-                    }
-                    ?>
-                    <span><?php echo isset($_GET['orderby']) ? events_get_orderby()[$_GET['orderby']] : events_get_orderby()['date-asc']; ?></span>
-                </span>
-                <?php events_get_orderby_html_list(); ?>
+                echo '</ul></div>';}?>
             </div>
         </div>
-    </div>
 </section>
 
 <section class="cards-grid taxonomy">

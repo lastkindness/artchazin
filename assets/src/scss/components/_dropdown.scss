@@ -17,6 +17,7 @@
     &__title {
         display: flex;
         line-height: 1em;
+        cursor: pointer;
         @include respond-to('tablet') {
             font-size: 14px;
         }

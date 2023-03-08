@@ -64,13 +64,32 @@ if ($main_title) { ?>
                     }
                     ?>
                 </span>
-                <?php echo '<ul class="dropdown__block filters__select filter-groups">';
+                <?php
+                $taxonomy = 'group';
+                $terms = get_terms($taxonomy, array('parent' => 0, 'hide_empty' => false));
+
+                function display_child_terms($term_id, $taxonomy, $current_term_id) {
+                    $terms = get_terms($taxonomy, array('parent' => $term_id, 'hide_empty' => false));
+                    if ($terms) {
+                        echo '<ul>';
+                        foreach ($terms as $term) {
+                            $class = ($current_term_id == $term->term_id) ? ' class="active"' : '';
+                            echo '<li' . $class . '><a href="' . get_term_link($term) . '">' . $term->name . '</a>';
+                            display_child_terms($term->term_id, $taxonomy, $current_term_id);
+                            echo '</li>';
+                        }
+                        echo '</ul>';
+                    }
+                }
+
+                echo '<ul class="dropdown__block filters__select filter-groups">';
                 foreach ($terms as $term) {
                     $class = ($current_term_id == $term->term_id) ? ' class="active"' : '';
-                    echo '<li' . $class . '><a href="' . get_term_link($term) . '"' . $class . '>' . $term->name . '</a></li>';
+                    echo '<li' . $class . '><a href="' . get_term_link($term) . '">' . $term->name . '</a>';
+                    display_child_terms($term->term_id, $taxonomy, $current_term_id);
+                    echo '</li>';
                 }
-                echo '</ul></div>';
-                }?>
+                echo '</ul></div>';}?>
                 <div class="events-posts-filter dropdown filters__item">
                 <span class="sorting-desc dropdown__title">
                     <?php
