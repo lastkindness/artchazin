@@ -130,7 +130,7 @@ if ($main_title) { ?>
                                 <?php if ($img) { ?>
                                     <img src="<?php echo $img;?>" alt="<?php if ($title) echo $title;?>" class="card__img">
                                 <?php } else { ?>
-                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/src/img/image-regular.svg"
+                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/image-regular.svg"
                                          alt="image icon"
                                          class="card__img">
                                 <?php } ?>

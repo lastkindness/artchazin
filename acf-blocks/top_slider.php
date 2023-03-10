@@ -1,6 +1,6 @@
 <?php if($top_slider = get_sub_field('top_slider')): ?>
     <?php if (pll_current_language('slug') != 'en') : $current_lang = pll_current_language('slug'); endif; ?>
-    <section class="top-slider">
+    <section <?php if($id = get_sub_field('id')): echo 'id="' . $id . '"'; endif;?> class="top-slider">
         <div class="container">
             <div class="top-slider__wrapper <?php if (count($top_slider)>3) : echo ' swiper'; endif ; ?>">
                 <?php if($top_slider_title = get_sub_field('top_slider_title')): ?>
@@ -21,7 +21,7 @@
                                 <?php if ($img) { ?>
                                     <img src="<?php echo $img;?>" title="<?php if ($title) echo $title;?>" alt="<?php if ($title) echo $title;?>" class="top-slider__card-img card__img">
                                 <?php } else { ?>
-                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/src/img/image-regular.svg"
+                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/image-regular.svg"
                                          alt="image icon"
                                          class="product-gallery-slider__card-img card__img">
                                 <?php } ?>

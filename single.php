@@ -22,6 +22,7 @@ get_header(); ?>
                 <div class="post__title h1"><?php the_title(); ?></div>
                 <div class="post__container">
                     <div class="post__descr">
+                        <div class="post__date"><?php the_date(); ?></div>
                         <?php if ($sub_title = get_field('sub_title')) { ?>
                             <div class="post__descr-title h3"><?php echo $sub_title;?></div>
                         <?php } ?>
@@ -31,8 +32,9 @@ get_header(); ?>
                             the_content();?>
                         </div>
                     </div>
-                    <div class="post__picture">
-                        <?php if ($img = get_the_post_thumbnail_url()) { ?>
+                    <?php $img = get_the_post_thumbnail_url(); ?>
+                    <div class="post__picture <?php if (!$img) : echo 'post__picture_empty'; endif; ?>">
+                        <?php if ($img) { ?>
                             <img src="<?php echo $img;?>" alt="Post Image Thumbnail" class="post__picture-img">
                         <?php } ?>
                         <?php if ($title_on_image = get_field('title_on_image')) { ?>
@@ -44,6 +46,9 @@ get_header(); ?>
                             </p>
                         <?php } ?>
                     </div>
+                </div>
+                <div class="post__tags">
+                    <?php the_tags( '<span class="tag"># ', ' | ', '</span>' ); ?>
                 </div>
             </div>
         </div>

@@ -3,16 +3,22 @@
     &__wrapper {
 
     }
+    &__descr {
+        &-subtitle {
+            text-align: left;
+        }
+        &-title {
+            text-align: left;
+        }
+    }
     &__item {
         margin-bottom: 128px;
         @include respond-to('laptop') {
             margin-bottom: 40px;
+            flex-wrap: wrap;
         }
         &:nth-child(odd) {
             display: flex;
-            @include respond-to('laptop') {
-                flex-wrap: wrap-reverse;
-            }
             .about {
                 &__descr {
                     max-width: 680px;
@@ -25,7 +31,6 @@
                     }
                     &-title {
                         margin-bottom: 32px;
-                        text-align: left;
                         @include respond-to('laptop') {
                             font-size: 40px;
                         }
@@ -35,7 +40,6 @@
                     }
                     &-subtitle {
                         margin-bottom: 19px;
-                        text-align: left;
                         color: $headingColor;
                         @include respond-to('laptop') {
                             font-size: 32px;
@@ -49,7 +53,6 @@
                         margin-bottom: 8px;
                     }
                     &-text {
-                        text-align: left;
                     }
                 }
                 &__img {
@@ -66,15 +69,12 @@
         }
         &:nth-child(even) {
             display: flex;
-            @include respond-to('laptop') {
-                flex-wrap: wrap;
-            }
+            flex-direction: row-reverse;
             .about {
                 &__descr {
                     max-width: 955px;
                     &-title {
                         margin-bottom: 19px;
-                        text-align: left;
                         color: $headingColor;
                         @include respond-to('laptop') {
                             font-size: 32px;
@@ -85,7 +85,6 @@
                     }
                     &-secondtitle {
                         margin: 64px 0 19px;
-                        text-align: left;
                         color: $headingColor;
                         @include respond-to('laptop') {
                             font-size: 32px;
@@ -98,10 +97,10 @@
                 &__img {
                     max-height: 613px;
                     max-width: 542px;
-                    margin-right: 32px;
+                    margin: 0 32px 0 0;
                     @include respond-to('tablet') {
                         width: 55%;
-                        margin-bottom: 20px;
+                        margin: 32px 0 0 0;
                     }
                     @include respond-to('mobile') {
                         width: 100%;
@@ -116,5 +115,33 @@
 
     &__item {
 
+    }
+}
+
+html {
+    &[lang="he_IL"] {
+        .about {
+            &__item {
+                &:nth-child(odd) {
+                    .about {
+                        &__descr {
+                            margin-left: 30px;
+                        }
+                    }
+                }
+                &:nth-child(even) {
+                    .about {
+                        &__img {
+                            margin: 0 0 0 32px;
+                        }
+                    }
+                }
+            }
+            &__descr {
+                &-subtitle {
+                    text-align: right;
+                }
+            }
+        }
     }
 }

@@ -1,6 +1,6 @@
 .post {
     padding: 0 0 120px;
-    @include respond-to('desktop') {
+    @include respond-to('laptop') {
         padding: 0 0 40px;
     }
     &__title {
@@ -8,16 +8,16 @@
         text-transform: capitalize;
     }
     &__descr {
-        max-width: 940px;
-        @include respond-to('desktop-m') {
-            max-width: 1680px;
+        width: 58.21%;
+        @include respond-to('laptop') {
+            width: 100%;
         }
         &-title {
             text-align: left;
             color: $headingColor;
         }
         &-divider {
-            max-width: 903px;
+            width: 100%;
             text-align: left;
             margin: 15px 0 8px;
         }
@@ -25,20 +25,35 @@
     &__container {
         display: flex;
         margin-top: 32px;
-        @include respond-to('desktop-m') {
-            flex-wrap: wrap;
+        align-items: flex-start;
+        justify-content: space-between;
+        @include respond-to('laptop') {
+            flex-direction: column-reverse;
         }
+    }
+    &__tags {
+        font-weight: 300;
+        font-size: 14px;
+        a {
+            color: $headingColor;
+        }
+    }
+    &__date {
+        font-size: 14px;
     }
     &__picture {
         position: relative;
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center;
-        max-width: 650px;
-        margin-left: 32px;
-        @include respond-to('desktop-m') {
-            margin: 0 auto;
-            margin-top: 30px;
+        width: 38.69%;
+        margin: 0;
+        @include respond-to('laptop') {
+            width: 70%;
+            margin: 0 0 40px;
+        }
+        @include respond-to('mobile') {
+            width: 100%;
         }
         &:before {
             display: block;
@@ -52,6 +67,14 @@
             z-index: 0;
             background: linear-gradient(107.55deg, rgba(26, 30, 32, 0.8) 0%, rgba(39, 49, 54, 0.8) 107.79%);
         }
+        &_empty {
+            .post__picture-descr {
+                position: relative;
+                transform: unset;
+                left: unset;
+                top: unset;
+            }
+        }
         &-wrapper {
             z-index: 1;
             padding: 150px 30px 49px;
@@ -60,26 +83,19 @@
             align-items: center;
             justify-content: center;
         }
-        &-davidestar {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            position: absolute;
-            z-index: 0;
-            max-width: 130px;
-            max-height: 130px;
-            color: $greyColor;
-            opacity: 0.8;
-            margin: 0 auto;
-        }
         &-descr {
             text-align: center;
-            position: relative;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translateX(-50%);
             z-index: 1;
             font-family: $fontAbyssinica;
             font-weight: 400;
             font-size: 24px;
             line-height: 150%;
+            width: 100%;
+            padding: 20px;
             color: $white;
             @include respond-to('mobile-sm') {
                 font-size: 18px;

@@ -18,6 +18,9 @@ blockquote p {
     &:last-child {
         margin-bottom: 0;
     }
+    @include respond-to('mobile-sm') {
+        font: 400 14px/20px $font;
+    }
 }
 
 input,
