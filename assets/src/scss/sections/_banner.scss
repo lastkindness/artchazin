@@ -4,8 +4,10 @@
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+    margin: 50px 0;
     @include respond-to( 'tablet') {
         padding: 70px 0;
+        margin: 30px 0;
     }
     &:before {
         display: block;
@@ -112,6 +114,9 @@
                 margin-right: 32px;
             }
         }
+    }
+    &.no_margin {
+        margin: 0;
     }
 }
 

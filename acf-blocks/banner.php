@@ -1,7 +1,7 @@
-<section <?php if($id = get_sub_field('id')): echo 'id="' . $id . '"'; endif;?> class="banner"
+<section <?php if($id = get_sub_field('id')): echo 'id="' . $id . '"'; endif;?> class="banner <?php if(get_sub_field('no_margin')): echo 'no_margin'; endif;?>"
     <?php if($background = get_sub_field('background')): ?>
          style="background-image: url('<?php echo $background['url'];?>')">
-    <?php endif ; ?>>
+    <?php endif ; ?>
     <div class="container">
         <div class="banner__wrapper">
             <div class="banner__descr ">

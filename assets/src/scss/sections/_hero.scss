@@ -4,6 +4,7 @@
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+    margin: 50px 0;
     &:before {
         display: block;
         content: "";
@@ -15,6 +16,9 @@
         right: 0;
         z-index: 0;
         background: linear-gradient(107.55deg, rgba(26, 30, 32, 0.8) 0%, rgba(39, 49, 54, 0.8) 107.79%);
+    }
+    &.no_margin {
+        margin: 0;
     }
     .container {
         height: 100%;

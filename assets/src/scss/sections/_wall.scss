@@ -3,6 +3,10 @@
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+    margin: 50px 0;
+    @include respond-to( 'mobile') {
+        margin: 30px 0;
+    }
     &:before {
         display: block;
         content: "";
@@ -64,5 +68,8 @@
                 line-height: 1.1em;
             }
         }
+    }
+    &.no_margin {
+        margin: 0;
     }
 }

@@ -1,4 +1,8 @@
 .ketubah {
+    margin: 50px 0;
+    @include respond-to('mobile') {
+        margin: 30px 0;
+    }
     &__wrapper {
         display: flex;
         @include respond-to('desktop') {
@@ -25,11 +29,14 @@
         &-text {
             text-align: left;
         }
+        &.ketubah__gallery {
+            width: 62%;
+        }
     }
     &__gallery {
         margin-left: 52px;
         display: grid;
-        width: 62%;
+        width: 100%;
         grid-template-columns: auto;
         grid-auto-rows: minmax(235px, auto);
         grid-template-rows: repeat(2, 280px);
@@ -50,6 +57,9 @@
             &.big {
                 grid-row: 1/3;
             }
+        }
+        &-img {
+            object-fit: cover;
         }
     }
 }

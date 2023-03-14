@@ -1,4 +1,4 @@
-<section <?php if($id = get_sub_field('id')): echo 'id="' . $id . '"'; endif;?> class="hero"
+<section <?php if($id = get_sub_field('id')): echo 'id="' . $id . '"'; endif;?> class="hero <?php if(get_sub_field('no_margin')): echo 'no_margin'; endif;?>"
      <?php if($hero_background = get_sub_field('hero_background')): ?>
         style="background-image: url('<?php echo $hero_background['url'];?>')">
      <?php endif ; ?>>
