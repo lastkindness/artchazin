@@ -1,5 +1,5 @@
 <?php if($text_img = get_sub_field('text_img')): ?>
-    <section <?php if($id = get_sub_field('id')): echo 'id="' . $id . '"'; endif;?> class="about">
+    <section <?php if(get_sub_field('animation')): echo 'data-aos="fade-up"'; endif;?> <?php if($id = get_sub_field('id')): echo 'id="' . $id . '"'; endif;?> class="about">
         <div class="container">
             <div class="about__wrapper">
                 <?php foreach ($text_img as $item) : ?>

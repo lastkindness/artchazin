@@ -8,6 +8,8 @@
 
 @import '~nouislider/dist/nouislider.css';
 
+@import '~aos/dist/aos.css';
+
 @import "fonts";
 @import "mixins";
 @import "vars";
@@ -50,7 +52,7 @@
 @import "sections/content";
 @import "sections/image-with-text";
 @import "sections/main-subtitle";
-
+@import "sections/map";
 
 @import "pages/404";
 @import "pages/content";

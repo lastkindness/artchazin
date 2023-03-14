@@ -1,5 +1,5 @@
 <?php if($gallery = get_sub_field('gallery')): ?>
-    <section <?php if($id = get_sub_field('id')): echo 'id="' . $id . '"'; endif;?> class="ketubah <?php if(get_sub_field('no_margin')): echo 'no_margin'; endif;?>">
+    <section <?php if(get_sub_field('animation')): echo 'data-aos="fade-up"'; endif;?> <?php if($id = get_sub_field('id')): echo 'id="' . $id . '"'; endif;?> class="ketubah <?php if(get_sub_field('no_margin')): echo 'no_margin'; endif;?>">
         <div class="container">
             <div class="ketubah__wrapper">
                 <?php if($title = get_sub_field('title')) : ?>

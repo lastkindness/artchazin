@@ -1,6 +1,6 @@
 <?php if($products_grid = get_sub_field('products_grid')): ?>
     <?php if (pll_current_language('slug') != 'en') : $current_lang = pll_current_language('slug'); endif; ?>
-    <section <?php if($id = get_sub_field('id')): echo 'id="' . $id . '"'; endif;?> class="cards-grid">
+    <section <?php if(get_sub_field('animation')): echo 'data-aos="fade-up"'; endif;?> <?php if($id = get_sub_field('id')): echo 'id="' . $id . '"'; endif;?> class="cards-grid">
         <div class="container">
             <div class="cards-grid__wrapper">
                 <?php if($products_grid_title = get_sub_field('products_grid_title')): ?>

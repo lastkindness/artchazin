@@ -1,5 +1,7 @@
 export default () => {
-    zoomer();
+    if(document.querySelector('.zoomer-box')) {
+        zoomer();
+    }
     function zoomer() {
         document.querySelectorAll('.zoomer-box').forEach(function(item, index) {
             item.addEventListener('mousemove', function(e)  {

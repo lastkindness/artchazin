@@ -1,5 +1,5 @@
 <?php if($cards_with_icons = get_sub_field('cards_with_icons')): ?>
-    <section <?php if($id = get_sub_field('id')): echo 'id="' . $id . '"'; endif;?> class="cards-with-icons">
+    <section <?php if(get_sub_field('animation')): echo 'data-aos="fade-up"'; endif;?> <?php if($id = get_sub_field('id')): echo 'id="' . $id . '"'; endif;?> class="cards-with-icons">
         <div class="container">
             <div class="cards-with-icons__wrapper">
                 <?php foreach ($cards_with_icons as $item) : ?>

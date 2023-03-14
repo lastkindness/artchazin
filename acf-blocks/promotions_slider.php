@@ -1,6 +1,6 @@
 <?php if($promotions_slider = get_sub_field('promotions_slider')): ?>
     <?php if (pll_current_language('slug') != 'en') : $current_lang = pll_current_language('slug'); endif; ?>
-    <section <?php if($id = get_sub_field('id')): echo 'id="' . $id . '"'; endif;?> class="top-slider">
+    <section <?php if(get_sub_field('animation')): echo 'data-aos="fade-up"'; endif;?> <?php if($id = get_sub_field('id')): echo 'id="' . $id . '"'; endif;?> class="top-slider">
         <div class="container">
             <div class="top-slider__wrapper <?php if (count($promotions_slider)>3) : echo ' swiper'; endif ; ?>">
                 <?php if($promotions_slider_title = get_sub_field('promotions_slider_title')): ?>

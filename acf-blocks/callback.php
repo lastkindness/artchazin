@@ -1,4 +1,4 @@
-<section <?php if($id = get_sub_field('id')): echo 'id="' . $id . '"'; endif;?> class="callback parallax"
+<section <?php if(get_sub_field('animation')): echo 'data-aos="fade-up"'; endif;?> <?php if($id = get_sub_field('id')): echo 'id="' . $id . '"'; endif;?> class="callback parallax"
     <?php if($background = get_sub_field('background')): ?>
          style="background-image: url('<?php echo $background['url'];?>')">
     <?php endif ; ?>

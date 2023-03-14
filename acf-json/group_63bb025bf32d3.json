@@ -61,6 +61,25 @@
                             "ui_off_text": ""
                         },
                         {
+                            "key": "field_6410e1c7b1858",
+                            "label": "Is Animated ?",
+                            "name": "animation",
+                            "type": "true_false",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "message": "",
+                            "default_value": 0,
+                            "ui": 0,
+                            "ui_on_text": "",
+                            "ui_off_text": ""
+                        },
+                        {
                             "key": "field_63bb02c20b5ef",
                             "label": "Hero Background Image",
                             "name": "hero_background",
@@ -212,6 +231,25 @@
                             "maxlength": ""
                         },
                         {
+                            "key": "field_6410e1efb1859",
+                            "label": "Is Animated ?",
+                            "name": "animation",
+                            "type": "true_false",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "message": "",
+                            "default_value": 0,
+                            "ui": 0,
+                            "ui_on_text": "",
+                            "ui_off_text": ""
+                        },
+                        {
                             "key": "field_63d1efe34d652",
                             "label": "Top Slider Title",
                             "name": "top_slider_title",
@@ -339,6 +377,25 @@
                             "prepend": "",
                             "append": "",
                             "maxlength": ""
+                        },
+                        {
+                            "key": "field_6410e201b185a",
+                            "label": "Is Animated ?",
+                            "name": "animation",
+                            "type": "true_false",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "message": "",
+                            "default_value": 0,
+                            "ui": 0,
+                            "ui_on_text": "",
+                            "ui_off_text": ""
                         },
                         {
                             "key": "field_640f5b7d3e95b",
@@ -472,6 +529,25 @@
                             "maxlength": ""
                         },
                         {
+                            "key": "field_6410e21fb185b",
+                            "label": "Is Animated ?",
+                            "name": "animation",
+                            "type": "true_false",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "message": "",
+                            "default_value": 0,
+                            "ui": 0,
+                            "ui_on_text": "",
+                            "ui_off_text": ""
+                        },
+                        {
                             "key": "field_640f5c083e962",
                             "label": "Promotions Slider Title",
                             "name": "promotions_slider_title",
@@ -601,6 +677,25 @@
                             "prepend": "",
                             "append": "",
                             "maxlength": ""
+                        },
+                        {
+                            "key": "field_6410e230b185c",
+                            "label": "Is Animated ?",
+                            "name": "animation",
+                            "type": "true_false",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "message": "",
+                            "default_value": 0,
+                            "ui": 0,
+                            "ui_on_text": "",
+                            "ui_off_text": ""
                         },
                         {
                             "key": "field_640f5c8b3e96a",
@@ -734,6 +829,25 @@
                             "maxlength": ""
                         },
                         {
+                            "key": "field_6410e272b185d",
+                            "label": "Is Animated ?",
+                            "name": "animation",
+                            "type": "true_false",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "message": "",
+                            "default_value": 0,
+                            "ui": 0,
+                            "ui_on_text": "",
+                            "ui_off_text": ""
+                        },
+                        {
                             "key": "field_640f6794ccca9",
                             "label": "Services Grid Title",
                             "name": "services_grid_title",
@@ -865,6 +979,25 @@
                             "maxlength": ""
                         },
                         {
+                            "key": "field_6410e289b185e",
+                            "label": "Is Animated ?",
+                            "name": "animation",
+                            "type": "true_false",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "message": "",
+                            "default_value": 0,
+                            "ui": 0,
+                            "ui_on_text": "",
+                            "ui_off_text": ""
+                        },
+                        {
                             "key": "field_640f68e236e4f",
                             "label": "Products Grid Title",
                             "name": "products_grid_title",
@@ -992,6 +1125,25 @@
                             "prepend": "",
                             "append": "",
                             "maxlength": ""
+                        },
+                        {
+                            "key": "field_6410e299b185f",
+                            "label": "Is Animated ?",
+                            "name": "animation",
+                            "type": "true_false",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "message": "",
+                            "default_value": 0,
+                            "ui": 0,
+                            "ui_on_text": "",
+                            "ui_off_text": ""
                         },
                         {
                             "key": "field_640f69c336e56",
@@ -1123,6 +1275,25 @@
                             "prepend": "",
                             "append": "",
                             "maxlength": ""
+                        },
+                        {
+                            "key": "field_6410e2adb1860",
+                            "label": "Is Animated ?",
+                            "name": "animation",
+                            "type": "true_false",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "message": "",
+                            "default_value": 0,
+                            "ui": 0,
+                            "ui_on_text": "",
+                            "ui_off_text": ""
                         },
                         {
                             "key": "field_640f6a0e36e5d",
@@ -1275,6 +1446,25 @@
                             "ui_off_text": ""
                         },
                         {
+                            "key": "field_6410e2bdb1861",
+                            "label": "Is Animated ?",
+                            "name": "animation",
+                            "type": "true_false",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "message": "",
+                            "default_value": 0,
+                            "ui": 0,
+                            "ui_on_text": "",
+                            "ui_off_text": ""
+                        },
+                        {
                             "key": "field_63db4c9b5b8ce",
                             "label": "Background Image",
                             "name": "background",
@@ -1390,6 +1580,25 @@
                             "maxlength": ""
                         },
                         {
+                            "key": "field_6410e2cfb1862",
+                            "label": "Is Animated ?",
+                            "name": "animation",
+                            "type": "true_false",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "message": "",
+                            "default_value": 0,
+                            "ui": 0,
+                            "ui_on_text": "",
+                            "ui_off_text": ""
+                        },
+                        {
                             "key": "field_640fa75ebe228",
                             "label": "No Margin",
                             "name": "no_margin",
@@ -1498,6 +1707,25 @@
                             "prepend": "",
                             "append": "",
                             "maxlength": ""
+                        },
+                        {
+                            "key": "field_6410e2e2b1863",
+                            "label": "Is Animated ?",
+                            "name": "animation",
+                            "type": "true_false",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "message": "",
+                            "default_value": 0,
+                            "ui": 0,
+                            "ui_on_text": "",
+                            "ui_off_text": ""
                         },
                         {
                             "key": "field_640a85cde2966",
@@ -1629,6 +1857,25 @@
                             "prepend": "",
                             "append": "",
                             "maxlength": ""
+                        },
+                        {
+                            "key": "field_6410e2f8b1864",
+                            "label": "Is Animated ?",
+                            "name": "animation",
+                            "type": "true_false",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "message": "",
+                            "default_value": 0,
+                            "ui": 0,
+                            "ui_on_text": "",
+                            "ui_off_text": ""
                         },
                         {
                             "key": "field_640fa785be229",
@@ -1863,6 +2110,25 @@
                             "maxlength": ""
                         },
                         {
+                            "key": "field_6410e30cb1865",
+                            "label": "Is Animated ?",
+                            "name": "animation",
+                            "type": "true_false",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "message": "",
+                            "default_value": 0,
+                            "ui": 0,
+                            "ui_on_text": "",
+                            "ui_off_text": ""
+                        },
+                        {
                             "key": "field_640f95399d930",
                             "label": "Title",
                             "name": "title",
@@ -2013,6 +2279,25 @@
                             "maxlength": ""
                         },
                         {
+                            "key": "field_6410e31eb1866",
+                            "label": "Is Animated ?",
+                            "name": "animation",
+                            "type": "true_false",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "message": "",
+                            "default_value": 0,
+                            "ui": 0,
+                            "ui_on_text": "",
+                            "ui_off_text": ""
+                        },
+                        {
                             "key": "field_640fc71335362",
                             "label": "Cards With Icons",
                             "name": "cards_with_icons",
@@ -2125,6 +2410,25 @@
                             "maxlength": ""
                         },
                         {
+                            "key": "field_6410e330b1867",
+                            "label": "Is Animated ?",
+                            "name": "animation",
+                            "type": "true_false",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "message": "",
+                            "default_value": 0,
+                            "ui": 0,
+                            "ui_on_text": "",
+                            "ui_off_text": ""
+                        },
+                        {
                             "key": "field_640fc78535368",
                             "label": "Content",
                             "name": "content",
@@ -2171,6 +2475,25 @@
                             "prepend": "",
                             "append": "",
                             "maxlength": ""
+                        },
+                        {
+                            "key": "field_6410e340b1868",
+                            "label": "Is Animated ?",
+                            "name": "animation",
+                            "type": "true_false",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "message": "",
+                            "default_value": 0,
+                            "ui": 0,
+                            "ui_on_text": "",
+                            "ui_off_text": ""
                         },
                         {
                             "key": "field_640fc7b33536e",
@@ -2245,6 +2568,25 @@
                             "maxlength": ""
                         },
                         {
+                            "key": "field_6410e34fb1869",
+                            "label": "Is Animated ?",
+                            "name": "animation",
+                            "type": "true_false",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "message": "",
+                            "default_value": 0,
+                            "ui": 0,
+                            "ui_on_text": "",
+                            "ui_off_text": ""
+                        },
+                        {
                             "key": "field_640fc84335375",
                             "label": "Main Subtitle",
                             "name": "main_subtitle",
@@ -2293,9 +2635,95 @@
                             "maxlength": ""
                         },
                         {
+                            "key": "field_6410e35cb186a",
+                            "label": "Is Animated ?",
+                            "name": "animation",
+                            "type": "true_false",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "message": "",
+                            "default_value": 0,
+                            "ui": 0,
+                            "ui_on_text": "",
+                            "ui_off_text": ""
+                        },
+                        {
                             "key": "field_640fc84b35378",
                             "label": "Main Title",
                             "name": "main_title",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_6410e91c9c11e": {
+                    "key": "layout_6410e91c9c11e",
+                    "name": "map",
+                    "label": "Map",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_6410e91c9c11f",
+                            "label": "ID",
+                            "name": "id",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        },
+                        {
+                            "key": "field_6410e91c9c120",
+                            "label": "Is Animated ?",
+                            "name": "animation",
+                            "type": "true_false",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "message": "",
+                            "default_value": 0,
+                            "ui": 0,
+                            "ui_on_text": "",
+                            "ui_off_text": ""
+                        },
+                        {
+                            "key": "field_6410e9aab1437",
+                            "label": "Google Map coordinates",
+                            "name": "coord",
                             "type": "text",
                             "instructions": "",
                             "required": 0,
@@ -2338,5 +2766,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1678755957
+    "modified": 1678830340
 }

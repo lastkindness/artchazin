@@ -12,6 +12,7 @@ window.noUiSlider = require('nouislider');
 // Fancybox
 const fancybox = require('@fancyapps/fancybox');
 
+import AOS from 'aos'
 import main from "./modules/main"
 import burger from "./modules/burger"
 import header from "./modules/header"
@@ -28,11 +29,13 @@ import zoomlens from './modules/zoomlens'
 import searchDrop from './modules/search-drop'
 import noUiSliderInit from './modules/no-ui-slider'
 import dropDown from './modules/dropdown'
+import map from './modules/map'
 
 import '../scss/app.scss';
 import '../scss/admin.scss';
 
 $(document).ready(() => {
+    AOS.init();
     main();
     header();
     burger();
@@ -51,4 +54,5 @@ $(document).ready(() => {
     searchDrop();
     noUiSliderInit();
     dropDown();
+    map();
 });

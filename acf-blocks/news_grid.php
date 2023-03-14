@@ -1,6 +1,6 @@
 <?php if($news_grid = get_sub_field('news_grid')): ?>
     <?php if (pll_current_language('slug') != 'en') : $current_lang = pll_current_language('slug'); endif; ?>
-    <section <?php if($id = get_sub_field('id')): echo 'id="' . $id . '"'; endif;?> class="articles">
+    <section <?php if(get_sub_field('animation')): echo 'data-aos="fade-up"'; endif;?> <?php if($id = get_sub_field('id')): echo 'id="' . $id . '"'; endif;?> class="articles">
         <div class="container">
             <div class="articles__wrapper <?php if (count($news_grid)>3) : echo ' swiper'; endif ; ?>">
                 <?php if($news_grid_title = get_sub_field('news_grid_title')): ?>
