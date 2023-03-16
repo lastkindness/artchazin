@@ -297,6 +297,59 @@
             ]
         },
         {
+            "key": "field_6410fda3f4cf2",
+            "label": "Google Maps API Key",
+            "name": "google_maps_api_key",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_6410fdcaf4cf3",
+            "label": "Google Maps API Coords",
+            "name": "map_coords",
+            "type": "text",
+            "instructions": "Enter Google Maps coordinates\r\nExample of correct entry of coordinates (width, longitude separated by comma)\r\n52.53033638838595, 5.705908496973422",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_64124e360dd9a",
+            "label": "Google Maps Link",
+            "name": "map_address",
+            "type": "link",
+            "instructions": "Enter Google Maps Link With Your Address",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array"
+        },
+        {
             "key": "field_63db18714c23b",
             "label": "Header settings",
             "name": "",
@@ -722,5 +775,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1678729862
+    "modified": 1678974844
 }

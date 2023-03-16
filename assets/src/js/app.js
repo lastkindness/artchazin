@@ -35,7 +35,6 @@ import '../scss/app.scss';
 import '../scss/admin.scss';
 
 $(document).ready(() => {
-    AOS.init();
     main();
     header();
     burger();
@@ -55,4 +54,5 @@ $(document).ready(() => {
     noUiSliderInit();
     dropDown();
     map();
+    AOS.init();
 });

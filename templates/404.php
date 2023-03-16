@@ -3,7 +3,7 @@
  * Template name: Front 404 Template
  */
 
-get_header('front'); ?>
+get_header(); ?>
 
 <section class="error parallax" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/src/img/peoplecallback.jpg')">
     <div class="container">
@@ -15,4 +15,4 @@ get_header('front'); ?>
     </div>
 </section>
 
-<?php get_footer('front'); ?>
+<?php get_footer(); ?>

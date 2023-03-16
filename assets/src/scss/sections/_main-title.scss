@@ -1,2 +1,9 @@
 .main-title {
+    &__title {
+        text-align: left;
+        text-transform: capitalize;
+    }
+    &__descr {
+        margin: 20px 0 0;
+    }
 }

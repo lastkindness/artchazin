@@ -4,19 +4,17 @@
         flex-direction: row;
         justify-content: space-between;
         @include respond-to('desktop-m') {
-            flex-wrap: wrap-reverse;
+            flex-wrap: wrap;
         }
         @include respond-to('laptop') {
             flex-wrap: wrap;
-            flex-direction: column-reverse;
             align-items: center;
         }
     }
     &__descr {
-        max-width: 580px;
+        width: 32.86%;
         @include respond-to('desktop-m') {
-            order: 3;
-            max-width: 100%;
+            width: 100%;
         }
         &-divider {
             margin: 0 auto;
@@ -26,48 +24,56 @@
                 max-width: 539px;
             }
         }
+        &-title,
         &-text {
             text-align: left;
         }
     }
     &__form {
-        max-width: 413px;
+        width: 24.58%;
         margin-top: 30px;
         @include respond-to('desktop-m') {
-            margin-left: 400px;
+            width: 40%;
         }
         @include respond-to('laptop') {
             margin-left: 0;
-            order: 2;
         }
-        &-name {
-            box-shadow: inset 0px 0px 8px rgba(0, 0, 0, 0.15);
-            margin: 0;
+        @include respond-to('mobile') {
+            width: 100%;
         }
-        &-phone {
-            box-shadow: inset 0px 0px 8px rgba(0, 0, 0, 0.15);
-        }
-        textarea {
+        &-item {
             box-shadow: inset 0px 0px 8px rgba(0, 0, 0, 0.15);
         }
         &-button {
             box-shadow: inset 0px 0px 8px rgba(0, 0, 0, 0.15);
             margin-top: 16px;
+            width: 100%;
         }
     }
     &__contacts {
         margin-top: 30px;
+        width: 31.13%;
         @include respond-to('desktop-m') {
             margin-top: 20px;
+            width: 40%;
+        }
+        @include respond-to('mobile') {
+            width: 100%;
         }
         &-list {
+            list-style-type: none;
             margin: 0;
+            padding: 0;
         }
         &-link {
+            font-size: 24px;
             color: $darkgrey;
+            font-family: $font;
+            @include respond-to('mobile') {
+                font-size: 16px;
+            }
         }
         &-item {
-            font-size: 24px;
             .icon {
                 margin-right: 10px;
             }
@@ -86,6 +92,7 @@
         }
         &-map {
             margin-top: 6px;
+            height: 300px;
         }
     }
 }

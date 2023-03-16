@@ -18,7 +18,7 @@
                     <div class="ketubah__gallery">
                         <?php foreach ($gallery as $item) : ?>
                             <?php if($image = $item['image']) : ?>
-                                <a class="ketubah__gallery-item zoomer-box <?php if ($item['is_big']) : echo ' big'; endif; ?>" href="<?php echo $image['url']; ?>" data-fancybox="gallery">
+                                <a class="ketubah__gallery-item <?php if ($item['is_big']) : echo ' big'; endif; ?>" href="<?php echo $image['url']; ?>" data-fancybox="gallery">
                                     <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" class="ketubah__gallery-img">
                                 </a>
                             <?php endif ; ?>

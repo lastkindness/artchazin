@@ -2,9 +2,9 @@
     <div class="container">
         <div class="map__wrapper">
             <h2 class="map__title"></h2>
-            <div id="map<?php if($id):echo $id; endif;?>"
+            <div class="map-container" id="map<?php if($id):echo $id; endif;?>"
                 <?php if($coord = get_sub_field('coord')): echo 'data-coord="' . $coord . '"';
-                      elseif ($global_coord = get_field('map-coords', 'options')) : echo 'data-coord="' . $global_coord . '"'; endif;?>>
+                      elseif ($global_coord = get_field('map_coords', 'options')) : echo 'data-coord="' . $global_coord . '"'; endif;?>>
             </div>
         </div>
     </div>

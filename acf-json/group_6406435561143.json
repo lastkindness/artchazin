@@ -4,8 +4,27 @@
     "fields": [
         {
             "key": "field_640643a725870",
-            "label": "Test",
-            "name": "test",
+            "label": "Description",
+            "name": "description",
+            "type": "wysiwyg",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 1,
+            "delay": 0
+        },
+        {
+            "key": "field_64131e343578b",
+            "label": "Form Shortcode",
+            "name": "form_shortcode",
             "type": "text",
             "instructions": "",
             "required": 0,
@@ -39,5 +58,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1678132145
+    "modified": 1678975707
 }

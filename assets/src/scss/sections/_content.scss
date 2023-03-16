@@ -1,0 +1,16 @@
+.content {
+    p,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        text-align: left;
+    }
+    &__wrapper {
+        max-width: 762px;
+        margin-top: 64px;
+        text-align: left;
+    }
+}

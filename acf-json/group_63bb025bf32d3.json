@@ -2348,9 +2348,9 @@
                                         "class": "",
                                         "id": ""
                                     },
-                                    "return_format": "",
+                                    "return_format": "array",
                                     "preview_size": "medium",
-                                    "library": "",
+                                    "library": "all",
                                     "min_width": "",
                                     "min_height": "",
                                     "min_size": "",
@@ -2508,9 +2508,9 @@
                                 "class": "",
                                 "id": ""
                             },
-                            "return_format": "",
+                            "return_format": "array",
                             "preview_size": "medium",
-                            "library": "",
+                            "library": "all",
                             "min_width": "",
                             "min_height": "",
                             "min_size": "",
@@ -2766,5 +2766,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1678830340
+    "modified": 1678919436
 }
